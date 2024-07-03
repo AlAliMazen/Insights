@@ -1,14 +1,12 @@
 # OVERVIEW
 
-This template was made as a guide to help ensure you cover assessment criteria in your fourth portfolio write up. It is specific to the **PORTFOLIO 4: Full-Stack Toolkit** project.
+Insights is a website which provides reviews about a book or books which the user has read. Clients will be able to have a review of many books to help them taking a decision on whether it is worth buying this book or not.
 
-There still is not an official readme example for this Project Provided by CI.
+Insights makes use of the knowledge gained up till know to code a full website using a bunch of technologies varying from front end to the back end. Besides it applies the Model View Controller (MVC) design pattern to offer not a static website but rather an interactive webpage.
 
+Insights starts by introducing itself as a platform for books, people can look for when they are logged in and enjoy reading a short description about the book as well as its author. Clients who are registered can also give their thought and reviews about books they have read before and they can also add a new book with its author. New books suggestions should be first approved by the admin of the page before they are public to the audience. 
 
-Sections marked as 🚨**Required** and 🚀 **merit & beyond**
-
-**Please note** that project assessment criteria changes more often than these guides are updated so double-check the submission criteria before assuming the  🚨**Required**  is all you have to do to pass.
-
+Rating of a book, likes of a books as well as reviews on a specific book will be very helpful to guide any client whether to read this book or move to something else. Books are classified based on their categories which might by useful when filtering and narrowing the choice.
 
 ## Helpful tools
 
@@ -138,7 +136,7 @@ Markdown's not all that easy so sometimes you may want to use some tools to make
 ## Author
 🚨**Required** 
 
-DEVELOPER_NAME (take credit for the work you do!)
+Mazen Al Ali
 
 # Table of Contents
 🚀 **merit & beyond**
