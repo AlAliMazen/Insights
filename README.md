@@ -1,4 +1,4 @@
-# OVERVIEW
+# Insights
 
 Insights is a website which provides reviews about a book or books which the user has read. Clients will be able to have a review of many books to help them taking a decision on whether it is worth buying this book or not.
 
@@ -731,6 +731,18 @@ This section just summarizers tools and programming languages you used.
 🚀 **merit & beyond**
 
 -write bullet points for the languages you used (HTML, CSS, JAVASCRIPT, PYTHON,  DJANGO)
+
+### Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap5
+
+### Backend
+
+- Python Version 3.9.6
+- Django Version 4.2.13
 
 ## Frameworks, Libraries & Programs Used
 🚀 **merit & beyond**
