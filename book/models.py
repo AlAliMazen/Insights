@@ -44,3 +44,24 @@ class Category(models.Model):
     def __str__(self):
         #return f"Author: {self.fullname}  added by: {User.get_full_name}. Author born in: {self.place_of_birth} on {self.date_of_birth} | Status: {self.status}"
         return self.category_name
+
+class Book(models.Model):
+    """
+    main class for showing books
+    """
+    title = models.CharField(max_length=200, unique=True)
+    writer = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='book_author')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user')
+    slug = models.SlugField(max_length=200, unique=True)
+    cover_img = CloudinaryField('image', default='placeholder')
+    short_description = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    book_category = models.ForeignKey(Category, on_delete=models.DO_NOTHING,related_name="Genre")
+    rating_average=models.FloatField(default=0.0)
+    likes=models.IntegerField(default=0)
+
+    class Meta:
+        ordering = ['created_on','title']
+    
+    def __str__(self):
+        return self.title

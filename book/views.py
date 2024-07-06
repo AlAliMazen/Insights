@@ -19,3 +19,10 @@ def add_category(request):
     Display Category  :model: book.Category
     """
     return HttpResponse("<h1>Category</h1>")
+
+
+def add_book(request):
+    """
+    Display Book  :model: book.book
+    """
+    return HttpResponse("<h1>Add Books</h1>")
