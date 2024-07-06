@@ -29,3 +29,18 @@ class Author(models.Model):
     def __str__(self):
         #return f"Author: {self.fullname}  added by: {User.get_full_name}. Author born in: {self.place_of_birth} on {self.date_of_birth} | Status: {self.status}"
         return self.fullname
+    
+
+class Category(models.Model):
+    """
+    category will be used to specify the book genre whether it is politics, economics, sociology, thriller,
+    """
+    category_name=models.CharField(max_length=200, unique=True)
+    category_description=models.TextField()
+
+    class Meta:
+        ordering =['category_name']
+    
+    def __str__(self):
+        #return f"Author: {self.fullname}  added by: {User.get_full_name}. Author born in: {self.place_of_birth} on {self.date_of_birth} | Status: {self.status}"
+        return self.category_name

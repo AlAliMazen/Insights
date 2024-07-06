@@ -12,3 +12,10 @@ def my_author(request):
     Display authors  :model: book.Author
     """
     return HttpResponse("<h1>Hello my author</h1>")
+
+
+def add_category(request):
+    """
+    Display Category  :model: book.Category
+    """
+    return HttpResponse("<h1>Category</h1>")
