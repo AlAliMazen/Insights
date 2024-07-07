@@ -3,7 +3,7 @@ from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
-from .models import Author
+from .models import Author,Book,Category,Review
 # Create your views here.
 
 
@@ -26,3 +26,9 @@ def add_book(request):
     Display Book  :model: book.book
     """
     return HttpResponse("<h1>Add Books</h1>")
+
+def add_comment(request):
+    """
+    Display Book  :model: book.book
+    """
+    return HttpResponse("<h1>Comment</h1>")

@@ -65,3 +65,35 @@ class Book(models.Model):
     
     def __str__(self):
         return self.title
+
+
+class Review(models.Model):
+    """
+    for adding reviews on the selected book
+    """
+    book=models.ForeignKey(Book, on_delete=models.CASCADE, related_name="reviews")
+    author=models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
+    insight=models.TextField(default='Give your thoughts about the book')
+    approved=models.BooleanField(default=False)
+    created_on=models.DateTimeField(auto_now_add=True)
+    class Meta:
+        ordering = ["created_on"]
+
+    def __str__(self):
+        return self.content
+
+
+class Likes(models.Model):
+    """
+    see how many likes a book has got
+    """
+    likes=models.BooleanField(default=False)
+    liked_book=models.ForeignKey(Book, on_delete=models.CASCADE, related_name='liked_book')
+    user_id=models.ForeignKey(User, on_delete=models.CASCADE, related_name="liker")
+    created_on=models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["created_on"]
+    
+    def __str__(self):
+        return str(self.id)
