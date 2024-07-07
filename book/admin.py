@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
-from .models import Author, Category, Book, Review, Likes
+from .models import Author, Category, Book, Review, Likes, Rating
 
 # Register your models here.
 @admin.register(Author)
@@ -38,3 +38,9 @@ class ReviewAdmin(SummernoteModelAdmin):
 class LikesAdmin(admin.ModelAdmin):
     list_display = ('id', 'liked_book','user_id','created_on')
     search_fields=['liked_book']
+
+
+@admin.register(Rating)
+class RatingAdmin(admin.ModelAdmin):
+    list_display = ('id','rated_book','user_rated','created_on')
+    search_fields=['rated_book']

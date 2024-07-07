@@ -97,3 +97,18 @@ class Likes(models.Model):
     
     def __str__(self):
         return str(self.id)
+
+class Rating(models.Model):
+    """
+    see how many point out of 10 has a book got
+    """
+    rating=models.FloatField(default=0.0)
+    rated_book=models.ForeignKey(Book,on_delete=models.CASCADE,related_name="rated_book")
+    user_rated=models.ForeignKey(User, on_delete=models.CASCADE,related_name='user_rated')
+    created_on=models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["created_on"]
+    
+    def __str__(self):
+        return str(self.rating)
