@@ -11,9 +11,7 @@ from .models import Author,Book,Category,Review
 class BooksList(generic.ListView):
     queryset = Book.objects.all()
     template_name="book/index.html"
-    paginated_by=3
-
-
+    paginate_by=6
 
 def book_list(request):
     queryset = Book.objects.all()
