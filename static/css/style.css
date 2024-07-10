@@ -1,16 +1,20 @@
 body {
     background-color: #F9FAFC;
+    font-family: "Junge", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.brand {
-    font-family: Lato, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #4A4A4F;
+.hvr-underline-from-center{
+    border-bottom:#0A419F;
+    color: #FF4850;
 }
 
-.red-o {
-    color: #E84610;
+.navbar-light .navbar-nav .nav-link{
+    color: #0A419F;
+}
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link{
+    color: #FF4850;
 }
 
 .thin {
@@ -22,11 +26,11 @@ body {
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: #0A419F;
 }
 
 .main-bg {
-    background-color: #2D3D4E;
+    background-color: #fafafa;
 }
 
 .card {
@@ -50,13 +54,24 @@ body {
     width: 100%;
     height: auto;
 }
-
-.author {
-    color: #F19E80;
+.carousel-caption{
+    bottom: 25rem;
+    background-color:rgb(10,65,159, 0.5);
+    
+}
+.card-writer {
+    color: #0A419F;
     margin: 4px;
     text-transform: uppercase;
 }
-
+.book-link{
+    color: #FF4850;
+    text-decoration: none;
+}
+.card-text{
+    overflow:hidden;
+    height:250px
+}
 .masthead {
     margin-top: 10px;
     overflow: hidden;

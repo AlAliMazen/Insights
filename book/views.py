@@ -7,6 +7,25 @@ from .models import Author,Book,Category,Review
 # Create your views here.
 
 
+
+class BooksList(generic.ListView):
+    queryset = Book.objects.all()
+    template_name="book/index.html"
+    paginated_by=3
+
+
+
+def book_list(request):
+    queryset = Book.objects.all()
+    book = get_object_or_404(queryset)
+    print("about to render the the page")
+    return render(request,
+                  'book/index.html',
+                  {
+                      "book": book
+                  })
+
+
 def my_author(request):
     """
     Display authors  :model: book.Author

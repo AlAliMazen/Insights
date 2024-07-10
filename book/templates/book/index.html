@@ -1,0 +1,74 @@
+{% extends "root.html" %}
+{% load static %}
+{% block content %}
+<!-- index and landing page starts here -->
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/shiromani-scattered-books.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>First slide label</h2>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/shiromani-kant-mo3FOTG62ao-unsplash.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>Second slide label</h2>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/daria-nepriakhina-books-above-each-other.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>Third slide label</h2>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+<!-- showing the books which are saved in the database -->
+<div class="container">
+  <div class="row">
+    <div class="col my-3">
+      <h1 class="text-center">Books Gallery</h1>
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for book in book_list %}
+    <div class="col">
+      <div class="card">
+        {% if "placeholder" in book.cover_img.url %}
+        <img src="{% static 'images/default.jpg' %}" class="card-img-top" width="125" height="450"
+          alt="{{ book.title }}">
+        {% else %}
+        <img src="{{ book.cover_img.url }}" class="card-img-top" width="150" height="450" alt="{{ book.title }}">
+        {% endif %}
+        <div class="card-body">
+          <h5 class="card-writer">{{ book.writer }}</h5>
+          <h4 class="card-title"><a href="#" class="book-link hvr-underline-from-center"> {{ book.title }}</a></h4>
+          <h4><i class="fa-solid fa-heart"></i></h4>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
