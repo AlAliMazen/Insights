@@ -1,0 +1,43 @@
+{% extends "root.html" %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/dariusz-old-notebook-with-pen-camera.jpg' %} " class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Book's Category ? </h5>
+        <p>Why do you like this art of books?</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container my-5 px-4 text-center">
+  <div class="row justify-content-center custom-spacing">
+    <div class="col-5">
+      <div class="p-1">
+        <h3>Adding a Category</h3>
+        <!-- for to add a book-->
+        <form action="" method=POST id="category-form">
+          {% csrf_token %}
+          {{ categoryForm | crispy }}
+          <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="col-5">
+      <div class="p-1">
+        <img src="{% static 'images/radu-marcusu-books-with-lady-before.jpg' %}" width="950" height="850" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

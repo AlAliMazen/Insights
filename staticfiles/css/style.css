@@ -33,9 +33,16 @@ body {
     background-color: #fafafa;
 }
 
-.card {
-    border: none;
-    background-color: transparent;
+#book-form,
+#author-form,
+#category-form{
+    border:1px solid #0A419F;
+    padding: 1rem;
+}
+#book-form div,
+#author-form div,
+#category-form div{
+    text-align: left;
 }
 
 .image-container {
@@ -55,7 +62,7 @@ body {
     height: auto;
 }
 .carousel-caption{
-    bottom: 25rem;
+    bottom: 50%;
     background-color:rgb(10,65,159, 0.5);
     
 }

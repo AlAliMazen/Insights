@@ -1,0 +1,45 @@
+{% extends "root.html" %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/dariusz-old-notebook-with-pen-camera.jpg' %} " class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Tell us about your beloved writer </h5>
+        <p>Thoughts brought to life by authors make it worth reading about them</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Here is the form -->
+<div class="container mx-5 px-4 text-center">
+  <div class="row justify-content-center custom-spacing">
+    <div class="col-5">
+      <div class="p-1">
+        <h3>Adding Author</h3>
+        <!-- for to add a book-->
+        <form action="" method=POST enctype="multipart/form-data" id="author-form">
+          {% csrf_token %}
+          {{ authorForm | crispy }}
+          <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+        </form>
+
+      </div>
+    </div>
+    <div class="col-5">
+      <div class="p-1">
+        <img src="{% static 'images/radu-marcusu-books-with-lady-before.jpg' %}" alt="" width="950" height="850">
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
