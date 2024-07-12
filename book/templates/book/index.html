@@ -68,7 +68,7 @@
         <div class="card-body">
           <h3 class="book-writer">{{ book.writer }}</h3>
           <hr class="h-divider">
-          <h3 class="card-title"><a href="#" class="book-link hvr-underline-from-center"> {{ book.title }}</a></h3>
+          <h3 class="card-title"><a href="{% url 'book_insight' book.slug %}" class="book-link hvr-underline-from-center"> {{ book.title }}</a></h3>
           <h4 class="card-category">{{ book.book_category }}</h4>
           <h6 class="book-user">added by: {{ book.user }}  <span class="bar-seprator">|</span>  on {{ book.created_on }} <i class="fa-solid fa-heart"></i></h6>
         </div>

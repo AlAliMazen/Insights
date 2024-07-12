@@ -122,7 +122,13 @@ def add_category(request):
             submitted = True
 
     return render(request,'book/add_category.html', {'categoryForm':categoryForm, 'submitted': submitted})
-    
+
+
+def book_insight(request,slug):
+    queryset = Book.objects.all()
+    book=get_object_or_404(queryset, slug=slug)
+    print(f'{book.title} | {book.writer}')
+    return render(request, "book/book_insight.html",{'book':book})
 
 
 def add_comment(request):

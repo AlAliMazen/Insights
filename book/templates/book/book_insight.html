@@ -1,0 +1,13 @@
+{% extends "root.html" %}
+{% load static %}
+{% block content %}
+<h1>Book details</h1>
+<p>{{ book.title }}</p>
+<p>{{ book.short_description }}</p>
+<p>{{ book.writer }}</p>
+<p>{{ book.user }}</p>
+<p>{{ book.created_on }}</p>
+<p><img src="{{ book.cover_img.url }}" alt="{{ book.title }}"> </p>
+
+
+{% endblock %}

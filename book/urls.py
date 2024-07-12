@@ -9,4 +9,5 @@ urlpatterns=[
     path('add_book/', views.add_book, name='add-book'),
     path('add_author/', views.add_author, name='add-author'),
     path('add_category/', views.add_category, name='add-category'),
+    path('<slug:slug>/', views.book_insight, name='book_insight')
 ]
