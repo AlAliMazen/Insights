@@ -25,12 +25,32 @@
     <div class="col-5">
       <div class="p-1">
         <h3>Adding a book</h3>
+        {% if user.is_authenticated %}
         <!-- for to add a book-->
         <form action="" method=POST enctype="multipart/form-data" id="book-form">
           {% csrf_token %}
           {{ bookForm | crispy }}
           <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
         </form>
+        {% else %}
+        <div class="container">
+          <div class="row justify-content-center">
+            <h4>Sign in or Sign p to add your book</h4>
+            <div class="col my-5">
+              <h5>Already have an account then Sign in</h5>
+              <br>
+              <a href="{% url 'account_login' %}"><button type="button" class="btn btn-primary btn-lg">Sign in</button></a>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col my-5">
+              <h5>Or Sign up for new account</h5>
+              <br>
+              <a href="{% url 'account_signup' %} "><button type="button" class="btn btn-primary btn-lg">Sign up</button></a>
+            </div>
+          </div>
+        </div>
+        {% endif %}
       </div>
     </div>
     <div class="col-5">
