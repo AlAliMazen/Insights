@@ -13,9 +13,9 @@
     <div class="carousel-item active">
       <img src="{% static 'images/shiromani-scattered-books.jpg' %}" class="d-block w-100" alt="...">
       <div class="carousel-caption">
-        <h2>Suggest a new book</h2>
+        <h2 class="caption-text">Suggest a new book</h2>
         <p>Some representative placeholder content for the first slide.</p>
-        <a href="{% url 'add-book' %}"><button type="button" class="btn btn-primary btn-lg">Suggest a book</button></a>
+        <a href="{% url 'add-book' %}"><button type="button" class="btn btn-primary btn-lg suggest-btn">Suggest a book</button></a>
       </div>
     </div>
     <div class="carousel-item">
@@ -51,7 +51,8 @@
 <div class="container">
   <div class="row">
     <div class="col my-3">
-      <h1 class="text-center">Books Gallery</h1>
+      <h1 class="book-gallery">Books Gallery</h1>
+      <hr class="h-divider">
     </div>
   </div>
   <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -65,9 +66,11 @@
         <img src="{{ book.cover_img.url }}" class="card-img-top" width="150" height="450" alt="{{ book.title }}">
         {% endif %}
         <div class="card-body">
-          <h5 class="card-writer">{{ book.writer }}</h5>
-          <h4 class="card-title"><a href="#" class="book-link hvr-underline-from-center"> {{ book.title }}</a></h4>
-          <h4><i class="fa-solid fa-heart"></i></h4>
+          <h3 class="book-writer">{{ book.writer }}</h3>
+          <hr class="h-divider">
+          <h3 class="card-title"><a href="#" class="book-link hvr-underline-from-center"> {{ book.title }}</a></h3>
+          <h4 class="card-category">{{ book.book_category }}</h4>
+          <h6 class="book-user">added by: {{ book.user }}  <span class="bar-seprator">|</span>  on {{ book.created_on }} <i class="fa-solid fa-heart"></i></h6>
         </div>
       </div>
     </div>
@@ -75,7 +78,7 @@
   </div>
 </div>
 {% if is_paginated %}
-<nav aria-label="Page navigation">
+<nav aria-label="Page navigation" class="my-2">
   <ul class="pagination justify-content-center">
     {% if page_obj.has_previous %}
     <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link"> PREV &laquo;</a></li>
