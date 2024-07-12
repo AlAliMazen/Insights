@@ -1,1 +1,1 @@
-web: gunicorn insight.wsgi
+web: gunicorn insights.wsgi
