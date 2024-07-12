@@ -44,9 +44,17 @@ body {
 #category-form div{
     text-align: left;
 }
+.sign-in-up{
+    border:1px solid #0A419F;
+    border-radius: 10px;
+    padding: 1rem;
+}
 
 .image-container {
     position: relative;
+}
+.section-img-container{
+    padding: 10% .5rem;
 }
 
 .image-flash {
@@ -62,9 +70,8 @@ body {
     height: auto;
 }
 .carousel-caption{
-    bottom: 50%;
+    bottom: 25%;
     background-color:rgb(10,65,159, 0.5);
-    
 }
 .card-writer {
     color: #0A419F;
@@ -78,6 +85,22 @@ body {
 .card-text{
     overflow:hidden;
     height:250px
+}
+.btn-primary{
+    background-color: #0A419F;
+    color: #fafafa;
+}
+.btn-primary:hover{
+    background-color: #E84610;
+    border: 1px solid #0A419F;
+}
+.h-divider{
+    width: 50%;
+    height: 5px !important;
+    margin: 5px auto;
+    opacity: .80;
+    border-radius: 10px;
+    background-color: #E84610;
 }
 .masthead {
     margin-top: 10px;
@@ -135,24 +158,25 @@ body {
 
 .btn-signup,
 .btn-edit {
-    background-color: #82DEE4;
+    background-color: #0A419F;
     color: #fff;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
-    background-color: #fff;
-    color: #F19E80;
+    background-color: #FF4850;
+    color: #fafafa;
+    border: 1px solid #0A419F;
 }
 
 .link {
-    color: #23BBBB;
+    color: #FF4850;
     text-decoration: none;
 }
 
 .link:hover,
 .link:active {
-    color: #445261;
+    color: #0A419F;
     text-decoration: underline;
 }
 
@@ -180,4 +204,23 @@ body {
 
 .approval {
     color: lightgreen
+}
+
+/* -- styling the form for sign up and sign in --*/
+.form-title{
+    text-align: center;
+}
+
+.signup, .login{
+    border: 1px solid #0A419F;
+}
+.signup p, .login p {
+    margin: 2px;
+    padding: 2px;
+    text-align: left;
+}
+.signup p label,
+.login p label
+{
+    width: 135px;
 }

@@ -19,11 +19,12 @@
     </div>
   </div>
 </div>
-<div class="container my-5 px-4 text-center">
-  <div class="row justify-content-center custom-spacing">
-    <div class="col-5">
+<div class="container my-5 px-4 text-center justify-content-center">
+  <div class="row custom-spacing">
+    <div class="col-12 col-md-5 p-3 mb-2">
       <div class="p-1">
         <h3>Adding a Category</h3>
+        <hr class="h-divider">
         {% if user.is_authenticated %}
         <!-- for to add a book-->
         <form action="" method=POST id="category-form">
@@ -32,7 +33,7 @@
           <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
         </form>
         {% else %}
-        <div class="container">
+        <div class="container sign-in-up">
           <div class="row justify-content-center">
             <h4>Sign in or Sign p to add your book</h4>
             <div class="col my-5">
@@ -52,9 +53,9 @@
         {% endif %}
       </div>
     </div>
-    <div class="col-5">
-      <div class="p-1">
-        <img src="{% static 'images/radu-marcusu-books-with-lady-before.jpg' %}" width="950" height="850" alt="">
+    <div class="col-12 col-md-5 p-3 mb-2">
+      <div class="section-img-container">
+        <img src="{% static 'images/radu-marcusu-books-with-lady-before.jpg' %}" class="scale" alt="">
       </div>
     </div>
   </div>
