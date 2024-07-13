@@ -3,9 +3,9 @@ from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
-from .models import Author,Book,Category,Review
+from .models import Author,Book,Category,Review,Likes,Rating
 from .forms import BookForm, AuthorForm, CategoryForm
-
+from django.db.models import Avg
 
 
 # Create your views here.
@@ -125,10 +125,27 @@ def add_category(request):
 
 
 def book_insight(request,slug):
+    #book
     queryset = Book.objects.all()
     book=get_object_or_404(queryset, slug=slug)
-    print(f'{book.title} | {book.writer}')
-    return render(request, "book/book_insight.html",{'book':book})
+    # author
+    book_author = book.writer
+    author_details=get_object_or_404(Author, fullname=book_author)
+    #likes
+    likes=book.liked_book.count()
+    #ratings
+    book_rating_set=Rating.objects.filter(rated_book=book)
+    average_rating=book_rating_set.aggregate(Avg('rating'))['rating__avg']
+    #reviews
+    reviews=Review.objects.filter(book=book.id)
+    return render(request, "book/book_insight.html",
+                  {
+                      'book':book,
+                      'author_details':author_details ,
+                      'likes':likes,
+                       'ratings':average_rating,
+                        'reviews':reviews
+                    })
 
 
 def add_comment(request):

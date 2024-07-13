@@ -80,7 +80,7 @@ class Review(models.Model):
         ordering = ["created_on"]
 
     def __str__(self):
-        return self.content
+        return self.insight
 
 
 class Likes(models.Model):

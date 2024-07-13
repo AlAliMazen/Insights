@@ -38,9 +38,11 @@ class ReviewAdmin(SummernoteModelAdmin):
 class LikesAdmin(admin.ModelAdmin):
     list_display = ('id', 'liked_book','user_id','created_on')
     search_fields=['liked_book']
+    list_filter=('liked_book',)
 
 
 @admin.register(Rating)
 class RatingAdmin(admin.ModelAdmin):
-    list_display = ('id','rated_book','user_rated','created_on')
+    list_display = ('id','rated_book','rating', 'user_rated','created_on')
     search_fields=['rated_book']
+    list_filter=('rated_book',)

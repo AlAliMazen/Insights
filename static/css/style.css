@@ -162,6 +162,7 @@ body {
     color: #0A419F;
     size: 2rem;
 }
+
 .book-user{
     color: #FF4850;
 }
@@ -169,13 +170,31 @@ body {
 .bar-seprator{
     color: #0A419F;
 }
+/* -- styling book detail --*/
+.text-justify{
+    text-align: justify;
+}
+.lg-text{
+    font-size: larger;
+}
+
+.book-reviews{
+    color: #0A419F;
+}
+.book-likes{
+    color: #FF4850;
+}
+.book-rating{
+    color: gold;
+}
+
+
 
 .post-link {
     margin: 10px;
     background-color: #0A419F;
     color: #fafafa;
 }
-
 
 .page-link {
     background-color: #0A419F;

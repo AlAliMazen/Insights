@@ -1,13 +1,82 @@
 {% extends "root.html" %}
 {% load static %}
 {% block content %}
-<h1>Book details</h1>
-<p>{{ book.title }}</p>
-<p>{{ book.short_description }}</p>
-<p>{{ book.writer }}</p>
-<p>{{ book.user }}</p>
-<p>{{ book.created_on }}</p>
-<p><img src="{{ book.cover_img.url }}" alt="{{ book.title }}"> </p>
+<div class="container my-5 px-4 text-center justify-content-center">
+    <div class="row">
+        <div class="col-12 col-md-8 my-3 p-2">
+            <h2>{{ book.title }} <span class="bar-seprator">|</span> {{ book.writer }}<hr class="h-divider my-5"></h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-5 p-3 mb-2 text-justify">
+            <h4>Short Overview</h4>
+            <p class="book-description">
+                {{ book.short_description }}
+            </p>
+            <h6 class="book-user">Added by: {{ book.user }} <span class="bar-seprator">|</span> on: {{ book.created_on }} </h6>
+            <div class="my-3 p-3">
+                <div class="row justify-content-center">
+                    <div class="col-10 lg-text">
+                        <span class="mx-1 px-1 book-reviews"><i class="fa-solid fa-comments mx-2"></i>55</span>
+                        <span class="mx-1 px-1 book-likes"><i class="fa-solid fa-heart mx-2"></i>{{ likes }}</span>
+                        <span class="mx-1 px-1 book-rating"><i class="fa-solid fa-star mx-2"></i>{{ ratings }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-5 p-3 mb-2">
+            <img src="{{ book.cover_img.url }}" class="my-5" width="500" height="600" alt="{{ book.title }}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-5 p-3 mb-2 text-justify">
+            <h4>About {{ book.writer }}</h4>
+            <p class="author-biography">
+                {{ author_details.short_biography }}
+
+            </p>
+            <h6 class="book-user">Added by: {{ author_details.user }} <span class="bar-seprator">|</span> on: {{ author_details.created_on }} </h6>            
+        </div>
+        <div class="col-12 col-md-5 p-3 mb-2">
+            <img src="{{ author_details.author_image.url }}" class="my-5" width="500" height="600"  alt="{{ author_details.fullname }}">
+        </div>
+    </div>
+    <div class="row">
+        <!-- showing comments -->
+         <div class="col-md-8 my-4 p-4 text-justify">
+            <h3>Insights:</h3>
+            <div class="insight-body">
+                {% for review in reviews %}
+                <div class="p-2 review">
+                    <div class="font-weight-bold">
+                        {{ review.author }}
+                        <span class="font-weight-normal">
+                            {{ review.created_on }}
+                        </span>
+                    </div>
+                    <div id="review{{ review.id }}">
+                        <p>
+                            {{ review.insight | linebreaks }}
+                        </p>
+                    </div>
+                    {% if review.approved and review.author == user %}
+                    <p class="wait-approval">
+                        Review is awaiting approval
+                    </p>
+                    {% endif %}
+                    {% if user.is_authenticated and review.author == user %}
+                    <button class="btn btn-delete" review_id="{{ review.id }}">Delete</button>
+                    <button class="btn btn-edit" review_id="{{ review.id }}">Edit</button>
+                    {% endif %}
+                </div>
+                {% endfor %}
+
+            </div>
+         </div>
+
+    </div>
+
+</div>
 
 
 {% endblock %}
