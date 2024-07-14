@@ -298,6 +298,17 @@ As part of the requirements for this project you need to have at least **1 origi
 
 For designing and planning my Entities (Models) which are reflected in the database for this project I have used [Quick DBD Online Tool](https://www.quickdatabasediagrams.com/) in the basic plan.
 
+![Database Tables](static/assets/README/Database_tables.png)
+
+## Database Choice
+🚨**Required** 
+
+I have used PostgreSQL indicated and recommended by Code Institute. First I have set up a database connection using the CI recommendations and link it int he Project env.py as DATABASE_URL. It is not possible to check this file as it is added in the .gitignore for security reasons. 
+
+## Data Models
+🚨**Required** 
+
+
 The Database is made of the following entities (Tables):
 
 1- Author : can be added by a created by user or Admin. Client can add many authors even if they still didn't have red their books. **One** authors can write **One or Many** book/s. Admin on the backend can approve the client author and make it available in the dropdown page for other clients.
@@ -306,32 +317,45 @@ Author Entity has the following Columns:
 
 ![Author Table](static/assets/README/author_tbl.png)
 
-2- Category : can be added by a created by user or Admin. Ever
+2- Category : can be added by a created by user or Admin. Clients can add new Category which is not included in the dropdown list in order to categorize the book later on. This Model has Many-to-One relationship to Book entity. Many books can be categorized under one category. The entity is quiet simple and it has a only two columns in addition to its ID. These Columns are category name and category description. It is supposed to be used for future purposes.
 
-3- Book : can be added by a created by user or Admin
-
-4- Like : can be added by a created by user or Admin
-
-5- Rating : can be added by a created by user or Admin
-
-6- User (already defined in Django)
+Category table has the following structure:
+![Category Table](static/assets/README/Category_tbl.png)
 
 
-## Database Choice
-🚨**Required** 
+3- Book : This is the main entity used across website. Books can be added. This table makes use of Author, Category, User, Review, Likes and Rating table. Thus, its relation as as following based on other entities:
 
-Just state you used postgres as the database because the data is relational and heroku serves this up reactively easily with no cost. (this might be changing as Sales Force takes over in November 2022)
+  - Many-to-One  : With Author table
+  - Many-to-One  : With User who added the book
+  - Many-to-One  : with Category as many books can be categorized under one genre
+  - One-to-Many  : with Reviews because one book can have many reviews by many reader (multiple)
+  - One-to-Many  : with Likes because one book can have many likes 
+  - One-to-Many  : with Rating because one book can have many points
 
-## Data Models
-🚨**Required** 
+It has the following structure:
+![Book table](static/assets/README/Book_tbl.png)
 
-Show the accessors you know your data. If you end up using some data models from an example project, call that out and don't be as detailed about writing those up unless you added to them.
 
-Each data model that you created yourself and customized should have its Fields, Field Type and any validation documented. You should also cross-reference any code in your repository that relate to CREATE, READ, UPDATE, DELETE operations for these models.
+4- Likes : interaction table to track clients attitude with the book. It stores which book has been liked and by which user (client). Like is a feature that is either true or false. Thus, every user has and can either like a book (true) or doesn't like the book and keeps it as false per default.
 
-You can try to use markdown, or just take a screenshot from a Google spreadsheet.
+It has the following structure :
 
-Below is an example of a write-up for an Activities Data Model
+![Like Table](static/assets/README/Likes_tbl.png)
+
+
+5- Rating : It is about the total average of a book out of 10. This field is similar to Likes entity but instead of either true or false, client can specify a value between 0.0 to 10.0 . The total rate is going to be calculated by the average.
+
+![Rating Table](static/assets/README/Rating_tbl.png) .
+
+7- Review: The interactions between people who did or want to read the book to give their insights about the book are going to be tracked here. It makes use of the book_id which defines which book has been reviewed and commented on. It has Many-to-One relation to both Book and User table and has the following structure:
+
+![Review Table](static/assets/README/Review_tbl.png)
+
+6- User (already defined in Django): Used and default table by Django framework to help end user creates their accounts on the website. This table is not only used in the Database but also as a separate table in the Django Template Language to decide on whether the user is logged in or out and is the same one as the commenter (reviewer)
+
+![User Table](static/assets/README/User_tbl.png)
+
+
 > **Activities Model**
 > Activities is a table to hold a unique icon image and name values that users have associated with events and places. It helps with sorting events and prevents the need from carrying around two data objects in the larger Events and Places data structures. The purpose of an Activities object is to provide an imagery association to a category.
 >
