@@ -151,7 +151,13 @@ Generate after readme is complete by copying and pasting your readme from this p
 ## Target Audience
 🚀 **merit & beyond**
 
-our site is most likely geared to a certain audience with a certain interest, that is looking for what your site offers. The type of users, age, gender, interests, and the topic of the site drives many UX decisions so write out what whom you expect to use your site.
+Based on the the first idea in my mind, I have coded this website with intention to target the following group of people:
+
+- **Book Enthusiasts** : for all thise who are passionate about reading and want to share their love for books.
+
+- **(Avid) Readers**: For individuals who are always on the lookout for new books to devour and enjoy reading reviews before making a choice.
+
+- **Literary Critics**: For people who enjoy analyzing literature and wish to share their perspectives with a broader audience.
 
 ## Design Choices
 🚀 **merit & beyond**
@@ -161,67 +167,92 @@ Now that you have let the assessors know about the target audience and users, yo
 ### Colors
 🚀 **merit & beyond**
 
-- Discuss your color pallet choices and how it ties into users' emotions or target audience.
-- include a screenshot of your pallet using a tool like coolors.co
+For my colors I have used the following three colors which can make a high contrast helping for reading on a whit background
+ - Dark Blue : RGB(10,65,159) -> HEX: #0A419F 
+ - Dark RED : RGB(255,75,80) -> HEX: #FF4B50 
+ - Light Blue: RGB(63,89,143) -> HEX: #3F598F
+ 
+ For the font and the background, I have used the following standard colors:
+ - Background: RGB(250,250,250) -> HEX: #FAFAFA
+ - Font Color: RBB(0,0,0)       -> HEX:  #000000
+
 
 ### Typography
 🚀 **merit & beyond**
 
-- discuss font size, font types for headers vs buttons vs general text and how it ties into users' emotions or target
-  audience.
-- include screenshots of fonts used and links to the appropriate website ex) https://fonts.google.com/specimen/Raleway
+As this is a website about giving reviews about books which are mostly printable, I have used a similar font which is also for printing. I have used Google fonts and specifically the one used here is called **Junge** 
+
+For the [see the Junge Font Family](https://fonts.google.com/specimen/Junge?query=junge) .
+
 
 ### Images
 🚀 **merit & beyond**
 
-Explain why you used certain icons and images on your site
+I have depended heavily on [Unsplash website for free images](https://unsplash.com/) .
+
+Images used on this website are listed below:
+- [Scattered books](https://unsplash.com/photos/white-and-blue-printer-paper-mo3FOTG62ao) .
+
+- [Women standing before book shelf](https://unsplash.com/photos/woman-finding-some-book-to-read-mbKApJz6RSU)
+
+- [Old book with pen and Camera](https://unsplash.com/photos/flat-ray-photography-of-book-pencil-camera-and-with-lens-3OiYMgDKJ6k).
+
+- [books in shelf](https://unsplash.com/photos/assorted-title-of-books-piled-in-the-shelves-NIJuEQw0RKg).
+
+- [Thinking Fast and Slow](https://unsplash.com/photos/the-new-york-times-book-kshkB1i5_5o).
+
+- [Scattered books II](https://unsplash.com/photos/a-pile-of-books-sitting-next-to-each-other-Hqbkgga0rNQ)
+
+- [books above each other](https://unsplash.com/photos/pile-of-assorted-title-books-xY55bL5mZAM).
+
+- [Placeholder book](https://unsplash.com/photos/white-printer-paper-on-white-surface-zx2xVvxBcww).
+
+
 
 ### Design Elements
 🚀 **merit & beyond**
 
-- list out the type of elements you want to use on your site, this will help you when choosing a framework and goes hand
-  in hand when doing the wireframes. If you did something out of the ordinary, or think something was particularly
-  clever, add a sentence and a screenshot or reference the file the code or css is in.
+- For styling my website I have depend depend on the [Code Institute template](https://github.com/Code-Institute-Solutions/blog/tree/main/01_getting_set_up) as a base template and then customize it based on my needs using **Bootstrap5** built in classes. 
 
-> - desktop navigation
-> - mobile navigation
-> - footer
-> - containers/cards
-> - buttons
-> - text input
-> - textarea inputs
-> - dropdowns
-> - modals/layers
-> - check boxes
-> - switches
-> - accordions/drawers
-> - pagination
-> - date pickers
-> - maps
-> - images
-> - tooltips
-> - icons
-> - tabbed content
-> - file pickers
-> - video players
-> - audio players
-z
-### Animations and Transitions
+
+### Hover Effects and Icons
 🚀 **merit & beyond**
 
-- discuss any special animations or transitions you've programmed
-- special hover state effects
+- When moving cursor over a menubar link a hover effect is going to take place. This hove effect is called **underline from center** . I bring the CDN link for the Hover effect from the [CDN for Hover Effects](https://cdnjs.com/libraries/hover.css)
+
+A list of the available Hover effects can be found under this link [Hover Effects to choose from](https://ianlunn.github.io/Hover/)
+
+
+- Another vital element used heavily on this website is the use of Font-awesome icons which are very helpful indicating the purpose they are created for:
+
+1- [Indicating Reviews on A book ](https://fontawesome.com/icons/comments?f=classic&s=solid)
+
+2- [Rating a book ](https://fontawesome.com/icons/star?f=classic&s=solid)
+
+3 - [Likes on a book ](https://fontawesome.com/icons/heart?f=classic&s=solid)
+
+4- [Linked In ](https://fontawesome.com/icons/linkedin?f=brands&s=solid)
+
+5 - [GitHib Icon](https://fontawesome.com/icons/github?f=brands&s=solid)
+
+
 
 ### Frameworks
 🚨**Required** 
 
-- If you use bootstrap, tailwind, bulma, materialize or some other JS/CSS framework, call it out here and why you made
-  that choice. (Typically I look at the design elements I want and make sure the framework supports them)
+For making the website as responsive as possible I do have used Bootstrap5 and read through its documentation as following :
+
+ - For the Landing page carousel I have used [three images with text below](https://getbootstrap.com/docs/5.3/components/carousel/)
+
+ - For showing off the books gallery on landing page, I have used a [card page](https://getbootstrap.com/docs/5.3/components/card/)
+
+ -  [Navigation bar](https://getbootstrap.com/docs/5.3/components/navbar/) is made of a logo to the left, menubar in the middle. When Website is being loaded on a mobile devices, the menubar is going to be squeezed into a burger button located to the upper right corner of the page.
 
 ### Custom Styles
 🚨**Required**
 
-- call out any overrides you did for bootstrap styles or the framework you used, even if they are fonts and colors, perhaps lead assessors to the file of interest in your repo
+- In order to customize the website, I have coded my own CSS file located in under [project  static root directory](https://github.com/AlAliMazen/Insights/tree/main/static/css) in the template/css/style.css
+
 
 ### Custom Javascript
 🚨**Required** 
@@ -265,11 +296,26 @@ As part of the requirements for this project you need to have at least **1 origi
 ## Entity Relationship Diagram
 🚨**Required** 
 
- [draw.io](https://app.diagrams.net/) is a free tool that can help you draw up an ERD concerning your custom model.
+For designing and planning my Entities (Models) which are reflected in the database for this project I have used [Quick DBD Online Tool](https://www.quickdatabasediagrams.com/) in the basic plan.
 
-Wade Williams wrote a great [blog]( https://wadewilliams.com/technology-software/generating-erd-for-django-applications/) on how to add a django extension to auto create an ERD. 
+The Database is made of the following entities (Tables):
 
-You can always draw one out by hand or in google sheets. 
+1- Author : can be added by a created by user or Admin. Client can add many authors even if they still didn't have red their books. **One** authors can write **One or Many** book/s. Admin on the backend can approve the client author and make it available in the dropdown page for other clients.
+
+Author Entity has the following Columns:
+
+![Author Table](static/assets/README/author_tbl.jpg)
+
+2- Category : can be added by a created by user or Admin. Ever
+
+3- Book : can be added by a created by user or Admin
+
+4- Like : can be added by a created by user or Admin
+
+5- Rating : can be added by a created by user or Admin
+
+6- User (already defined in Django)
+
 
 ## Database Choice
 🚨**Required** 
