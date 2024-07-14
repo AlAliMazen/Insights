@@ -140,11 +140,11 @@ def book_insight(request,slug):
     reviews=Review.objects.filter(book=book.id)
     return render(request, "book/book_insight.html",
                   {
-                      'book':book,
-                      'author_details':author_details ,
-                      'likes':likes,
-                       'ratings':average_rating,
-                        'reviews':reviews
+                    'book':book,
+                    'author_details':author_details ,
+                    'likes':likes,
+                    'ratings':average_rating,
+                    'reviews':reviews
                     })
 
 
