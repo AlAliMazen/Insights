@@ -304,7 +304,7 @@ The Database is made of the following entities (Tables):
 
 Author Entity has the following Columns:
 
-![Author Table](static/assets/README/author_tbl.jpg)
+![Author Table](static/assets/README/author_tbl.png)
 
 2- Category : can be added by a created by user or Admin. Ever
 
