@@ -20,9 +20,9 @@ class CategoryAdmin(SummernoteModelAdmin):
 
 @admin.register(Book)
 class BookAdmin(SummernoteModelAdmin):
-    list_display = ('id','title','writer','book_category')
+    list_display = ('id','title','writer','book_category','approved')
     search_fields = ['title','writer']
-    list_filter = ('title','created_on',)
+    list_filter = ('title','created_on','approved',)
     prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('short_description',)
 

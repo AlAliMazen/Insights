@@ -11,7 +11,8 @@
     <div class="col-md-8 mt-3 offset-md-2">
       <h1 class="form-title">{% trans "Sign Up" %}</h1>
       <hr class="h-divider">
-      <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}
+      <p class="sign-in-up-text">{% blocktrans %}Already have an account? Then please 
+        <a href="{{ login_url }}" class="link">sign in</a>.{% endblocktrans %}
       </p>
       <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
         {% csrf_token %}

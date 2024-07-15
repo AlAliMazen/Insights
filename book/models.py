@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django import forms
 from cloudinary.models import CloudinaryField
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 # Create your models here.
 
@@ -57,8 +59,7 @@ class Book(models.Model):
     short_description = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     book_category = models.ForeignKey(Category, on_delete=models.DO_NOTHING,related_name="Genre")
-    rating_average=models.FloatField(default=0.0)
-    likes=models.IntegerField(default=0)
+    approved=models.BooleanField(default=False)
 
     class Meta:
         ordering = ['created_on','title']
@@ -102,7 +103,7 @@ class Rating(models.Model):
     """
     see how many point out of 10 has a book got
     """
-    rating=models.FloatField(default=0.0)
+    rating=models.FloatField(validators=[MinValueValidator(0.0),MaxValueValidator(10.0)])
     rated_book=models.ForeignKey(Book,on_delete=models.CASCADE,related_name="rated_book")
     user_rated=models.ForeignKey(User, on_delete=models.CASCADE,related_name='user_rated')
     created_on=models.DateTimeField(auto_now_add=True)

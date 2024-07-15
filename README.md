@@ -819,13 +819,11 @@ This section just summarizers tools and programming languages you used.
 
 List out the tools you used with a link and a short description (this helps others figure out where to get the bonus points & reminds you what you used for your next project
 - Balsamiq
-- Coolors.co
 - fontawesome
 - gitpod
 - github
 - google fonts
-- font awesome
-- amiresponsive
+- amiresponsiv
 - table of contents creator
 - markdown table generator
 

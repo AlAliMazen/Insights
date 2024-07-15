@@ -92,7 +92,7 @@ body {
     color: #fafafa;
 }
 .btn-primary:hover{
-    background-color: #E84610;
+    background-color: #FF4850;
     border: 1px solid #0A419F;
 }
 .h-divider{
@@ -101,7 +101,7 @@ body {
     margin: 5px auto;
     opacity: .80;
     border-radius: 10px;
-    background-color: #E84610;
+    background-color: #FF4850;
     margin-bottom: 5px;
 }
 .masthead {
@@ -113,11 +113,6 @@ body {
     width: 100%;
 }
 
-.masthead-text {
-    background-color: #445261;
-    color: white;
-    position: relative;
-}
 
 .masthead-image {
     position: relative;
@@ -138,14 +133,11 @@ body {
     z-index: 100;
 }
 /* -- styling books gallery --*/
-.caption-text{
-    color: #FF4850;
-}
 .suggest-btn{
     background-color: #0A419F;
     color: #fafafa;
-    border-color: #FF4850;
 }
+
 .suggest-btn:hover{
     background-color: #FF4850;
     color: #fafafa;
@@ -201,7 +193,7 @@ body {
     color: #fafafa;
 }
 .page-link:hover{
-    background-color: #E84610;
+    background-color: #FF4850;
     border: 1px solid #0A419F;
     color: #fafafa;
 }
@@ -241,19 +233,19 @@ body {
 }
 
 .btn-like {
-    color: #E84610;
+    color: #FF4850;
     border: none;
     background: transparent;
 }
 
 .btn-delete {
     color: #fff;
-    background: #E84610;
+    background: #FF4850;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
+    color: #FF4850;
     background: transparent;
     border: none;
 }
@@ -283,4 +275,7 @@ body {
 .login p label
 {
     width: 135px;
+}
+.sign-in-up-text{
+    margin-top: 40px;
 }

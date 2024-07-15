@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="col-12 col-md-5 p-3 mb-2">
-            <img src="{{ book.cover_img.url }}" class="my-5" width="500" height="600" alt="{{ book.title }}">
+            <img src="{{ book.cover_img.url }}" class="my-5" width="100%" height="600" alt="{{ book.title }}">
         </div>
     </div>
     <div class="row">
@@ -38,7 +38,7 @@
             <h6 class="book-user">Added by: {{ author_details.user }} <span class="bar-seprator">|</span> on: {{ author_details.created_on }} </h6>            
         </div>
         <div class="col-12 col-md-5 p-3 mb-2">
-            <img src="{{ author_details.author_image.url }}" class="my-5" width="500" height="600"  alt="{{ author_details.fullname }}">
+            <img src="{{ author_details.author_image.url }}" class="my-5" width="100%" height="600"  alt="{{ author_details.fullname }}">
         </div>
     </div>
     <div class="row">

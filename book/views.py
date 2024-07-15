@@ -11,20 +11,9 @@ from django.db.models import Avg
 # Create your views here.
 
 class BooksList(generic.ListView):
-    queryset = Book.objects.all()
+    queryset = Book.objects.filter(approved=True)
     template_name="book/index.html"
     paginate_by=6
-
-def book_list(request):
-    queryset = Book.objects.all()
-    book = get_object_or_404(queryset)
-    print("about to render the the page")
-    return render(request,
-                  'book/index.html',
-                  {
-                      "book": book
-                  })
-
 
 def my_author(request):
     """
