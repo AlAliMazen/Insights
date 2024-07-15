@@ -17,16 +17,15 @@ class AuthorForm(forms.ModelForm):
         fields = ('fullname','date_of_birth','author_image','place_of_birth','short_biography')
         # widget=forms.DateInput(format='%d/%m/%Y'),input_formats=['%d/%m/%Y'],
         labels = {
-			'name': 'Author fullname',
-			'date_of_birth': 'dd/mm/yyyy',
-			'author_image': 'Manager',
+			'fullname': 'Author fullname',
+			'date_of_birth': 'Date of Birth',
+			'author_image': 'Author Image',
 			'place_of_birth': 'Country of origin',
 			'short_biography': 'Short biography',			
 		}
 
         widgets = {
-			'name': forms.TextInput(attrs={'class':'form-control', 'placeholder':'Event Name'}),
-			'date_of_birth': forms.DateInput(attrs={'type': 'text', 'placeholder': 'dd.mm.yyyy'}),
+			'date_of_birth': forms.DateInput(attrs={'type': 'text', 'placeholder': 'yyyy-mm-dd'}),
 		}
 
 class CategoryForm(forms.ModelForm):
