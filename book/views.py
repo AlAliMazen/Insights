@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from .models import Author,Book,Category,Review,Likes,Rating
-from .forms import BookForm, AuthorForm, CategoryForm
+from .forms import BookForm, AuthorForm, CategoryForm, ReviewForm
 from django.db.models import Avg
 
 
@@ -127,18 +127,58 @@ def book_insight(request,slug):
     average_rating=book_rating_set.aggregate(Avg('rating'))['rating__avg']
     #reviews
     reviews=Review.objects.filter(book=book.id)
+
+    # Review form
+    userReview=ReviewForm()
+    #handling the post request
+
+    if request.method=='POST':
+        userReview=ReviewForm(request.POST)
+        if userReview.is_valid():
+           print("in the inner if")
+           single_review=userReview.save(commit=False)
+           single_review.book=book
+           single_review.author = request.user
+           single_review.save()
+           messages.add_message(
+                request, messages.SUCCESS,
+                'Review submitted and awaiting approval'
+            )
+           userReview=ReviewForm()
+    print("About to render the books insights")
     return render(request, "book/book_insight.html",
                   {
                     'book':book,
                     'author_details':author_details ,
                     'likes':likes,
                     'ratings':average_rating,
-                    'reviews':reviews
+                    'reviews':reviews,
+                    'userReview':userReview
                     })
 
 
-def add_comment(request):
+def add_review(request, id):
     """
     Display Book  :model: book.book
     """
-    return HttpResponse("<h1>Comment</h1>")
+    submitted = False
+    print("in the function")
+    if request.method =='POST':
+        print("Any thing")
+        reviewForm=ReviewForm(request.POST)
+        book = get_object_or_404(Book,book_id=id)
+        print(f'{book.title}')
+        if reviewForm.is_valid():
+           reviewForm.save(commit=False)
+           reviewForm.book=book
+           reviewForm.author= request.user
+           reviewForm.save()
+           messages.add_message(
+                request, messages.SUCCESS,
+                'Review submitted and awaiting approval'
+            )
+           submitted =True
+        else:
+            reviewForm = ReviewForm()
+
+    return render(request,"book/book_insight.html/",{'reviewForm':reviewForm})

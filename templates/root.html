@@ -71,11 +71,18 @@
                     {% endif %}
 
                 </ul>
-                <!--<span class="navbar-text text-muted"> adventures of a software developer</span>-->
+               
             </div>
         </div>
     </nav>
     <main class="flex-shrink-0 main-bg">
+       
+        {% if user.is_authenticated %}
+        <p class="text-center m-3">Hello {{ user }}</p>
+        {% else %}
+        <p class="text-center m-3">You are not logged in</p>
+        {% endif %}
+        
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}

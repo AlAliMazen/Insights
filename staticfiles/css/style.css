@@ -279,3 +279,6 @@ body {
 .sign-in-up-text{
     margin-top: 40px;
 }
+.wait-approval{
+    color: red;
+}

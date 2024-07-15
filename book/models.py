@@ -74,7 +74,7 @@ class Review(models.Model):
     """
     book=models.ForeignKey(Book, on_delete=models.CASCADE, related_name="reviews")
     author=models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
-    insight=models.TextField(default='Give your thoughts about the book')
+    insight=models.TextField(blank=False)
     approved=models.BooleanField(default=False)
     created_on=models.DateTimeField(auto_now_add=True)
     class Meta:

@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from book.views import my_author, add_category, add_book, add_comment
+from book.views import my_author, add_category, add_book
 
 urlpatterns = [
     #path('',my_author,name='home'),

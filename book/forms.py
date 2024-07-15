@@ -2,7 +2,7 @@ from django import forms
 
 from django.forms import ModelForm
 
-from .models import Book, Author, Category
+from .models import Book, Author, Category,Review
 
 # create a form for a book 
 
@@ -33,3 +33,8 @@ class CategoryForm(forms.ModelForm):
         model=Category
         fields=('category_name','category_description')
 
+
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model=Review
+        fields=('insight',)
