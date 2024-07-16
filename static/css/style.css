@@ -173,14 +173,14 @@ body {
 .book-reviews{
     color: #0A419F;
 }
+
 .book-likes{
     color: #FF4850;
 }
+
 .book-rating{
-    color: rgb(22, 236, 11);
+    color: rgb(236, 195, 11);
 }
-
-
 
 .post-link {
     margin: 10px;
@@ -278,4 +278,7 @@ body {
 }
 .wait-approval{
     color: red;
+}
+.social-links{
+    color:#fafafa
 }
