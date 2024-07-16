@@ -1,0 +1,785 @@
+[
+    {
+        "model": "book.author",
+        "pk": 2,
+        "fields": {
+            "fullname": "William Shakespear",
+            "user": 1,
+            "author_image": "image/upload/v1720238565/mxsbrfqdxsonub1m6ixi.png",
+            "place_of_birth": "England",
+            "date_of_birth": "1616-04-23",
+            "short_biography": "William Shakespeare .April 1564 – 23 April 1616) was an English playwright, poet and actor. He is widely regarded as the greatest writer in the English language and the world's pre-eminent dramatist. He is often called England's national poet and the \"Bard of Avon\" (or simply \"the Bard\"). His extant works, including collaborations, consist of some 39 plays, 154 sonnets, three long narrative poems and a few other verses, some of uncertain authorship. His plays have been translated into every major living language and are performed more often than those of any other playwright. Shakespeare remains arguably the most influential writer in the English language, and his works continue to be studied and reinterpreted.\r\n\r\nShakespeare was born and raised in Stratford-upon-Avon, Warwickshire. At the age of 18, he married Anne Hathaway, with whom he had three children: Susanna, and twins Hamnet and Judith. Sometime between 1585 and 1592, he began a successful career in London as an actor, writer, and part-owner (\"sharer\") of a playing company called the Lord Chamberlain's Men, later known as the King's Men after the ascension of King James VI of Scotland to the English throne.",
+            "created_on": "2024-07-06T04:04:13.306Z",
+            "approved": true
+        }
+    },
+    {
+        "model": "book.author",
+        "pk": 3,
+        "fields": {
+            "fullname": "Emily Jane Brontë",
+            "user": 1,
+            "author_image": "image/upload/v1720272458/i0dkrgozmjkek47x0gkp.png",
+            "place_of_birth": "England",
+            "date_of_birth": "1818-06-30",
+            "short_biography": "Emily Brontë was born on 30 July 1818 to Maria Branwell and an Irish father, Patrick Brontë. The family was living on Market Street, in a house now known as the Brontë Birthplace in the village of Thornton on the outskirts of Bradford, in the West Riding of Yorkshire, England. Emily was the second youngest of six siblings, preceded by Maria, Elizabeth, Charlotte and Branwell. In 1820, Emily's younger sister Anne, the last Brontë child, was born. Shortly thereafter, the family moved eight miles away to Haworth, where Patrick was employed as perpetual curate.[4] In Haworth, the children would have opportunities to develop their literary talents.\r\n\r\nWhen Emily was only three, and all six children under the age of eight, she and her siblings lost their mother, Maria, to cancer on 15 September 1821.[5] The younger children were to be cared for by Elizabeth Branwell, their aunt and Maria's sister.\r\n\r\nEmily's three elder sisters, Maria, Elizabeth, and Charlotte were sent to the Clergy Daughters' School at Cowan Bridge. At the age of six, on 25 November 1824, Emily joined her sisters at school for a brief period.[6] At school, however, the children suffered abuse and privations, and when a typhoid epidemic swept the school, Maria and Elizabeth became ill. Maria, who may actually have had tuberculosis, was sent home, where she died. Elizabeth died shortly after.",
+            "created_on": "2024-07-06T13:27:38.549Z",
+            "approved": false
+        }
+    },
+    {
+        "model": "book.author",
+        "pk": 4,
+        "fields": {
+            "fullname": "Eric Arthur Blair",
+            "user": 1,
+            "author_image": "image/upload/placeholder",
+            "place_of_birth": "England",
+            "date_of_birth": "1903-06-25",
+            "short_biography": "Eric Arthur Blair (25 June 1903 – 21 January 1950) was an English novelist, poet, essayist, journalist, and critic who wrote under the pen name of George Orwell.[2] His work is characterised by lucid prose, social criticism, opposition to totalitarianism, and support of democratic socialism.[3][4]\r\n\r\nOrwell produced literary criticism, poetry, fiction, and polemical journalism. He is known for the allegorical novella Animal Farm (1945) and the dystopian novel Nineteen Eighty-Four (1949). His non-fiction works, including The Road to Wigan Pier (1937), documenting his experience of working-class life in the industrial north of England, and Homage to Catalonia (1938), an account of his experiences soldiering for the Republican faction of the Spanish Civil War (1936–1939), are as critically respected as his essays on politics, literature, language and culture.\r\n\r\nBorn in India, Blair was raised and educated in England from the age of one. After school he became an Imperial policeman in Burma, before returning to Suffolk, England, where he began his writing career as George Orwell—a name inspired by a favourite location, the River Orwell. He made a living from occasional pieces of journalism, and also worked as a teacher or bookseller while living in London. From the late 1920s to the early 1930s, his success as a writer grew and his first books were published. He was wounded fighting in the Spanish Civil War, leading to his first period of ill health on return to England. During the Second World War he served as a sergeant in the Greenwich Home Guard (1940–41), worked as a journalist and, between 1941 and 1943, worked for the BBC. The 1945 publication of Animal Farm led to fame during his lifetime. During his final years, he worked on Nineteen Eighty-Four and moved between London and the Scottish island of Jura. Nineteen Eighty-Four was published in June 1949, less than a year before his death.",
+            "created_on": "2024-07-06T13:30:16.099Z",
+            "approved": false
+        }
+    },
+    {
+        "model": "book.author",
+        "pk": 5,
+        "fields": {
+            "fullname": "Dan Brown",
+            "user": 1,
+            "author_image": "image/upload/v1720272865/enywbmlqjuripvz5zqkb.png",
+            "place_of_birth": "Exeter, New Hampshire, US",
+            "date_of_birth": "1964-06-22",
+            "short_biography": "Daniel Gerhard Brown (born June 22, 1964) is an American author best known for his thriller novels, including the Robert Langdon novels Angels & Demons (2000), The Da Vinci Code (2003), The Lost Symbol (2009), Inferno (2013), and Origin (2017). His novels are treasure hunts that usually take place over a period of 24 hours.[3] They feature recurring themes of cryptography, art, and conspiracy theories. His books have been translated into 57 languages and, as of 2012, have sold over 200 million copies. Three of them, Angels & Demons, The Da Vinci Code, and Inferno, have been adapted into films, while one of them, The Lost Symbol, was adapted into a television show.\r\n\r\nThe Robert Langdon novels are deeply engaged with Christian themes and historical fiction, and have generated controversy as a result. Brown states on his website that his books are not anti-Christian and he is on a \"constant spiritual journey\" himself.[4] He states that his book The Da Vinci Code is \"an entertaining story that promotes spiritual discussion and debate\" and suggests that the book may be used \"as a positive catalyst for introspection and exploration of our faith.\"[5]",
+            "created_on": "2024-07-06T13:34:26.027Z",
+            "approved": true
+        }
+    },
+    {
+        "model": "book.author",
+        "pk": 6,
+        "fields": {
+            "fullname": "Gibran Khalil Gibran",
+            "user": 1,
+            "author_image": "image/upload/v1720273105/azocrjytvf13cmvmhlrc.png",
+            "place_of_birth": "Lebanon",
+            "date_of_birth": "1883-04-10",
+            "short_biography": "was a Lebanese-American writer, poet and visual artist; he was also considered a philosopher, although he himself rejected the title.[5] He is best known as the author of The Prophet, which was first published in the United States in 1923 and has since become one of the best-selling books of all time, having been translated into more than 100 languages.[d]\r\n\r\nBorn in Bsharri, a village of the Ottoman-ruled Mount Lebanon Mutasarrifate to a Maronite Christian family, young Gibran immigrated with his mother and siblings to the United States in 1895. As his mother worked as a seamstress, he was enrolled at a school in Boston, where his creative abilities were quickly noticed by a teacher who presented him to photographer and publisher F. Holland Day. Gibran was sent back to his native land by his family at the age of fifteen to enroll at the Collège de la Sagesse in Beirut. Returning to Boston upon his youngest sister's death in 1902, he lost his older half-brother and his mother the following year, seemingly relying afterwards on his remaining sister's income from her work at a dressmaker's shop for some time.",
+            "created_on": "2024-07-06T13:38:25.587Z",
+            "approved": true
+        }
+    },
+    {
+        "model": "book.author",
+        "pk": 7,
+        "fields": {
+            "fullname": "Tayeb Salih",
+            "user": 1,
+            "author_image": "image/upload/v1720273302/baxndqldxttwcb8f5aru.png",
+            "place_of_birth": "Sudan",
+            "date_of_birth": "1929-07-12",
+            "short_biography": "Born in Karmakol, a village on the Nile near Al Dabbah, Sudan, in the Northern Province of Sudan, he graduated from University of Khartoum with a Bachelor of Science, before leaving for the University of London in the United Kingdom. Coming from a background of small farmers and religious teachers, his original intention was to work in agriculture. However, excluding a brief spell as a schoolmaster before moving to England, he worked in journalism and the promotion of international cultural exchange.\r\n\r\nFor more than ten years, Salih wrote a weekly column for the London-based Arabic language newspaper al Majalla, in which he explored various literary themes. He worked for the BBC's Arabic Service and later became director general of the Ministry of Information in Doha, Qatar. The last ten years of his working career, he spent at UNESCO headquarters in Paris, where he held various posts and was UNESCO's representative for the Arab states of the Persian Gulf.\r\n\r\nSalih's writing draws important inspiration from his youth in a Sudanese village; life that is centered on rural people and their complex relationships. \"At various levels and with varying degrees of psychoanalytic emphasis, he deals with themes of reality and illusion, the cultural dissonance between the West and the exotic Orient, the harmony and conflict of brotherhood, and the individual's responsibility to find a fusion between his or her contradictions.\"",
+            "created_on": "2024-07-06T13:41:43.527Z",
+            "approved": true
+        }
+    },
+    {
+        "model": "book.author",
+        "pk": 8,
+        "fields": {
+            "fullname": "Nizar Tawfiq Qabbani",
+            "user": 1,
+            "author_image": "image/upload/v1720273482/x7drpgij1wtejy6xrvew.png",
+            "place_of_birth": "Damascus, Syria",
+            "date_of_birth": "1923-03-21",
+            "short_biography": "Nizar Tawfiq Qabbani was a Syrian diplomat, poet, writer and publisher. He is considered to be Syria's National Poet. Qabbani was raised in Mi'thnah Al-Shahm, one of the neighborhoods of Old Damascus and studied at the National Scientific College School in Damascus between 1930 and 1941.The school was owned and run by his father's friend, Ahmad Munif al-Aidi. He later studied law at Damascus University, which was called Syrian University until 1958. He graduated with a bachelor's degree in law in 1945.\r\nAt the age of fifteen, Nizar Qabbani’s sister died due to contested reasons.[6] When asked whether he was a revolutionary, the poet answered: “Love in the Arab world is like a prisoner, and I want to set (it) free. I want to free the Arab soul, sense, and body with my poetry. The relationships between men and women in our society are not healthy.”\r\n\r\nIn 1981, Nizar Qabbani’s wife, Balqees, died in a bombing in Beirut, Lebanon, during the Lebanese civil war. The death of Balqees profoundly affected Qabbani’s psychology and poetry. He expressed his grief in an exceptionally moving poem titled Balqees. Qabbani blamed all Arab regimes for her death. Additionally, Qabbani used the death of his beloved Balqees to symbolize the death of Arab people in the Levant by their governments.[7] \"Balqees: I ask forgiveness. Maybe your life was for mine, a sacrifice. I know well that your killers’ aims were to kill my words. My beautiful, rest in peace. After you, poetry will cease and womanhood is out of place. Generations of children flocks Will keep asking about your long hair locks. Generations of lovers will read about you, the true instructor. One day the Arabs will get it that they killed the prophetess and the prophets.\".\r\n\r\nNizar Qabbani married twice in his life. His first wife was his cousin Zahra Aqbiq; together they had a daughter, Hadba, and a son, Tawfiq. Tawfiq died due to a heart attack when he was 22 years old when he was in London. Qabbani eulogized his son in the famous poem \"To the Legendary Damascene, Prince Tawfiq Qabbani\". Zahra Aqbiq died in 2007. His daughter Hadba,[12] born in 1947, was married twice, and lived in London until her death in April 2009.[12]\r\n\r\nHis second marriage was to an Iraqi woman named Balqis al-Rawi, a schoolteacher he met at a poetry recital in Baghdad; she was killed in the 1981 Iraqi embassy bombing in Beirut during the Lebanese Civil War on 15 December 1981.[4][8] Together they had a son, Omar, and a daughter, Zainab. After the death of Balqis, Qabbani did not marry again.",
+            "created_on": "2024-07-06T13:47:08.592Z",
+            "approved": true
+        }
+    },
+    {
+        "model": "book.author",
+        "pk": 9,
+        "fields": {
+            "fullname": "Mahmoud Darwish",
+            "user": 1,
+            "author_image": "image/upload/v1720274106/sxrev3rrhrxwcgydauac.png",
+            "place_of_birth": "Palestine",
+            "date_of_birth": "1941-03-13",
+            "short_biography": "Mahmoud Darwish was born in 1941 in al-Birwa in the Western Galilee,the second child of Salim and Houreyyah Darwish. His family were landowners. His mother was illiterate, but his grandfather taught him to read. During the Nakba, his village was captured by Israeli forces and the family fled to Lebanon, first to Jezzine and then Damour. Their home village was razed and destroyed by the IDF. to prevent its inhabitants from returning to their homes inside the new Jewish state.\r\n\r\nn 1988, Darwish wrote the Palestinian Declaration of Independence, which was the formal declaration for the creation of a State of Palestine. Darwish won numerous awards for his works. In his poetic works, Darwish explored Palestine as a metaphor for the loss of Eden, birth and resurrection, and the anguish of dispossession and exile.[2][3] He has been described as incarnating and reflecting \"the tradition of the political poet in Islam, the man of action whose action is poetry.\"",
+            "created_on": "2024-07-06T13:55:07.881Z",
+            "approved": true
+        }
+    },
+    {
+        "model": "book.author",
+        "pk": 10,
+        "fields": {
+            "fullname": "Ada Lovelace",
+            "user": 1,
+            "author_image": "image/upload/placeholder",
+            "place_of_birth": "London, England",
+            "date_of_birth": "1852-11-27",
+            "short_biography": "Ada Lovelace was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. She was the first to recognise that the machine had applications beyond pure calculation.\r\n\r\nHer educational and social exploits brought her into contact with scientists such as Andrew Crosse, Charles Babbage, Sir David Brewster, Charles Wheatstone and Michael Faraday, and the author Charles Dickens, contacts which she used to further her education. Ada described her approach as \"poetical science\" and herself as an \"Analyst (& Metaphysician)\".\r\n\r\nWhen she was eighteen, her mathematical talents led her to a long working relationship and friendship with fellow British mathematician Charles Babbage, who is known as \"the father of computers\". She was in particular interested in Babbage's work on the Analytical Engine. Lovelace first met him on 5 June 1833, when she and her mother attended one of Charles Babbage's Saturday night soirées[6] with their mutual friend, and Ada's private tutor, Mary Somerville.",
+            "created_on": "2024-07-06T13:57:30.140Z",
+            "approved": true
+        }
+    },
+    {
+        "model": "book.author",
+        "pk": 11,
+        "fields": {
+            "fullname": "Abdel-Wahab El-Messiri",
+            "user": 1,
+            "author_image": "image/upload/v1720274596/abrued1a09i5evov45sb.png",
+            "place_of_birth": "Eygpt",
+            "date_of_birth": "1938-07-02",
+            "short_biography": "El-Messiri was born in Damanhur, Egypt, graduated with a BA in English literature from Alexandria University in 1959. He received a MA in English and comparative literature from Columbia University in 1964 and a PhD in the same field from Rutgers University in 1969. He was professor emeritus of English and comparative literature at Ain Shams University, Egypt, from 1988. He was also a university professor at King Saud University, Saudi Arabia (1983–1988) and at Kuwait University, Kuwait (1988–1989) and a visiting professor at the International Islamic University Malaysia.",
+            "created_on": "2024-07-06T14:03:16.837Z",
+            "approved": true
+        }
+    },
+    {
+        "model": "book.author",
+        "pk": 12,
+        "fields": {
+            "fullname": "D. H. Lawrence",
+            "user": 1,
+            "author_image": "image/upload/v1721052728/ulykdn7iajnwe5sxoq8i.png",
+            "place_of_birth": "Englasnd",
+            "date_of_birth": "1885-09-11",
+            "short_biography": "He was an English novelist, short story writer, poet, playwright, literary critic, travel writer, essayist, and painter. His modernist works reflect on modernity, social alienation and industrialization, while championing sexuality, vitality and instinct. Three of his most famous novels — The Rainbow, Women in Love, and Lady Chatterley's Lover — were the subject of censorship trials for their radical portrayals of sexuality and use of explicit language.\r\n\r\nLawrence's opinions and artistic preferences earned him a controversial reputation; he endured contemporary persecution and public misrepresentation of his creative work throughout his life, much of which he spent in a voluntary exile that he described as a \"savage enough pilgrimage\".[1] At the time of his death, he had been variously scorned as tasteless, avant-garde, and a pornographer who had only garnered success for erotica; however, English novelist and critic E. M. Forster, in an obituary notice, challenged this widely held view, describing him as \"the greatest imaginative novelist of our generation\".[2] Later, English literary critic F. R. Leavis also championed both his artistic integrity and his moral seriousness.",
+            "created_on": "2024-07-15T14:12:09.448Z",
+            "approved": true
+        }
+    },
+    {
+        "model": "book.author",
+        "pk": 13,
+        "fields": {
+            "fullname": "Jane Austin",
+            "user": 4,
+            "author_image": "image/upload/v1720580074/ic8huzmcb4ksqieexyi2.png",
+            "place_of_birth": "United Kindeom",
+            "date_of_birth": "1775-12-16",
+            "short_biography": "<p><span style=\"color: rgb(189, 193, 198); font-family: Arial, sans-serif; background-color: rgb(31, 31, 31);\">Jane Austen was an English novelist known primarily for her six novels, which implicitly interpret, critique, and comment upon the British landed gentry at the end of the 18th century. Austen's plots often explore the dependence of women on marriage for the pursuit of favourable social standing and economic security.</span><br></p>",
+            "created_on": "2024-07-10T02:54:34.672Z",
+            "approved": true
+        }
+    },
+    {
+        "model": "book.author",
+        "pk": 14,
+        "fields": {
+            "fullname": "Edward Snowden",
+            "user": 7,
+            "author_image": "image/upload/v1720709603/lmzzc2wbi6cxkq5da6yq.png",
+            "place_of_birth": "United States",
+            "date_of_birth": "1983-06-21",
+            "short_biography": "<p>Edward Joseph Snowden, born on June 21, 1983, in Elizabeth City, North Carolina, is a former National Security Agency (NSA) contractor who gained international fame as a whistleblower. Snowden is known for leaking classified information from the NSA in 2013, revealing extensive global surveillance programs conducted by the NSA in collaboration with telecommunication companies and European governments.</p><p><br></p><p>Snowden grew up in a family with a history of government service; his father was a Coast Guard officer, and his mother worked for the U.S. District Court. Snowden displayed an early aptitude for computers and technology, dropping out of high school but later earning a GED. He briefly attended community college and took online courses before embarking on a career in the technology sector.</p><p><br></p><p>He joined the U.S. Army in 2004 but was discharged after breaking both legs during training. Snowden then worked for the Central Intelligence Agency (CIA) as a systems administrator and later as a subcontractor for the NSA. It was during his time with the NSA that he became disillusioned with the agency's practices, leading him to collect evidence of what he viewed as unethical mass surveillance.</p><p><br></p><p>In May 2013, Snowden fled to Hong Kong, where he met with journalists from The Guardian and The Washington Post, providing them with NSA documents. The publications sparked a global debate about privacy, security, and the extent of government surveillance. After his revelations, the U.S. government charged Snowden with theft of government property and violations of the Espionage Act.</p><p><br></p><p>Seeking asylum, Snowden traveled to Russia, where he was granted temporary asylum and later, permanent residency. His actions have been both lauded as a courageous stand for civil liberties and criticized as a threat to national security. Snowden has since been an advocate for privacy rights and has written an autobiography titled \"Permanent Record,\" published in 2019. He continues to speak out on issues of privacy and surveillance from his residence in Russia.</p>",
+            "created_on": "2024-07-16T09:21:43.545Z",
+            "approved": true
+        }
+    },
+    {
+        "model": "book.author",
+        "pk": 15,
+        "fields": {
+            "fullname": "Mazen Al Ali",
+            "user": 1,
+            "author_image": "image/upload/placeholder",
+            "place_of_birth": "Syria",
+            "date_of_birth": "1990-10-01",
+            "short_biography": "kjhflkjsdghlksdfg",
+            "created_on": "2024-07-11T16:23:31.789Z",
+            "approved": false
+        }
+    },
+    {
+        "model": "book.author",
+        "pk": 16,
+        "fields": {
+            "fullname": "Adham Shirqayw",
+            "user": 1,
+            "author_image": "image/upload/v1720715135/ifxgafujhac5ud5hobrn.png",
+            "place_of_birth": "Palestine",
+            "date_of_birth": "1975-01-01",
+            "short_biography": "any thing as test",
+            "created_on": "2024-07-11T16:25:36.280Z",
+            "approved": false
+        }
+    },
+    {
+        "model": "book.author",
+        "pk": 17,
+        "fields": {
+            "fullname": "Test Author",
+            "user": 1,
+            "author_image": "image/upload/v1720715724/qagyf1yo6iorxecqxkba.png",
+            "place_of_birth": "US",
+            "date_of_birth": "2000-10-01",
+            "short_biography": "kjkdhsdkljfhsdf",
+            "created_on": "2024-07-11T16:35:25.224Z",
+            "approved": false
+        }
+    },
+    {
+        "model": "book.author",
+        "pk": 18,
+        "fields": {
+            "fullname": "Hillary Diane Rodham Clinton",
+            "user": 1,
+            "author_image": "image/upload/v1721052102/unhwukzt0nred6cp6iow.png",
+            "place_of_birth": "United States",
+            "date_of_birth": "1947-10-26",
+            "short_biography": "Hillary Diane Rodham Clinton, born on October 26, 1947, in Chicago, Illinois, is a prominent American politician, diplomat, lawyer, writer, and public speaker. She was the First Lady of the United States from 1993 to 2001, serving alongside her husband, President Bill Clinton. As First Lady, she advocated for healthcare reform and championed women's and children's rights.\r\n\r\nA graduate of Wellesley College and Yale Law School, Clinton worked as a lawyer before entering public service. She served as the First Lady of Arkansas from 1979 to 1981 and from 1983 to 1992. In 2000, Clinton was elected as the first female Senator from New York, serving until 2009. During her tenure, she focused on issues such as national security, healthcare, and support for first responders in the wake of the September 11 attacks.\r\n\r\nIn 2008, Clinton ran for the Democratic presidential nomination but was defeated by Barack Obama, who appointed her as Secretary of State, a role she held from 2009 to 2013. As Secretary of State, she played a crucial role in shaping U.S. foreign policy, advocating for the use of \"smart power\" and emphasizing human rights and women's empowerment globally.\r\n\r\nClinton ran again for president in 2016 and became the Democratic nominee, making history as the first woman to lead a major party's ticket. She won the popular vote but lost the Electoral College to Donald Trump. Since then, Clinton has remained active in public life, writing several books and continuing her advocacy for social and political causes.\r\n\r\nThroughout her career, Clinton has been a polarizing figure, admired for her dedication to public service and criticized by opponents on various grounds. Despite controversies, her influence on American politics and her role as a trailblazer for women in leadership positions are widely acknowledged.",
+            "created_on": "2024-07-15T14:01:43.282Z",
+            "approved": false
+        }
+    },
+    {
+        "model": "book.category",
+        "pk": 1,
+        "fields": {
+            "category_name": "Fantasy",
+            "category_description": "Fantasy books are set in fictional universes and often involve magic, mythical creatures, and supernatural events. They can include epic quests, complex worlds, and imaginative elements.\r\n\r\nExample: The Lord of the Rings by J.R.R. Tolkien"
+        }
+    },
+    {
+        "model": "book.category",
+        "pk": 2,
+        "fields": {
+            "category_name": "Science Fiction",
+            "category_description": "Science fiction (sci-fi) explores futuristic concepts, advanced technology, space exploration, time travel, and extraterrestrial life. These stories often question the impact of scientific advancements on society and individuals.\r\n\r\n\r\nExample: Dune by Frank Herbert"
+        }
+    },
+    {
+        "model": "book.category",
+        "pk": 3,
+        "fields": {
+            "category_name": "Mystery",
+            "category_description": "Mystery novels revolve around solving a crime, often a murder, with a detective or amateur sleuth uncovering clues and unraveling the truth. They keep readers guessing until the end.\r\n\r\n\r\nExample: The Girl with the Dragon Tattoo by Stieg Larsson"
+        }
+    },
+    {
+        "model": "book.category",
+        "pk": 4,
+        "fields": {
+            "category_name": "Romance",
+            "category_description": "Romance novels focus on the romantic relationships between characters. They typically have an emotionally satisfying and optimistic ending. Subgenres include historical romance, contemporary romance, and romantic suspense.\r\n\r\nExample: Pride and Prejudice by Jane Austen"
+        }
+    },
+    {
+        "model": "book.category",
+        "pk": 5,
+        "fields": {
+            "category_name": "Horror",
+            "category_description": "Horror books are designed to frighten and unsettle readers. They often involve supernatural elements, monsters, or psychological terror. The goal is to evoke feelings of fear and dread.\r\n\r\nExample: The Shining by Stephen King"
+        }
+    },
+    {
+        "model": "book.category",
+        "pk": 6,
+        "fields": {
+            "category_name": "Historical Fiction",
+            "category_description": "Historical fiction is set in a past time period and often incorporates real historical events or figures with fictional characters and plots. It aims to bring history to life and provide insight into different eras.\r\n\r\nExample: All the Light We Cannot See by Anthony Doerr"
+        }
+    },
+    {
+        "model": "book.category",
+        "pk": 7,
+        "fields": {
+            "category_name": "Biography/Autobiography",
+            "category_description": "Biographies and autobiographies tell the true story of a person's life. Biographies are written by someone else, while autobiographies are written by the subject themselves.\r\n\r\nExample: Steve Jobs by Walter Isaacson"
+        }
+    },
+    {
+        "model": "book.category",
+        "pk": 8,
+        "fields": {
+            "category_name": "Self-Help",
+            "category_description": "Self-help books offer advice and strategies for personal development, mental health, relationships, and achieving success. They aim to help readers improve their lives.\r\n\r\nExample: The Power of Habit by Charles Duhigg"
+        }
+    },
+    {
+        "model": "book.category",
+        "pk": 9,
+        "fields": {
+            "category_name": "Travel",
+            "category_description": "Travel books provide insights into different cultures, places, and experiences. They can be guidebooks, memoirs, or narratives about journeys and adventures.\r\n\r\nExample: Eat, Pray, Love by Elizabeth Gilbert"
+        }
+    },
+    {
+        "model": "book.category",
+        "pk": 10,
+        "fields": {
+            "category_name": "True Crime",
+            "category_description": "True crime books detail real criminal cases, exploring the events, investigations, and outcomes. They often delve into the psychology of criminals and the impact on victims.\r\n\r\nExample: In Cold Blood by Truman Capote"
+        }
+    },
+    {
+        "model": "book.category",
+        "pk": 11,
+        "fields": {
+            "category_name": "History",
+            "category_description": "History books examine past events, civilizations, and notable figures. They aim to provide a comprehensive understanding of historical developments and their significance.\r\n\r\nExample: Sapiens: A Brief History of Humankind by Yuval Noah Harari"
+        }
+    },
+    {
+        "model": "book.category",
+        "pk": 12,
+        "fields": {
+            "category_name": "Politics",
+            "category_description": "explore the theory and practice of government and political systems. They cover a wide range of topics including political philosophy, policy analysis, international relations, political history, and biographies of political figures. These books provide insights into the functioning of political institutions, the behavior of voters and politicians, and the impact of laws and policies on societies. Whether discussing democracy, authoritarianism, political ideologies, or contemporary political issues, politics books aim to inform, analyze, and provoke thought about the governance and organization of societies."
+        }
+    },
+    {
+        "model": "book.category",
+        "pk": 13,
+        "fields": {
+            "category_name": "Economics",
+            "category_description": "Delve into the study of how societies allocate resources and make decisions about production, distribution, and consumption. They cover a broad spectrum of topics including microeconomics, macroeconomics, economic theory, and applied economics. These books often explore concepts such as supply and demand, market structures, economic growth, and fiscal and monetary policies. They may also address global trade, financial markets, economic development, and the impact of economic policies on various aspects of society. Whether aimed at providing academic insights or practical knowledge, economics books strive to explain the complexities of economic systems and their influence on our daily lives."
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 1,
+        "fields": {
+            "title": "The Merchant of Venice",
+            "writer": 2,
+            "user": 1,
+            "slug": "the-merchant-of-venice",
+            "cover_img": "image/upload/v1720291417/uhetdqouyok5u9ln6rkz.png",
+            "short_description": "is a play by William Shakespeare, believed to have been written between 1596 and 1598. A merchant in Venice named Antonio defaults on a large loan taken out on behalf of his dear friend, Bassanio, and provided by a Jewish moneylender, Shylock, with seemingly inevitable fatal consequences.\r\n\r\nAlthough classified as a comedy in the First Folio and sharing certain aspects with Shakespeare's other romantic comedies, the play is most remembered for its dramatic scenes, and it is best known for the character Shylock and his famous demand for a \"pound of flesh\".\r\n\r\nThe play contains two famous speeches, that of Shylock, \"Hath not a Jew eyes?\" on the subject of humanity, and that of Portia on \"the quality of mercy\". Debate exists on whether the play is anti-Semitic, with Shylock's insistence on his legal right to the pound of flesh being in opposition to Shylock's seemingly universal plea for the rights of all people suffering discrimination.",
+            "created_on": "2024-07-06T18:43:37.685Z",
+            "book_category": 11,
+            "approved": true
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 2,
+        "fields": {
+            "title": "Angels and Demons",
+            "writer": 5,
+            "user": 1,
+            "slug": "angels-and-demons",
+            "cover_img": "image/upload/v1720291592/i66opnd4hym8ytzq4jw1.png",
+            "short_description": "The book contains several ambigrams created by real-life typographer John Langdon. Besides the \"Angels & Demons\" and \"Illuminati\" designs, the title of the book is also presented as an ambigram on the hardcover book jacket, and on the inside cover of the paperback versions. The book also contains ambigrams of the words Earth, Air, Fire, and Water, which has served to bring the art of ambigrams to public attention by virtue of the popularity of the book. The \"Illuminati Diamond\" mentioned in the book is an ambigram of the four elements that are arranged in the shape of a diamond",
+            "created_on": "2024-07-06T18:46:33.334Z",
+            "book_category": 1,
+            "approved": false
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 3,
+        "fields": {
+            "title": "Season of Migration to the North",
+            "writer": 7,
+            "user": 1,
+            "slug": "season-of-migration-to-the-north",
+            "cover_img": "image/upload/placeholder",
+            "short_description": "Mawsim al-Hijrah ilâ al-Shamâl is the story of the “traveled man,” the African who has returned from schooling abroad, told to an unspecified audience by an unnamed narrator. The narrator returns to his Sudanese village of Wad Hamid on the Nile in the 1950s after writing a doctoral thesis on ‘the life of an obscure English poet.’ Mustafa Sa'eed, the main protagonist of the novel, is a child of British colonialism, and a fruit of colonial education. He is also a monstrous product of his time.\r\n\r\nThe unnamed narrator is eager to make a contribution to the new postcolonial life of his country.[5] On his arrival home, the narrator encounters a new villager named Mustafa Sa'eed who exhibits none of the adulation for his achievements that most others do, and he displays an antagonistically aloof nature. Mustafa betrays his past one drunken evening by wistfully reciting poetry in fluent English, leaving the narrator resolute to discover the stranger's identity. The narrator later asks Mustafa about his past, and Mustafa tells him much of his story, often saying \"I am no Othello, Othello was a lie,\" as well as \"I am a lie.\"\r\n\r\nThe narrator becomes fascinated by Mustafa, and learns that Mustafa was also a precocious student educated in the West but that he held a violent, hateful and complex relationship with his western identity and acquaintances. The story of Mustafa's troubled past in Europe, and in particular his love affairs with British women, form the center of the novel. Mustafa attracts the women by appealing to their Orientalist fantasies, and all of these relationships end in tragedy. Three of the women commit suicide and the fourth, Mustafa's wife, is murdered by him. He stands trial for the murder and serves time in an English jail.",
+            "created_on": "2024-07-06T18:47:53.109Z",
+            "book_category": 11,
+            "approved": true
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 4,
+        "fields": {
+            "title": "Sons and Lovers",
+            "writer": 12,
+            "user": 1,
+            "slug": "sons-and-lovers",
+            "cover_img": "image/upload/v1721052714/uzotzjjfmvh7try8g0fl.png",
+            "short_description": "Sons and Lovers is a 1913 novel by the English writer D. H. Lawrence. It traces emotional conflicts through the protagonist, Paul Morel, and his suffocating relationships with a demanding mother and two very different lovers, which exert complex influences on the development of his manhood. The novel was originally published by Gerald Duckworth and Company Ltd., London, and Mitchell Kennerley Publishers, New York. While the novel initially received a lukewarm critical reception, along with allegations of obscenity, it is today regarded as a masterpiece by many critics and is often regarded as Lawrence's finest achievement. It tells us more about Lawrence's life and his phases, as his first was when he lost his mother in 1910 to whom he was particularly attached. And it was from then that he met Frieda Richthofen, and around this time that he began conceiving his two other great novels, The Rainbow and Women in Love, which had more sexual emphasis and maturity.",
+            "created_on": "2024-07-06T18:51:43.576Z",
+            "book_category": 4,
+            "approved": true
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 5,
+        "fields": {
+            "title": "Hamlet",
+            "writer": 2,
+            "user": 11,
+            "slug": "hamlet",
+            "cover_img": "image/upload/v1720579797/scttbpp21iqdykgoit6m.png",
+            "short_description": "<p>\"**Hamlet**,\" one of William Shakespeare's most renowned tragedies, follows the story of Prince Hamlet of Denmark as he grapples with the sudden death of his father, the king. Consumed by grief and suspicion, Hamlet learns from his father's ghost that his uncle Claudius, now the new king, is the murderer. This revelation sets Hamlet on a path of revenge, leading to a complex interplay of madness, deception, and existential contemplation. The play delves deep into themes of mortality, corruption, and the human condition, cementing its status as a timeless masterpiece in the canon of English literature.<br></p>",
+            "created_on": "2024-07-10T02:49:57.740Z",
+            "book_category": 3,
+            "approved": true
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 6,
+        "fields": {
+            "title": "Pride and Prejudice",
+            "writer": 13,
+            "user": 10,
+            "slug": "pride-and-prejudice",
+            "cover_img": "image/upload/v1720580175/pjzber66frjlmo8qx4o8.png",
+            "short_description": "<p>\"**Pride and Prejudice**,\" a beloved novel by Jane Austen, centers on Elizabeth Bennet, a sharp-witted young woman, and her evolving relationship with the aloof and wealthy Mr. Darcy. Set in the early 19th century, the story explores themes of class, marriage, and social expectations. Through a series of misunderstandings and personal growth, Elizabeth and Darcy overcome their initial misjudgments and prejudices, ultimately finding love and mutual respect. Austen's keen social commentary and memorable characters make this novel a timeless exploration of manners and morality.<br></p>",
+            "created_on": "2024-07-10T02:56:15.844Z",
+            "book_category": 6,
+            "approved": false
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 7,
+        "fields": {
+            "title": "Women in Love",
+            "writer": 12,
+            "user": 4,
+            "slug": "women-in-love",
+            "cover_img": "image/upload/v1720580436/as28wmsvf1llrtkqqcy0.png",
+            "short_description": "<p>\"**Women in Love**\" by D.H. Lawrence is a novel that explores complex relationships and emotional struggles through the lives of two sisters, Ursula and Gudrun Brangwen, in post-World War I England. Ursula becomes involved with Rupert Birkin, an introspective school inspector, while Gudrun engages in a tumultuous relationship with Gerald Crich, a wealthy industrialist. The novel delves into themes of love, power, and individual fulfillment, contrasting the passionate yet destructive connections between the characters. Lawrence's vivid prose and psychological insight offer a profound examination of human desires and the quest for meaning in a changing world.<br></p>",
+            "created_on": "2024-07-10T03:00:37.085Z",
+            "book_category": 4,
+            "approved": false
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 8,
+        "fields": {
+            "title": "Wuthering Heights",
+            "writer": 3,
+            "user": 7,
+            "slug": "wuthering-heights",
+            "cover_img": "image/upload/v1720580650/qg595jcec67xgqmzccak.png",
+            "short_description": "<p>\"**Wuthering Heights**\" by Emily Brontë is a gothic novel set on the desolate moors of Yorkshire, revolving around the intense and turbulent relationship between Heathcliff, an orphaned boy adopted by the Earnshaw family, and Catherine Earnshaw, his passionate and headstrong soulmate. The narrative, delivered through the recollections of housekeeper Nelly Dean and tenant Mr. Lockwood, spans two generations, exploring themes of love, revenge, and the destructive power of obsession. Brontë's vivid and haunting storytelling captures the raw and primal forces driving human emotions, making \"Wuthering Heights\" a profound and enduring work in English literature.<br></p>",
+            "created_on": "2024-07-10T03:04:11.284Z",
+            "book_category": 4,
+            "approved": true
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 9,
+        "fields": {
+            "title": "Arabian Love Poems",
+            "writer": 8,
+            "user": 2,
+            "slug": "arabian-love-poems",
+            "cover_img": "image/upload/placeholder",
+            "short_description": "<p>\"**Arabian Love Poems**\" by Nizar Qabbani is a celebrated collection of poetry by the renowned Syrian poet, known for his eloquent and passionate exploration of love, sensuality, and the complexities of human relationships. Qabbani's verses blend the rich traditions of Arabic poetry with modern sensibilities, capturing the intensity of romantic and erotic desire, as well as the pain of longing and loss. His lyrical and evocative language, infused with emotional depth and cultural resonance, has earned him a cherished place in contemporary Arabic literature, making \"Arabian Love Poems\" a testament to the enduring power of love and poetic expression.<br></p>",
+            "created_on": "2024-07-10T03:10:39.832Z",
+            "book_category": 4,
+            "approved": false
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 67,
+        "fields": {
+            "title": "Permanent Record",
+            "writer": 14,
+            "user": 1,
+            "slug": "permanent-record",
+            "cover_img": "image/upload/v1720712451/vqnesg560uhirqqlgwta.png",
+            "short_description": "**Permanent Record** is a memoir by Edward Snowden, the former NSA contractor who leaked classified information about the U.S. government's mass surveillance programs. The book details Snowden's life, from his early years as a tech-savvy teenager to his career in the intelligence community. It covers his motivations for becoming a whistleblower, the ethical dilemmas he faced, and the global impact of his revelations. Snowden's account provides a personal perspective on privacy, government overreach, and the implications of technological advancements in surveillance.",
+            "created_on": "2024-07-11T14:56:03.886Z",
+            "book_category": 11,
+            "approved": true
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 69,
+        "fields": {
+            "title": "Test 20",
+            "writer": 2,
+            "user": 1,
+            "slug": "test-20",
+            "cover_img": "image/upload/v1720718625/d6heafurjpcpv4xt5usd.png",
+            "short_description": "any thing that doesn't make sense",
+            "created_on": "2024-07-11T17:23:46.408Z",
+            "book_category": 7,
+            "approved": false
+        }
+    },
+    {
+        "model": "book.book",
+        "pk": 70,
+        "fields": {
+            "title": "What Happened",
+            "writer": 18,
+            "user": 7,
+            "slug": "what-happened",
+            "cover_img": "image/upload/v1721052377/l1qskunrwfkva8psqieh.png",
+            "short_description": "<p><b>\"What Happened\"</b>s a memoir by Hillary Clinton, published in September 2017. The book provides an in-depth, personal account of her experiences during the 2016 U.S. presidential election, where she ran as the Democratic candidate against Republican Donald Trump. Clinton reflects on the campaign, her unexpected defeat, and the factors she believes contributed to the outcome, including Russian interference, FBI Director James Comey's actions, and media coverage.</p><p>In addition to the campaign analysis, Clinton discusses the broader social and political climate, touching on issues like sexism, fake news, and the polarization of American society. She also shares insights into her personal life, emotions, and coping mechanisms following the election. \"What Happened\" is both a candid reflection and a critique of the 2016 election, offering Clinton's perspective on one of the most controversial and surprising elections in U.S. history.</p>",
+            "created_on": "2024-07-15T14:05:48.208Z",
+            "book_category": 12,
+            "approved": true
+        }
+    },
+    {
+        "model": "book.review",
+        "pk": 2,
+        "fields": {
+            "book": 4,
+            "author": 2,
+            "insight": "It is amazing to read about that period.",
+            "approved": true,
+            "created_on": "2024-07-13T09:34:19.156Z"
+        }
+    },
+    {
+        "model": "book.review",
+        "pk": 3,
+        "fields": {
+            "book": 4,
+            "author": 7,
+            "insight": "Long but worth reading",
+            "approved": true,
+            "created_on": "2024-07-13T09:34:43.957Z"
+        }
+    },
+    {
+        "model": "book.review",
+        "pk": 4,
+        "fields": {
+            "book": 4,
+            "author": 3,
+            "insight": "I couldn't read this book <b>because lack of time</b>",
+            "approved": true,
+            "created_on": "2024-07-13T09:35:29.750Z"
+        }
+    },
+    {
+        "model": "book.review",
+        "pk": 5,
+        "fields": {
+            "book": 4,
+            "author": 2,
+            "insight": "The second still not approved review",
+            "approved": false,
+            "created_on": "2024-07-15T15:11:14.538Z"
+        }
+    },
+    {
+        "model": "book.review",
+        "pk": 13,
+        "fields": {
+            "book": 3,
+            "author": 2,
+            "insight": "Amazing book which shows exactly the reality and the inner conflict ...",
+            "approved": false,
+            "created_on": "2024-07-15T21:24:33.567Z"
+        }
+    },
+    {
+        "model": "book.review",
+        "pk": 14,
+        "fields": {
+            "book": 3,
+            "author": 2,
+            "insight": "Amazing book which shows exactly the reality and the inner conflict ...",
+            "approved": false,
+            "created_on": "2024-07-15T21:29:05.706Z"
+        }
+    },
+    {
+        "model": "book.review",
+        "pk": 15,
+        "fields": {
+            "book": 3,
+            "author": 2,
+            "insight": "Amazing book which shows exactly the reality and the inner conflict ...",
+            "approved": false,
+            "created_on": "2024-07-15T21:31:01.187Z"
+        }
+    },
+    {
+        "model": "book.review",
+        "pk": 16,
+        "fields": {
+            "book": 3,
+            "author": 2,
+            "insight": "Give your thoughts about the book",
+            "approved": false,
+            "created_on": "2024-07-15T21:34:49.565Z"
+        }
+    },
+    {
+        "model": "book.review",
+        "pk": 17,
+        "fields": {
+            "book": 3,
+            "author": 2,
+            "insight": "Give your thoughts about the book",
+            "approved": false,
+            "created_on": "2024-07-15T21:37:02.516Z"
+        }
+    },
+    {
+        "model": "book.review",
+        "pk": 18,
+        "fields": {
+            "book": 1,
+            "author": 12,
+            "insight": "When you read for william shakespear you never feel that you live in the past but rather in the future",
+            "approved": false,
+            "created_on": "2024-07-15T21:42:20.604Z"
+        }
+    },
+    {
+        "model": "book.review",
+        "pk": 19,
+        "fields": {
+            "book": 1,
+            "author": 2,
+            "insight": "Shakespear doesn't address the past, but rather he addresses the future",
+            "approved": false,
+            "created_on": "2024-07-16T09:14:48.157Z"
+        }
+    },
+    {
+        "model": "book.likes",
+        "pk": 1,
+        "fields": {
+            "likes": true,
+            "liked_book": 1,
+            "user_id": 1,
+            "created_on": "2024-07-07T15:19:02.672Z"
+        }
+    },
+    {
+        "model": "book.likes",
+        "pk": 2,
+        "fields": {
+            "likes": true,
+            "liked_book": 2,
+            "user_id": 1,
+            "created_on": "2024-07-07T15:19:13.087Z"
+        }
+    },
+    {
+        "model": "book.likes",
+        "pk": 3,
+        "fields": {
+            "likes": false,
+            "liked_book": 4,
+            "user_id": 10,
+            "created_on": "2024-07-12T23:34:35.994Z"
+        }
+    },
+    {
+        "model": "book.likes",
+        "pk": 4,
+        "fields": {
+            "likes": false,
+            "liked_book": 4,
+            "user_id": 1,
+            "created_on": "2024-07-12T23:34:46.601Z"
+        }
+    },
+    {
+        "model": "book.likes",
+        "pk": 5,
+        "fields": {
+            "likes": false,
+            "liked_book": 4,
+            "user_id": 2,
+            "created_on": "2024-07-12T23:34:53.544Z"
+        }
+    },
+    {
+        "model": "book.likes",
+        "pk": 6,
+        "fields": {
+            "likes": false,
+            "liked_book": 4,
+            "user_id": 11,
+            "created_on": "2024-07-12T23:35:05.515Z"
+        }
+    },
+    {
+        "model": "book.likes",
+        "pk": 7,
+        "fields": {
+            "likes": false,
+            "liked_book": 4,
+            "user_id": 9,
+            "created_on": "2024-07-12T23:35:12.670Z"
+        }
+    },
+    {
+        "model": "book.likes",
+        "pk": 8,
+        "fields": {
+            "likes": false,
+            "liked_book": 4,
+            "user_id": 8,
+            "created_on": "2024-07-12T23:35:21.105Z"
+        }
+    },
+    {
+        "model": "book.likes",
+        "pk": 9,
+        "fields": {
+            "likes": false,
+            "liked_book": 4,
+            "user_id": 6,
+            "created_on": "2024-07-12T23:35:40.998Z"
+        }
+    },
+    {
+        "model": "book.rating",
+        "pk": 1,
+        "fields": {
+            "rating": 7.9,
+            "rated_book": 1,
+            "user_rated": 1,
+            "created_on": "2024-07-07T15:33:05.996Z"
+        }
+    },
+    {
+        "model": "book.rating",
+        "pk": 2,
+        "fields": {
+            "rating": 3.0,
+            "rated_book": 4,
+            "user_rated": 1,
+            "created_on": "2024-07-13T00:11:20.219Z"
+        }
+    },
+    {
+        "model": "book.rating",
+        "pk": 3,
+        "fields": {
+            "rating": 2.0,
+            "rated_book": 4,
+            "user_rated": 2,
+            "created_on": "2024-07-13T00:11:29.861Z"
+        }
+    },
+    {
+        "model": "book.rating",
+        "pk": 4,
+        "fields": {
+            "rating": 5.0,
+            "rated_book": 4,
+            "user_rated": 5,
+            "created_on": "2024-07-13T00:11:40.636Z"
+        }
+    },
+    {
+        "model": "book.rating",
+        "pk": 5,
+        "fields": {
+            "rating": 4.0,
+            "rated_book": 4,
+            "user_rated": 11,
+            "created_on": "2024-07-13T00:11:50.954Z"
+        }
+    }
+]

@@ -125,13 +125,12 @@ def book_insight(request,slug):
     #ratings
     book_rating_set=Rating.objects.filter(rated_book=book)
     average_rating=book_rating_set.aggregate(Avg('rating'))['rating__avg']
-    #reviews
-    reviews=Review.objects.filter(book=book.id)
+    #reviews to show on a specific book
+    reviews=book.reviews.all().order_by("-created_on")
 
-    # Review form
-    userReview=ReviewForm()
+    reviews_count=book.reviews.filter(approved=True).count()
+
     #handling the post request
-
     if request.method=='POST':
         userReview=ReviewForm(request.POST)
         if userReview.is_valid():
@@ -140,11 +139,9 @@ def book_insight(request,slug):
            single_review.book=book
            single_review.author = request.user
            single_review.save()
-           messages.add_message(
-                request, messages.SUCCESS,
-                'Review submitted and awaiting approval'
-            )
-           userReview=ReviewForm()
+           messages.add_message(request, messages.SUCCESS,'Review submitted and awaiting approval')
+           
+    userReview=ReviewForm()
     print("About to render the books insights")
     return render(request, "book/book_insight.html",
                   {
@@ -153,32 +150,30 @@ def book_insight(request,slug):
                     'likes':likes,
                     'ratings':average_rating,
                     'reviews':reviews,
-                    'userReview':userReview
-                    })
+                    'reviews_count':reviews_count,
+                    'userReview':userReview,
+                    },)
 
 
-def add_review(request, id):
+def edit_review(request, slug, review_id):
     """
-    Display Book  :model: book.book
+    edit the selected review
     """
-    submitted = False
-    print("in the function")
-    if request.method =='POST':
-        print("Any thing")
-        reviewForm=ReviewForm(request.POST)
-        book = get_object_or_404(Book,book_id=id)
-        print(f'{book.title}')
-        if reviewForm.is_valid():
-           reviewForm.save(commit=False)
-           reviewForm.book=book
-           reviewForm.author= request.user
-           reviewForm.save()
-           messages.add_message(
-                request, messages.SUCCESS,
-                'Review submitted and awaiting approval'
-            )
-           submitted =True
+    print(f"in the edit form {slug}  |  {review_id}",)
+    if request.method == "POST":
+        queryset = Book.objects.filter(approved=True)
+        book=get_object_or_404(queryset,slug=slug)
+        review=get_object_or_404(Review, pk=review_id)
+        review_form=ReviewForm(data=request.POST,instance=review)
+
+        if review_form.is_valid() and review.author==request.user:
+            insight=review_form.save(commit=False)
+            insight.book=book
+            insight.approved=False
+            insight.save()
+            messages.add_message(request, messages.SUCCESS, 'Insight Updated!')
+
         else:
-            reviewForm = ReviewForm()
-
-    return render(request,"book/book_insight.html/",{'reviewForm':reviewForm})
+            messages.add_message(request, messages.ERROR, 'Error updating insight!')
+    
+    return HttpResponseRedirect(reverse('book_insight',args=[slug]))
