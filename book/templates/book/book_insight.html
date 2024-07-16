@@ -59,8 +59,7 @@
         <div class="col-12 col-md-5 p-1 mb-2 text-justify">
             <h3>Insights:</h3>
             <div class="insight-body">
-                <!-- We want a for loop inside the empty control tags
-          to iterate through each comment in comments -->
+                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for review in reviews %}
                 <div class="p-2 reviews
                     {% if not review.approved and review.author == user %}
@@ -83,6 +82,7 @@
                     <button class="btn btn-delete" review_id="{{ review.id }}">Delete</button>
                     <button class="btn btn-edit" review_id="{{ review.id }}">Edit</button>
                     {% endif %}
+                    <hr>
                 </div>
                 {% endfor %}
             </div>
@@ -105,11 +105,30 @@
                 {% endif %}
             </div>
         </div>
-
     </div>
-
 </div>
-
+<!-- Delete confirmation modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1"
+  aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"
+          id="deleteModalLabel">Delete Review?</h5>
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete your Review?
+        This action cannot be undone.
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary"
+          data-bs-dismiss="modal">Close</button>
+        <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
 {% block extras %}

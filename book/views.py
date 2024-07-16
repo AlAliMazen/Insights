@@ -156,6 +156,7 @@ def book_insight(request,slug):
 
 
 def edit_review(request, slug, review_id):
+
     """
     edit the selected review
     """
@@ -175,5 +176,22 @@ def edit_review(request, slug, review_id):
 
         else:
             messages.add_message(request, messages.ERROR, 'Error updating insight!')
+    
+    return HttpResponseRedirect(reverse('book_insight',args=[slug]))
+
+
+def delete_review(request, slug, review_id):
+    """
+    delete a review from a book
+    """
+    queryset = Book.objects.filter(approved=True)
+    book = get_object_or_404(queryset, slug=slug)
+    review = get_object_or_404(Review, pk=review_id)
+
+    if review.author == request.user:
+        review.delete()
+        messages.add_message(request, messages.SUCCESS, "Review deleted!")
+    else:
+        messages.add_message(request, messages.ERROR, "Only your own review ")
     
     return HttpResponseRedirect(reverse('book_insight',args=[slug]))

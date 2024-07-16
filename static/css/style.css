@@ -10,6 +10,14 @@ body {
     color: #FF4850;
 }
 
+.logged-in-user{
+    color: #0A419F;
+}
+
+.not-logged-in{
+    color: #FF4850;
+}
+
 .navbar-light .navbar-nav .nav-link{
     color: #0A419F;
 }
