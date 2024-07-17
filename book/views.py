@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from .models import Author,Book,Category,Review,Likes,Rating
-from .forms import BookForm, AuthorForm, CategoryForm, ReviewForm, LikesForm
+from .forms import BookForm, AuthorForm, CategoryForm, ReviewForm, LikesForm, RatingForm
 from django.db.models import Avg
 
 
@@ -123,7 +123,27 @@ def book_insight(request,slug):
     
     #ratings
     book_rating_set=Rating.objects.filter(rated_book=book)
+    user_has_rated=False
+
+    for rate in book_rating_set:
+        if rate.user_rated == request.user:
+            user_has_rated=True
+    
+    # handling the rating mechanism
+    if request.method=="POST":
+        ratingForm=RatingForm(request.POST)
+        if ratingForm.is_valid():
+            one_rate=ratingForm.save(commit=False)
+            one_rate.rated_book=book
+            one_rate.user_rated=request.user
+            one_rate.save()
+            return redirect(reverse('book_insight', kwargs={'slug':slug}))
+   
+
     average_rating=book_rating_set.aggregate(Avg('rating'))['rating__avg']
+    if average_rating == None:
+        average_rating = 0
+
     #reviews to show on a specific book
     reviews=book.reviews.all().order_by("-created_on")
 
@@ -133,7 +153,6 @@ def book_insight(request,slug):
     if request.method=='POST':
         userReview=ReviewForm(request.POST)
         if userReview.is_valid():
-           print("in the review form again")
            single_review=userReview.save(commit=False)
            single_review.book=book
            single_review.author = request.user
@@ -160,15 +179,15 @@ def book_insight(request,slug):
             like.user_id=request.user
             like.save()
             return redirect(reverse('book_insight', kwargs={'slug':slug}))
-        
+    
     # form for submitting a like 
-    likes_form=LikesForm
+    likes_form=LikesForm()
     userReview=ReviewForm()
-    print("About to render the books insights")
+    ratingForm=RatingForm()
     return render(request, "book/book_insight.html",
                   {
                     'book':book,
-                    'author_details':author_details ,
+                    'author_details':author_details,
                     'likes':likes,
                     'ratings':average_rating,
                     'reviews':reviews,
@@ -176,9 +195,10 @@ def book_insight(request,slug):
                     'userReview':userReview,
                     'likes_form':likes_form,
                     'all_likes':all_likes,
-                    'user_liked_book':user_liked_book
+                    'user_liked_book':user_liked_book,
+                    'ratingForm':ratingForm,
+                    'user_has_rated':user_has_rated,
                     },)
-
 
 
 def edit_review(request, slug, review_id):

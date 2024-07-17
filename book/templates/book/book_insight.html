@@ -103,9 +103,22 @@
                     <form id="likesForm" action="" method="POST">
                         {% csrf_token %}
                         {{ likes_form | crispy }}
-                        <a href="{% url 'book_insight' book.slug%}"></a> <button id="btn-likes" type="submit"
+                        <a href="{% url 'book_insight' book.slug %}"></a> <button id="btn-likes" type="submit"
                     value="Submit" class="btn btn-primary">Submit</button>
                     </form>  
+                    {% else %}
+                    <p>You have liked the book</p>
+                    {% endif %}
+                </div>
+                <hr>
+                <div>
+                    {% if not user_has_rated %}
+                    <form id="ratingForm" action="" method="POST">
+                        {% csrf_token %}
+                        {{ ratingForm | crispy }}
+                        <a href="{% url 'book_insight' book.slug %}"></a> <button id="btn-rating" type="submit"
+                    value="Submit" class="btn btn-primary">Submit</button>
+                    </form>
                     {% else %}
                     <p>You have liked the book</p>
                     {% endif %}
@@ -113,8 +126,10 @@
                 {% else %}
                 <h3>Log in to share your thoughts</h3>
                 <br>
-                <a href="{% url 'account_login' %}"><button type="button" class="btn btn-primary btn-lg">Log
-                        in</button></a>
+                <a href="{% url 'account_login' %}">
+                    <button type="button" class="btn btn-primary btn-lg">
+                    Log in</button>
+                </a>
                 {% endif %}
             </div>
         </div>

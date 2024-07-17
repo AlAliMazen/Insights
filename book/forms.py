@@ -2,7 +2,7 @@ from django import forms
 
 from django.forms import ModelForm
 
-from .models import Book, Author, Category,Likes,Review
+from .models import Book, Author, Category,Likes,Review,Rating
 
 # create a form for a book 
 
@@ -44,3 +44,22 @@ class LikesForm(forms.ModelForm):
     class Meta:
         model=Likes
         fields=('likes',)
+
+
+
+class RatingForm(forms.ModelForm):
+    class Meta:
+        model=Rating
+        fields=('rating',)
+
+        labels = {
+			'rating': 'Rating min(0.0) max(10.0)',
+            }
+        
+        widgets={
+            'rating':forms.NumberInput(attrs={
+                'min': '0.0',
+                'max': '10.0',
+                'step': '0.1',
+            })
+        }
