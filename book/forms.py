@@ -2,7 +2,7 @@ from django import forms
 
 from django.forms import ModelForm
 
-from .models import Book, Author, Category,Review
+from .models import Book, Author, Category,Likes,Review
 
 # create a form for a book 
 
@@ -38,3 +38,9 @@ class ReviewForm(forms.ModelForm):
     class Meta:
         model=Review
         fields=('insight',)
+
+
+class LikesForm(forms.ModelForm):   
+    class Meta:
+        model=Likes
+        fields=('likes',)

@@ -1,10 +1,10 @@
-from django.shortcuts import render, get_object_or_404,reverse
+from django.shortcuts import render, get_object_or_404,reverse, redirect
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from .models import Author,Book,Category,Review,Likes,Rating
-from .forms import BookForm, AuthorForm, CategoryForm, ReviewForm
+from .forms import BookForm, AuthorForm, CategoryForm, ReviewForm, LikesForm
 from django.db.models import Avg
 
 
@@ -120,8 +120,7 @@ def book_insight(request,slug):
     # author
     book_author = book.writer
     author_details=get_object_or_404(Author, fullname=book_author)
-    #likes
-    likes=book.liked_book.count()
+    
     #ratings
     book_rating_set=Rating.objects.filter(rated_book=book)
     average_rating=book_rating_set.aggregate(Avg('rating'))['rating__avg']
@@ -134,13 +133,26 @@ def book_insight(request,slug):
     if request.method=='POST':
         userReview=ReviewForm(request.POST)
         if userReview.is_valid():
-           print("in the inner if")
+           print("in the review form again")
            single_review=userReview.save(commit=False)
            single_review.book=book
            single_review.author = request.user
            single_review.save()
+           userReview=ReviewForm()
            messages.add_message(request, messages.SUCCESS,'Review submitted and awaiting approval')
            
+    
+    #likes count
+    likes=book.liked_book.count()
+    all_likes=book.liked_book.all()
+    user_liked_book=False
+    for user_like in all_likes:
+        if user_like.user_id == request.user:
+            user_liked_book = True
+    
+
+    # form for submitting a like
+    likes_form=LikesForm
     userReview=ReviewForm()
     print("About to render the books insights")
     return render(request, "book/book_insight.html",
@@ -152,6 +164,9 @@ def book_insight(request,slug):
                     'reviews':reviews,
                     'reviews_count':reviews_count,
                     'userReview':userReview,
+                    'likes_form':likes_form,
+                    'all_likes':all_likes,
+                    'user_liked_book':user_liked_book
                     },)
 
 
@@ -184,8 +199,8 @@ def delete_review(request, slug, review_id):
     """
     delete a review from a book
     """
-    queryset = Book.objects.filter(approved=True)
-    book = get_object_or_404(queryset, slug=slug)
+    #queryset = Book.objects.filter(approved=True)
+    #book = get_object_or_404(queryset, slug=slug)
     review = get_object_or_404(Review, pk=review_id)
 
     if review.author == request.user:
@@ -195,3 +210,4 @@ def delete_review(request, slug, review_id):
         messages.add_message(request, messages.ERROR, "Only your own review ")
     
     return HttpResponseRedirect(reverse('book_insight',args=[slug]))
+
