@@ -31,13 +31,6 @@
                         <span class="mx-1 px-1 book-rating"><i class="fa-solid fa-star mx-2"></i>{{ ratings }}</span>
                     </div>
                 </div>
-                <div class="row">
-                    {% for like in all_likes %}
-                    <div class="col-md-8 my-2 p-2">
-                        <span>{{ like.id }}  | {{ like.liked_book }}  | {{ like.user_id }}</span> <br>
-                    </div>
-                    {% endfor %}
-                </div>
             </div>
         </div>
         <div class="col-12 col-md-5 p-3 mb-2">
@@ -101,7 +94,7 @@
                 <form id="reviewForm" action="" method="POST">
                     {% csrf_token %}
                     {{ userReview | crispy }}
-                    <a href="{% url 'book_insight' book.slug%}"></a> <button id="submitButton" type="submit"
+                    <a href="{% url 'book_insight' book.id%}"></a> <button id="submitButton" type="submit"
                         value="Submit" class="btn btn-primary">Submit</button>
                 </form>
                 <hr>

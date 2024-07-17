@@ -140,8 +140,8 @@ def book_insight(request,slug):
            single_review.save()
            userReview=ReviewForm()
            messages.add_message(request, messages.SUCCESS,'Review submitted and awaiting approval')
-           
-    
+           return redirect(reverse('book_insight', kwargs={'slug':slug}))
+   
     #likes count
     likes=book.liked_book.count()
     all_likes=book.liked_book.all()
@@ -150,8 +150,18 @@ def book_insight(request,slug):
         if user_like.user_id == request.user:
             user_liked_book = True
     
-
-    # form for submitting a like
+    #handling likes for a book
+    if request.method=="POST":
+        likes_form=LikesForm(request.POST)
+        if likes_form.is_valid():
+            like=likes_form.save(commit=False)
+            like.likes=True
+            like.liked_book=book
+            like.user_id=request.user
+            like.save()
+            return redirect(reverse('book_insight', kwargs={'slug':slug}))
+        
+    # form for submitting a like 
     likes_form=LikesForm
     userReview=ReviewForm()
     print("About to render the books insights")
@@ -168,6 +178,7 @@ def book_insight(request,slug):
                     'all_likes':all_likes,
                     'user_liked_book':user_liked_book
                     },)
+
 
 
 def edit_review(request, slug, review_id):
