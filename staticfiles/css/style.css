@@ -9,6 +9,16 @@ body {
     border-bottom:#0A419F;
     color: #FF4850;
 }
+.dark-blue{
+    color:#0A419F
+}
+.logged-in-user{
+    color: #0A419F;
+}
+
+.not-logged-in{
+    color: #FF4850;
+}
 
 .navbar-light .navbar-nav .nav-link{
     color: #0A419F;
@@ -16,7 +26,10 @@ body {
 .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link{
     color: #FF4850;
 }
-
+.dropdown-item:focus, .dropdown-item:hover{
+    color: #0A419F;
+    background-color: #fafafa;
+}
 .thin {
     font-weight: 300;
 }
@@ -70,8 +83,8 @@ body {
     height: auto;
 }
 .carousel-caption{
-    bottom: 25%;
-    background-color:rgb(10,65,159, 0.5);
+    bottom: 45%;
+    background-color:rgb(10,65,159, 0.8);
 }
 .book-writer {
     color: #0A419F;

@@ -4,7 +4,6 @@ const reviewForm = document.getElementById("reviewForm");
 const submitButton = document.getElementById("submitButton");
 
 /**
- * 
  * delete model initialization
  */
 const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));

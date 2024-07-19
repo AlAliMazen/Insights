@@ -15,7 +15,7 @@
         <div class="col-12 col-md-5 p-3 mb-2 text-justify">
             <h4>{{ book.title }} <span class="bar-seprator">|</span> Short Overview</h4>
             <p class="book-description">
-                {{ book.short_description }}
+                {{ book.short_description | safe }}
             </p>
             <h6 class="book-user">Added by: {{ book.user }} 
                 <span class="bar-seprator">|</span>
@@ -44,7 +44,7 @@
     <div class="row justify-content-between ">
         <div class="col-12 col-md-5 p-3 mb-2 text-justify">
             <h4>About {{ book.writer }}</h4>
-            <p class="author-biography">{{ author_details.short_biography }}</p>
+            <p class="author-biography">{{ author_details.short_biography | safe }}</p>
             <h6 class="book-user">Added by: {{ author_details.user }} <span class="bar-seprator">|</span> 
                 on: {{ author_details.created_on }} </h6>
         </div>

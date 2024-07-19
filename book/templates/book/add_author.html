@@ -4,28 +4,27 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<div id="carouselExampleCaptions" class="carousel slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-      aria-current="true" aria-label="Slide 1"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="{% static 'images/dariusz-old-notebook-with-pen-camera.jpg' %} " class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Tell us about your beloved writer </h5>
-        <p>Thoughts brought to life by authors make it worth reading about them</p>
-      </div>
+<div class="container-fluide my-5 px4 text-center">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 my-3 p-2">
+      <h1 class="dark-blue">Tell us about your beloved writer</h1>
+      <hr class="h-divider">
+      <p class="dark-blue">Thoughts brought to life by authors make it worth reading about them</p>     
     </div>
   </div>
 </div>
+
 <!-- Here is the form -->
-<div class="container my-5 px-4 text-center justify-content-center">
-  <div class="row">
+<div class="container my-5 px-4 text-center">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 my-3 p-2">
+      <h3 class="dark-blue">Adding Author Details</h3>
+      <hr class="h-divider my-4">
+    </div>
+  </div>
+  <div class="row justify-content-center">
     <div class="col-12 col-md-5 p-3 mb-2">
       <div class="p-1">
-        <h3>Adding Author</h3>
-        <hr class="h-divider">
         {% if user.is_authenticated %}
         <!-- for to add a book-->
         <form action="" method=POST enctype="multipart/form-data" id="author-form">
@@ -36,7 +35,7 @@
         {% else %}
         <div class="container sign-in-up" >
           <div class="row justify-content-center">
-            <h4>Sign in or Sign p to add your book</h4>
+            <h4>Sign in or Sign up to add your book</h4>
             <div class="col my-5">
               <h5>Already have an account then Sign in</h5>
               <br>
@@ -48,7 +47,7 @@
             <div class="col my-5">
               <h5>Or Sign up for new account</h5>
               <br>
-              <a href="{% url 'account_signup' %} "><button type="button" class="btn btn-primary btn-lg">Sign
+              <a href="{% url 'account_signup' %} "><button type="button" class="btn btn-primary btn-lg btn-add">Sign
                   up</button></a>
             </div>
           </div>
@@ -63,6 +62,27 @@
       </div>
     </div>
   </div>
+</div>
+<!-- Adding confirmation model -->
+<div class="modal fade" id="addingModal" tabindex="-1"
+aria-labelledby="addingModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title"
+        id="addingModalLabel">Delete Review?</h5>
+       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+      {{ book.title }} has been added successfully added.
+    </div>
+    <div class="modal-footer justify-content-center">
+      <button type="button" class="btn btn-secondary"
+        data-bs-dismiss="modal">Close</button>
+      <a id="addingConfirm" href="#" class="btn btn-success">OK</a>
+    </div>
+  </div>
+</div>
 </div>
 
 {% endblock %}
