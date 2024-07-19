@@ -31,6 +31,11 @@
           {% csrf_token %}
           {{ authorForm | crispy }}
           <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+          {% if submitted %}
+          <span id="author-submitted" class="d-none" value="true"></span>
+          {% else %}
+          <span id="author-submitted" class="d-none" value="false"></span>
+          {% endif %}
         </form>
         {% else %}
         <div class="container sign-in-up" >
@@ -63,26 +68,21 @@
     </div>
   </div>
 </div>
-<!-- Adding confirmation model -->
-<div class="modal fade" id="addingModal" tabindex="-1"
-aria-labelledby="addingModalLabel" aria-hidden="true">
-<div class="modal-dialog">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h5 class="modal-title"
-        id="addingModalLabel">Delete Review?</h5>
-       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
-    <div class="modal-body">
-      {{ book.title }} has been added successfully added.
-    </div>
-    <div class="modal-footer justify-content-center">
-      <button type="button" class="btn btn-secondary"
-        data-bs-dismiss="modal">Close</button>
-      <a id="addingConfirm" href="#" class="btn btn-success">OK</a>
+<!-- Adding Author Confirmation modal -->
+ <!-- Confirmation Modal -->
+ <div class="modal fade" id="authorConfirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title txt-dark-blue text-center" id="confirmationModalLabel">Successful Submission</h5>
+      </div>
+      <div class="modal-body">
+        The author has been successfully saved to the database.
+      </div>
     </div>
   </div>
 </div>
-</div>
-
+{% endblock %}
+{% block extras %}
+    <script src="{% static 'js/books.js' %}"></script>
 {% endblock %}

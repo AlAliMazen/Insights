@@ -32,6 +32,11 @@
           {% csrf_token %}
           {{ categoryForm | crispy }}
           <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+          {% if submitted %}
+          <span id="category-submitted" class="d-none" value="true"></span>
+         {% else %}
+         <span id="category-submitted" class="d-none" value="false"></span>
+         {% endif %}
         </form>
         {% else %}
         <div class="container sign-in-up">
@@ -61,5 +66,22 @@
     </div>
   </div>
 </div>
+<!-- Adding Category Confirmation modal -->
+ <!-- Confirmation Modal -->
+ <div class="modal fade" id="categoryConfirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title txt-dark-blue text-center" id="confirmationModalLabel">Successful Submission</h5>
+      </div>
+      <div class="modal-body">
+        The category has been successfully saved to the database.
+      </div>
+    </div>
+  </div>
+</div>
 
+{% endblock %}
+{% block extras %}
+    <script src="{% static 'js/books.js' %}"></script>
 {% endblock %}

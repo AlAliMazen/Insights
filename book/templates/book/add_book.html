@@ -32,9 +32,9 @@
           {{ bookForm | crispy }}
           <button type="submit" value="submit" class="btn btn-primary">Submit</button>
           {% if submitted %}
-           <span id="submitted-status" class="d-none" value="true"></span>
+           <span id="book-submitted" class="d-none" value="true"></span>
           {% else %}
-          <span id="submitted-status" class="d-none" value="false"></span>
+          <span id="book-submitted" class="d-none" value="false"></span>
           {% endif %}
         </form>
         {% else %}
@@ -68,11 +68,11 @@
 
 <!-- Adding Book Confirmation modal -->
  <!-- Confirmation Modal -->
-<div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+<div class="modal fade" id="bookConfirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="confirmationModalLabel">Success</h5>
+        <h5 class="modal-title txt-dark-blue text-center" id="confirmationModalLabel">Successful Submission</h5>
       </div>
       <div class="modal-body">
         The book has been successfully saved to the database.
@@ -80,9 +80,6 @@
     </div>
   </div>
 </div>
-<script>
-  
-</script>
 {% endblock %}
 {% block extras %}
     <script src="{% static 'js/books.js' %}"></script>
