@@ -126,12 +126,12 @@ Markdown's not all that easy so sometimes you may want to use some tools to make
 ## Live Site
 🚨**Required** 
 
-- Include a link to deployed project (typically a Heroku Page)
+- Your can visit my website [Insights](https://insights-django-6d0b5a49c9fa.herokuapp.com) .
 
 ## Repository
 🚨**Required** 
 
-- Include a Link to the GitHub repository
+- A complete documentation on gitHub on [Insights](https://github.com/AlAliMazen/Insights) .
 
 ## Author
 🚨**Required** 
@@ -207,6 +207,9 @@ Images used on this website are listed below:
 
 - [Placeholder book](https://unsplash.com/photos/white-printer-paper-on-white-surface-zx2xVvxBcww).
 
+- ![Book lot on shelf](https://unsplash.com/photos/book-lot-on-shelf-_ar2ENzmqb0)
+
+- ![White wooden shelf with assorted books](https://unsplash.com/photos/white-wooden-shelf-with-assorted-books-7DMkvNblkpw)
 
 
 ### Design Elements
@@ -260,7 +263,7 @@ For making the website as responsive as possible I do have used Bootstrap5 and r
 - call attention to any custom javascript you created to help your User Experience you can organize this by functions or files
 
 ## Wireframes
-🚨**Required** 
+🚨**Required** STILL TO DO
 
 This section where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. 
 
@@ -290,8 +293,6 @@ Here is the [2022 announcement](https://code-institute-room.slack.com/archives/C
 
 # Information Architecture
 🚨**Required** 
-
-As part of the requirements for this project you need to have at least **1 original data model**. It's this section that discusses your data and how each piece relates to another and draws out the CRUD functionality you built.
 
 ## Entity Relationship Diagram
 🚨**Required** 
@@ -356,35 +357,33 @@ It has the following structure :
 ![User Table](static/assets/README/User_tbl.png)
 
 
-> **Activities Model**
-> Activities is a table to hold a unique icon image and name values that users have associated with events and places. It helps with sorting events and prevents the need from carrying around two data objects in the larger Events and Places data structures. The purpose of an Activities object is to provide an imagery association to a category.
->
-> | DB Key    | Data Type    |          Purpose            | Form Validation                            | DB processing        |
-> |--------	|:---------:	|:-------------------------:	|----------------------------------------	|------------------	|
-> | _id        | ObjectId    | unique identifier            | None                                    | n/a                |
-> | name    | String        | Name of Activity            | Required<br>Min 1 char<br>Max 50 chars    | trim<br>to lower    |
-> | icon    | String        | system path to image file    | Required                                |                  	|
->
-> Activity entries are used by events, places and filtering.
->
-> - [x] Create - An activity is potentially created when a user successfully creates a place, creates an event, updates an event, or updates a place.
-> - [x] Read - The Activities table is read when a user is adding an event, updating an event, adding a place or updating a place, to determine if a new value should be created or not. The activities table is queried for using the name and icon pair, if it is found, the ObjectId is passed to the event and places. If no match is found, a new Activity is created and that ObjectID is passed to the place or event.
-> - [ ] Update
-> - [ ] Delete
-    >
-    >  This table has no deletion or updates associated with it. It's strictly create and read. Eventually, maintenance scripts should be written to delete unused/deprecated entries.
->
-> The reading/writing of the activities table is housed in the [what2do2day/activities/views.py](what2do2day/activities/views.py) file.
 
 ## CRUD Diagrams
 🚀 **merit & beyond**
 
-You can also have CRUD diagrams to show the accessors visually how the model is
-used in your site.
+CRUD functionalities are completely applied on the Review Model where all visitors who visit the website can view (READ) the views on a specific book. Only registered users can WRITE (ADD) a review, UPDATE his/her own review and lastly DELETE his/her own review.
 
-I used [draw.io](https://app.diagrams.net/) and hooked it up to my google drive to create the screenshot below
+I used [draw.io](https://app.diagrams.net/) to draw the UML for the CRUD functionality applied to all models including Review, Book, Author, Category, Likes and Rating models.
 
-> ![image](https://user-images.githubusercontent.com/23039742/154406188-c9beb57a-2fd1-4f26-a8ed-bee320e46e3d.png)
+### Review Model:
+It represents the insight written by authorized visitors of the website and have been approved by the admin on the backend. In the following diagram I try to indicate how the CRUD functionality has been applied on the Review Model
+
+![Review-Model-CRUD](static/assets/Diagrams/Review_CRUD.drawio.png) 
+
+
+
+### Adding Author, Category or Book:
+I have applied the CREATING new records on the author, category and Book models. These records excluding Books'records are made available at real time. Books which are are added need to be approved by the admin on the backend. Through all these three models the functionality is the same shown in the following diagram 
+
+![C-author-books-category](static/assets/Diagrams/Adding_sources.drawio.png)
+
+
+### Likes and Rating Models:
+These two models are made for giving more interaction for user with the website. These models are small and can only be seen when reviewing a book and want to like and rate that book. Both are made for future purposes. 
+
+
+
+
 
 # Agile Process
 🚨**Required** 
