@@ -43,13 +43,14 @@ authorForm=document.addEventListener('DOMContentLoaded', function() {
     
 });
 
+const time_in_second=2500;
 /** Show books submission modal */
 function showBookConfirmationModal() {
     const confirmationModal = new bootstrap.Modal(document.getElementById('bookConfirmationModal'));
     confirmationModal.show();
     setTimeout(() => {
         confirmationModal.hide();
-    }, 3000);
+    }, time_in_second);
 };
 
 
@@ -59,7 +60,7 @@ function showCategoryConfirmationModal() {
     confirmationModal.show();
     setTimeout(() => {
         confirmationModal.hide();
-    }, 3000);
+    }, time_in_second);
 };
 
 /** Show author submission modal */
@@ -68,5 +69,5 @@ function showAuthorConfirmationModal() {
     confirmationModal.show();
     setTimeout(() => {
         confirmationModal.hide();
-    }, 3000);
+    }, time_in_second);
 };
