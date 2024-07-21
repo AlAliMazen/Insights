@@ -485,7 +485,7 @@ You can find my user stories related to this project by visiting [Insights-User-
 
 
 ## Feasibility vs Importance
-🚀 **merit & beyond**
+🚀 **merit & beyond** (It is not clear what to write here)
 
 To scope the project for a MVP (minimally viable product) a feasibility analysis was done.
 
@@ -509,28 +509,41 @@ Now you have to talk about the scope to reduce things more, you don't necessaril
 ## Agile Tool
 🚨**Required** 
 
-You are required to use an agile tool to track user stories through the development process. You could use a spreadsheet, JIRA, or another tool, and CI taught you how to use GitHub Issues to write your user stories.
+I depended on the templated provided by Code Institute to write and track my website User Stories. As for Tools used for tracking the implementation I have used GitHub Projects and issues linked to the project. Pre-mentioned I have listed my User stories and 
+you can find my user stories related to this project by visiting [Insights-User-Stories-Website](https://github.com/users/AlAliMazen/projects/2)
 
-- State what tool you used (GitHub, Jira, Rally, Trello, a spreadsheet)
-- Include a link to the tool's product/progress board
-- Include a screenshot of the tool's product/progress board
+**Import Notes**
 
-Lessons on how to use gitHub for a product board can be found in the LMS system under:  
-- Principles of Agile Development > 
-  - Common Agile Practices > 
-    - Product Backlog
+- I have updated the Board of the Project on tracking the user stories against the end of the project and not at real time because I have to let other real users try the the feature.
+
+- I sometimes correct the user story if they include any typos.
+
+
 
 ### User Story Example
 🚨**Required** 
 
-- include a screenshot of a user story with all it's details
+Some examples about user story based on the template looks like the following:
 
-If you made a template, call that out and provide:
-- link to template
-- screenshot of template
+- Account Registration:
+
+![Account-Register](static/assets/README/user-story-2.png)
+
+- View a list of available books with its details:
+
+![View-list-of-books](static/assets/README/user-story-1.png)
+
+
+Following is a screenshot on the the template for tracking user stories used for this website:
+
+- [Insight-User-Story-Project](https://github.com/AlAliMazen/Insights/issues/new?assignees=&labels=&projects=&template=user-story-template.md&title=)
+
+It looks like the following screenshot:
+
+![](static/assets/README/user.story-project-template.png)
 
 ### Epic Stories
-🚀 **merit & beyond**
+🚀 **merit & beyond**  Will NOT WRITE IT.
 
 If you want a chance at  **DISTINCTION**, you need to have epic stories to stories with tasks.
 
@@ -567,27 +580,82 @@ In this section, you should go over the different parts of your project, and des
 ## Implemented Features
 🚨**Required** 
 
-It's easiest to break this section down into the header, footer, and each page/layer/signification section of your website. Call out any differences for mobile vs desktop presentations, include a screenshot of the implemented feature.
+Insights website is coded to be a baseline for people who wants to learn about Backend and its communication to the frontend. All implemented features are available in the course content including applying the CRUD functionality and make use of forms.
 
-Don't forget your custom 404 error page
+- Visitors have a navigation bar which is accessible from all over the website, it is applied using Bootstrap5 mechanism.
+![insight-navigation](static/assets/README/insight-navigation.png)
 
-Don't forget the 3 phases of navigation:
-- unauthenticated
-- general authenticated user
-- superuser authenticated
+- Visitors can register themselves to have an account using the **Register** nav-item.
 
-And don't forget Defensive programming bits
-- validation of form inputs
-- not allowing users to create, read, update and delete information they shouldn't
+![insight-sign-up](static/assets/README/insight-sign-up.png)
 
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
+- Visitors can login in case they have created an account using only the username and their respective password. It gives them access to their reviews which they can update, delete or add a new review.
+
+![insight-sign-in](static/assets/README/insight-sign-in.png)
+
+- Visitors of the website can view all listed books with their writers, categories and by whom it was added and when. They don't need an account for that.
+
+![insight-books-gallery](static/assets/README/insight-books-gallery.png)
+
+- Visitors can click on the website logo to go back to the Home page.
+
+![insight-logo](static/assets/README/insight-navigation.png)
+
+- Visitors can click on a book to see a short overview about it as well as its author.
+
+![insight-select-book](static/assets/README/insight-book-gallery-II.png)
+
+- Visitors can see how many approved reviews are already there, hom many likes a book has got till now and how good a book is
+
+![insight-reviews-likes-rating](static/assets/README/insight-comments-likes-rates.png)
+
+- When a user is logged in, he can add a review to a selected book, like the book and rate it.
+
+![insight-write-review](static/assets/README/insight-write-review-like-rate.png)
+
+- Logged in user can only like the book one time.
+
+![insight-like-once](static/assets/README/insight-like-rate-once.png)
+
+- Logged in user can only rate the book one time. 
+
+![insight-like-once](static/assets/README/insight-like-rate-once.png)
+
+- Logged in user can add an author, a category or a book.
+
+Add-author:
+
+![insight-add-author-category-book](static/assets/README/insight-add-author.png)
+
+add-category:
+![insight-add-author-category-book](static/assets/README/insight-add-category.png)
+
+add-book:
+![insight-add-author-category-book](static/assets/README/insight-add-book.png)
+
+- Logged in user can see an indication that s/he is already logged-in.
+
+![insight-logged-in-user](static/assets/README/insight-signed-in-user.png)
+
+- Visitors can use the footer to follow the coder of the website on both linked-In and GitHub platforms.
+
+![insight-footer](static/assets/README/insight-footer.png)
+
 
 ## Future Features
 🚀 **merit & beyond**
 
-Use this section to discuss plans for additional features to be implemented in the future
+Though the website is a corner stone when learning about the backend and frontend communication, some plans are and already should be implemented in the future. These feature will give the website more professional functionality:
 
-If you end up not developing some features you hoped to implement, you can include those in this section too.
+- Commenting on other's reviews: this feature will build more communication between visitors of the website.
+
+- Dislike a book: logged in users should have the possibility to dislike the book because they have read it and they didn't find it that interesting.
+
+- Re-rate a book: logged in users should be able to update their own rating of the book (either increase, decrease or remove the existing rating)
+
+- Logged in users should be able to see their added authors, categories as well as books. They should be able to update and remove their participation. 
+
+- Logged in users should be able to manage their profile as well as delete the account completely. 
 
 ## Testing
 🚨**Required** 
