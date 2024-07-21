@@ -66,6 +66,7 @@ body {
 .image-container {
     position: relative;
 }
+
 .section-img-container{
     padding: 10% .5rem;
 }
@@ -82,8 +83,8 @@ body {
     width: 100%;
     height: auto;
 }
-.carousel-item img{
-    height:550px
+.slide-img{
+    height: 550px
 }
 
 .carousel-caption{
