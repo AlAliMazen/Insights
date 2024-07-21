@@ -6,14 +6,14 @@
 <div class="container my-5 px-4 text-center ">
     <div class="row justify-content-center">
         <div class="col-12 col-md-8 my-3 p-2">
-            <h2>{{ book.title }} <span class="bar-seprator">|</span> {{ book.writer }}
+            <h2 class="dark-blue">{{ book.title }} <span class="bar-seprator">|</span> {{ book.writer }}
                 <hr class="h-divider my-5">
             </h2>
         </div>
     </div>
     <div class="row  justify-content-between ">
         <div class="col-12 col-md-5 p-3 mb-2 text-justify">
-            <h4>{{ book.title }} <span class="bar-seprator">|</span> Short Overview</h4>
+            <h4 class="dark-blue">{{ book.title }} <span class="bar-seprator">|</span> Short Overview</h4>
             <p class="book-description">
                 {{ book.short_description | safe }}
             </p>
@@ -43,7 +43,7 @@
     </div>
     <div class="row justify-content-between ">
         <div class="col-12 col-md-5 p-3 mb-2 text-justify">
-            <h4>About {{ book.writer }}</h4>
+            <h4 class="dark-blue">About {{ book.writer }}</h4>
             <p class="author-biography">{{ author_details.short_biography | safe }}</p>
             <h6 class="book-user">Added by: {{ author_details.user }} <span class="bar-seprator">|</span> 
                 on: {{ author_details.created_on }} </h6>

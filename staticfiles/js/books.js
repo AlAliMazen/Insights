@@ -1,38 +1,73 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('book-form');
-
-    form.addEventListener('submit', async function(event) {
-        event.preventDefault(); // Prevent the default form submission
-
-        const formData = new FormData(form);
-        console.log("about to enter the try")
-        if (response.ok) {
-            showConfirmationModal();
+/** DOMContentLoaded */
+bookForm=document.addEventListener('DOMContentLoaded', function() {
+    /** Books */
+    const bookSubmission = document.getElementById('book-submitted');
+    if (bookSubmission != null){
+        const bookSubmissionValue= bookSubmission.getAttribute('value');
+        console.log("book submission ",bookSubmissionValue)
+        /** for book submission */
+        if (bookSubmissionValue==="true") {
+            showBookConfirmationModal();
         } else {
             console.error('Submission failed');
         }
-        /*try {
-            const response = await fetch('/submit-url', {
-                method: 'POST',
-                body: formData
-            });
+    }    
+});
 
-            if (response.ok) {
-                showConfirmationModal();
-            } else {
-                console.error('Submission failed');
-            }
-        } catch (error) {
-            console.error('Error:', error);
-        }*/
-    });
-
-    function showConfirmationModal() {
-        const confirmationModal = new bootstrap.Modal(document.getElementById('confirmationModal'));
-        confirmationModal.show();
-
-        setTimeout(() => {
-            confirmationModal.hide();
-        }, 2000);
+categoryForm=document.addEventListener('DOMContentLoaded', function() {
+    /** Category */
+    const categorySubmission = document.getElementById('category-submitted');
+    if(categorySubmission != null){
+        const categorySubmissionValue= categorySubmission.getAttribute('value');
+        /** for category submission */
+        if (categorySubmissionValue==="true") {
+            showCategoryConfirmationModal();
+        } else {
+            console.error('Submission failed');
+        }
     }
 });
+
+authorForm=document.addEventListener('DOMContentLoaded', function() {
+    /** Author */
+    const authorSubmission = document.getElementById('author-submitted');
+    if (authorSubmission != null){
+        const authorSubmissionValue= authorSubmission.getAttribute('value');
+        /** for author submission */
+        if (authorSubmissionValue==="true") {
+            showAuthorConfirmationModal();
+        } else {
+            console.error('Submission failed');
+        }
+    }
+    
+});
+
+const time_in_second=2500;
+/** Show books submission modal */
+function showBookConfirmationModal() {
+    const confirmationModal = new bootstrap.Modal(document.getElementById('bookConfirmationModal'));
+    confirmationModal.show();
+    setTimeout(() => {
+        confirmationModal.hide();
+    }, time_in_second);
+};
+
+
+/** Show category submission modal */
+function showCategoryConfirmationModal() {
+    const confirmationModal = new bootstrap.Modal(document.getElementById('categoryConfirmationModal'));
+    confirmationModal.show();
+    setTimeout(() => {
+        confirmationModal.hide();
+    }, time_in_second);
+};
+
+/** Show author submission modal */
+function showAuthorConfirmationModal() {
+    const confirmationModal = new bootstrap.Modal(document.getElementById('authorConfirmationModal'));
+    confirmationModal.show();
+    setTimeout(() => {
+        confirmationModal.hide();
+    }, time_in_second);
+};
