@@ -391,32 +391,98 @@ These two models are made for giving more interaction for user with the website.
 ## Project Goals
 🚨**Required** 
 
-This project was built to do something. Show blogs, engage users, track bookings, share recipes, provide admins nice ways to add/update/delete records. Privately store information.  Write out the purpose of this site.
+This project was built to achieve two main goals on two main levels:
 
-Project Goals sum up what you expect different users to do on your site.
-- some just come and read things related to your topic.
-- some users are administrating the site (adding, updating & deleting models)
-- some users are registered, so they manage information of their choice, interact with others, do a certain tasks
+1- Development Level: Handling the front-end as well as the backend architecture challenges when using Django Framework along with other programming languages including Python, Javascript, HTML and CSS. Handling the requests, linking all pages together and doing the right thing at the right place will help other developer when using this project as a template to learn and see how things work under the hood.
 
-**what to keep in this section**
-Document your project goals by one of the following methods:
-- List the project goals by type of users
-- Flat list 
-- Quick paragraph
+2- Visitors Level: interaction between a visitor and the website is made smoothly, giving the end user the possibility to manage his reviews including adding, reading, updating and deleting existing reviews. Furthermore, it lets user add his/her beloved author, category and book to let others interact with it. Behind the scene the admin can confirm the books choice as well as the review.
+
 
 ## Initial User Stories
 🚨**Required**
 
-To start the agile process this section kicks off with a bullet list/brainstorming dump about features you'd like to have. EVERYTHING write them out in bullet form:
+Right from the beginning I had a clear idea what to write (Idea for a website). Though it was challenging for me to come up with the journey details at that time. Brainstorming was as following:
 
-- As a 'user type' I 'to perform an action' so that I can 'achieve a goal'
+1- What can offer the user to do on my website?
 
-You can put this into a googlesheet and link to it.
+2- How can the user share his ideas on my website?
 
-**User Story Examples**
+3- How can I handle user's activity on my website.
 
-- [radiology booking](https://github.com/DeannaCarina/ELHTRadiology#user-stories)
-- [places/events searching site](https://github.com/maliahavlicek/what2do2day#user-stories)
+
+With these questions in mind, I started to write my user stories from User's Point Of View as well as Admin's Point of View. For tracking the implementation of user's story I used GitHub Projects and the template provided by the Code Institute.
+
+You can find my user stories related to this project by visiting [Insights-User-Stories-Website](https://github.com/users/AlAliMazen/projects/2)
+
+
+**Insights User Stories**
+
+1- View a list of available books with author amd category
+  
+  **As a user I can see a list of books with their titles, authors, category as well as the one who added the book**
+
+  - AC1: I can see book title, its writer, category and cover image.
+
+  - AC2: I can select a book to read more about it.
+
+  - AC3: I can see who created the book and when.
+
+
+2- Account Register:
+
+**As a user I can create an account so that I can interact with the content**
+
+- AC1: I can write my name and think out a password to login as logged-in user.
+
+- AC2: When logged in I can choose to let the website remember me so I don't need to log-in every time I visit the website.
+
+3- Add Author, Category and a Book:
+
+**As a logged-in user I can add authors, category and books so others can see them**
+
+- AC1: When logged-in I can add an author
+- AC2: When logged-in I can add a category
+- AC3: When logged-in I can add a book
+
+4- Interact with Content:
+
+**As a logged-in User I can choose a book to write a review, put a like and rate it**
+
+- AC1: As logged-in user I can write a review on a book.
+- AC2: As logged in user I can put a like on a book.
+- AC3: As logged in user I can rate a book.
+
+5- Edit my own Review:
+
+**As a user I can choose a review which is either approved or awaiting approval to update**
+
+- AC1: Only logged in user can choose his own review to update.
+
+6- Removing a book Review:
+
+**As a logged-in user I can choose my review to delete it.**
+
+- AC1: logged-in user can delete his own review about a book.
+
+- AC2: Logged-in user should see a confirmation whether he is sure about deleting his review.
+
+7- Approving Added Books
+
+**As a site Admin I can approve so that all site visitor can see the new book**
+
+- AC1: Admin can approve all newly added books which awaits approval.
+
+- AC2: Admin can delete the newly or already existing books as well.
+
+
+8- Approving/Deleting users Reviews
+
+**As a site Admin I can see all reviews so that I can approve or remove the appending and existing ones**
+
+- AC1: Only admin can see the appending review for approval 
+
+- AC2: Only Site Admin can delete newly reviews or even existing reviews.
+
 
 ## Feasibility vs Importance
 🚀 **merit & beyond**
