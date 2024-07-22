@@ -68,7 +68,7 @@ body {
 }
 
 .section-img-container{
-    padding: 10% .5rem;
+    padding: 1% .5rem;
 }
 
 .image-flash {
@@ -131,25 +131,11 @@ body {
     width: 100%;
 }
 
+/* --------- Error Messages --------*/
+ .dl, ol, ul {
+    color:red;
+ }
 
-.masthead-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
-}
 /* -- styling books gallery --*/
 .suggest-btn{
     background-color: #0A419F;

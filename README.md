@@ -566,40 +566,9 @@ It looks like the following screenshot:
 
 ![](static/assets/README/user.story-project-template.png)
 
-### Epic Stories
-🚀 **merit & beyond**  Will NOT WRITE IT.
 
-If you want a chance at  **DISTINCTION**, you need to have epic stories to stories with tasks.
-
-Example:
-EPIC: Navigation As a user, I want to have easy to see navigation on the page, so I can intuitively interact with the site without getting frustrated both on mobile and desktop devices.
-
-USER STORY: Navigation: Unauthenticated user: As an unauthenticated user I want to see what the site is about, and easily figure out how access more information. 
-
-Tasks:
-- [ ] Build Template so information in one spot
-- [ ] Rough in Logo
-- [ ] Add in Register/Login/Forgot Password
-- [ ] Add Main List Page
-- [ ] Rough in CSS
-
-Acceptance Criteria
-- [ ] navigation sticks in view as user scrolls
-- [ ] looks good on mobile
-- [ ] looks good on desktop
-- [ ] links work & go where expect
-- [ ] passes accessibility
-
-**What to keep in this section**
-- screenshot of epic story
-- EPIC TEMPLATE screenshot
-- link to EPIC TEMPLATE
-
-
-# Features
+# Features  [DONE]
 🚨**Required** 
-
-In this section, you should go over the different parts of your project, and describe each in a sentence or so and how they tie into  your user stories.
 
 ## Implemented Features
 🚨**Required** 
@@ -684,50 +653,102 @@ Though the website is a corner stone when learning about the backend and fronten
 ## Testing
 🚨**Required** 
 
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the Features section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
-
-**At this point, you should use gitHub Issues Templates** to track test cases and defects. Here's a [document](https://docs.google.com/document/d/1nDS5tZeMO77Dfq85IZGMSV6C41XaPm9FwcpR3k-UTVc/edit#heading=h.3kdbr3tqbzi) I put together for this process.
+I want to draw attention that following tests are conducted based on the purpose the tool or page's goal to achieve. In other words, the log-in page has the purpose to take a legitimate username and a password which are created before and let user sign-in as a logged in uer. Moreover, the testing is going to be divided into sections based on the available pages.
 
 
 ## Manual Testing
 🚨**Required** 
 
-For any scenarios that have not been automated, test the user stories/features manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios in markdown such as:
 
-**Manual Testing For Contact Form**
-1. Contact form:
-    1. Go to the "Contact Us" page
-    2. Try to submit the empty form and verify that an error message about the required fields appears
-    3. Try to submit the form with an invalid email address and verify that a relevant error message appears
-    4. Try to submit the form with all inputs valid and verify that a success message appears.
+**Manual Testing For Log in**
 
-Or you can use markdown check boxes and write them up per feature:
+1. From Navigation bar click on **Login** page:
+    1. Click on **Sign In** button with both username and password empty => Result: **Form Error Message** telling user that s/he has to fill out the form.
 
-**Manual Testing For Contact Form**
-- [x] try to submit 
-- [x] Try to submit the empty form and verify that an error message about the required fields appears
-- [x] Try to submit the form with an invalid email address and verify that a relevant error message appears
-- [x] Try to submit the form with all inputs valid and verify that a success message appears.
-- [x] no console errors
-- [x] submit goes to code institute data dump page in new tab
-- [x] looks good on mobile (one column)
-- [x] looks good on tablet (two columns)
-- [x] looks good on desktop (two columns but not SUPER HUGE)
+    ![insight-sign-in-A](static/assets/README/insght-sign-in-form-a.png)
 
-Or you can use a spreadsheet
+    2. Click on **Sign In** button again with either username or password is typed => Result: **Form Error Message** telling user to fill out required fields.
+
+    ![insight-sign-in-B](static/assets/README/insight-sign-in-b.png)
+
+    3. Type your username but with wrong password, then click on **Sign In** => Result: **Form Error Notification in Red** wil be shown indicating that either username or password is not correct.
+
+    ![insight-sign-in-C](static/assets/README/insight-sign-in-c.png)
+
+    4. Tpe your username and its corresponding password then click on **Sign In** => Result: Page will be refreshed and you will be redirected to the Home page. It **shows your username at the top** to indicate you are logged in. 
+
+    ![insight-sign-in-D](static/assets/README/insight-sign-in-d.png)
+
+**Manuel Testing for Register Form**
+
+2. From navigation click on **Register** menu item:
+  1. Type a username and a password of your choice => Result: When username is already there **Red notification indicating that username exists** 
+
+  ![insight-register-A](static/assets/README/insight-register-A.png)
+
+  2. Type a username (which is completely new) and try to make a mistake in the password => Result: **Red notification message** indicating that both password and its confirmation must match.
+
+  ![insight-register-B](static/assets/README/insight-register-B.png)
+  
+**Testing for Reviews Submission**
+
+3. Click on one of the book's titles and scroll down. Try to submit the **Review** form without typing any letter => Result: Form textarea 
+will indicate the form can't be empty.
+
+![insight-review-empty](static/assets/README/insightreview-submission.png)
+
+**Testing for Rating Form**
+
+4. Rating Form is made up of a float input field which should have a valid value between 0.0 and 10.0, otherwise it will be an error:
+    1. Try to click the **Submit** for the Submit Form => Result: **Form Error Message** indicating that the form must have a value.
+
+![insight-rate-form](static/assets/README/insight-rating-empty-a.png)
+    2. Try to submit a value grater than 10 => Result: **Form Error Notification** telling user that 'Value must be less than or equal to 10'
+
+  ![insight-rate-b](static/assets/README/insight-rate-b.png)
+    3. Try to submit a value less than 0 => Result: **Form Erro Notification** telling user that 'Value must be greater ot equal to 0'
+
+  ![insight-rate-b](static/assets/README/insight-rate-c.png)
+    4. try to submit a float value with comma instead of decimal point =>Result: **Form Error Notification** indicates that the field accepts numeric values only.
+
+  ![insight-rate-b](static/assets/README/insight-rate-d.png)
+
+**Testing Adding Author Form**
+
+5. All Forms used for **Adding sources to the Database** have the same built in functionality to indicate a **Form Error Notification** that a required field can't be submitted empty
+    1. On Adding an Author Form try to submit an empty Form required field => Result: **Form Error Notification** saying that form can't be submitted because a required field is empty.
+
+  ![insight-author-form-empty](static/assets/README/insight-author-empty-field.png)
+    2. Try to submit a the author form with **Existing Author Name** =>Result: **Error: Author with this Fullname already exists** that is because the author full-name is a unique field.
+
+![insight-author-exist](static/assets/README/insight-author-exist.png)
+    3. Try to submit the author form with a date in the following format yyyy-dd-mmm as in 1990-15-12 =>Result: **Form Error Notification** you have to enter a valid date in the formal of yyyy-mm-dd
+
+![insight-author-date](static/assets/README/insight-author-f-wrong-field.png)
+
+
+**Testing Adding Category Form**
+
+6. Category Form tests have to do with submitting an empty form and checking against duplication of category name.
+    1. Try to submit an empty category form =>Result:**Form Error Notification** indicting that form can't be submitted empty.
+
+  ![insight-category-form](static/assets/README/insight-category-empty-fields.png)
+    2. Try to submit the form with a category name **which already exists** =>Result: **Form Error indication that Category with this Name already exists**
+  
+  ![insight-category-exist](static/assets/README/insight-category-double-names.png)
+
+**Testing Adding Books Form**
+
+7. Book's form also has a check up mechanism that is applied when a book title already exists or user tries to submit an empty form. 
+    1. Try to submit the book form empty => Result: **Form Error Notification** All fields must be filled out
+
+![insight-book-empty-form](static/assets/README/insight-book-f-empty-field.png)
     
-Here is a [Manual Testing Template](https://docs.google.com/spreadsheets/d/1vc1IVL-ydQwWeWMqnk_GRox6HE6qxDLpchGse8Crayo/edit#gid=296578096) that you can use as a starting point to keep track of your testing efforts. Make a copy of it in your own account and update as needed to reflect the browsers you are testing and features.  
+  2. Try to submit the form wit a book title which is already stored in the database => Result: **Error: Book with this Title already exists** will appear.
+![insight-book-double-title](static/assets/README/insight-book-f-double-exist.png)
 
-It's ok to spot check specific functionality across devices and browsers but each page should be viewed as a whole for each device/browser combo at least once.
 
-A quick way to check if items are exceeding the screen width of a project is to run this javascript in the console for various screen emulations:
 
-```
-var docWidth = document.documentElement.offsetWidth;
-[].forEach.call(document.querySelectorAll('*'),function(el){if(el.offsetWidth > docWidth){console.log(el);}});
-```
 
 ## Compatibility and Responsive Testing
 🚨**Required** 
