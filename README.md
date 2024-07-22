@@ -263,24 +263,45 @@ For making the website as responsive as possible I do have used Bootstrap5 and r
 - call attention to any custom javascript you created to help your User Experience you can organize this by functions or files
 
 ## Wireframes
-🚨**Required** STILL TO DO
+🚨**Required** 
 
-This section where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. 
+I have used [Balsamiq-Wireframes](https://balsamiq.com/wireframes/) application to create the wireframes which I have coded as frontend view. Client is expected to land on the Home page as in the following screenshot:
 
-- you need **mobile** & **desktop** views
-- Capture Your Custom model's
-  - CREATE/ADD
-  - READ (LIST/DETAIL)
-  - UPDATE/EDIT
-  - DELETE
-  - & triggers for such things
-- call out differences for authentication levels:
-  - not logged in
-  - general user logged in
-  - super user logged in
-- HOW is the NAVIGATION different for admin users vs Logged-in users & unauthenticated users
+![insight-home](static/assets/Wireframes/Home.png)
 
-🚀 **merit & beyond**
+Visitors are presented with a landing page which is made of a central navigation where user can choose to **add an author, category or a book**. Visitors can also register and get an account. It is also indicating the visitors who don't still have an account, they will have a red label under the navigation indicating that they are still not registered. Though, they can scroll down to see the carousal made of three slides offering same functionality as for Add menu-bar item. Scrolling down will also show visitors who are still not registered the list of available and approved books with their cover image, author, title, category and by whom it was added and when. Books'gallery is made up of two rows, three book each. In case there are more than 6 books, the next button will be shown under the book's gallery indicating that there are other books available. Clicking on any book title will take the visitor to the selected book details page as following 
+
+![insight-book-detail](static/assets/Wireframes/Book_insight.png)
+
+On Book Insight page visitors are presented with more information on the book as well as its author. This page is made up of 3 big rows and two columns in each. It starts with the book short over view, what the book is about and it genre. It provides information about the one who added this book and when. It shows the number of approved reviews, likes and rating. In the second section, it sheds light on the author of the book who is also very important and can write many different books. Authors can also be added by a different user as the one who added the book. Last but not least, if the visitor is already logged in and has got an account, s/he can write a review on one of the books available, **edit his own review** or even **delete** it. Furthermore, logged in visitors can **put a like** on the book and it will be added at real time. Also s/he can rate the book. It is worth mentioning that both Likes and Rating are only available once meaning that if the logged in visitor has liked the book before, s/he can't like the book one more time. This is going to be a future feature to update the value in the database. When User submits his review, it will be shown right away as faded text awaiting for approval by the website admin on the backend. When User tries to delete his own review a confirmation model is going to be shown to ask user whether he is sure about what is going to happen and indicating that the action can't be undone afterwards.
+
+Moving to the next part of the website is where visitors need to register, Clicking on the **Register** in the navigation will lead to the following sign-up page
+
+![insight-sign-up](static/assets/Wireframes/Register.png)
+
+Visitors are required only to provide a username and a password but not an email. It is however required to be a valid email address if user provides only some letter which can't be validated by Django to be a legitimate email address. After successful sign-up process, users will be redirected back to the **Home** page where the can now add sources to the website and not only writing a review to a book.
+
+- Logged in user can choose **Add** from navigation or from the 3-home-slide to add an author where they will be directed to another page called add-author. Authors don't need to be approved by the admin to be made available for other users. User must provide information about the author like full name, birth, place of birth and author's photo as well as a short biography about him. If any information in the form is not correct Django will indicate it and won't submit the information to the backend for storing in the database. On the other hand, if provided information are correct and valid, there will be a modal showing success message confirming that the added author has be saved to the database.
+
+![insight-add-author](static/assets/Wireframes/Adding_author.png)
+
+- Moving to the adding Category is nearly the same as the one for the adding author, except that it requires only two pieces of information i.e. name of category and description for the category. In case these information are valid, there will be a confirmation modal assuring the user that the category has been saved to the database. Categories don't require to be approved by the admin to be shown for books later on. Page for adding a new category looks like the following wireframe 
+
+![insight-add-category](static/assets/Wireframes/Adding_Category.png)
+
+- Last but not least is the **adding Books** page where logged in user must also provide title of the book, select the author from the drop-down menu, provide a short overview on the book and categorize the book under one of the available categories. An image for the book cover must also be provided, other wise a placeholder image is going to be shown later one. **Books need to be approved by the website admin in order to be shown on the landing page**. A success confirmation message inside a modal is going to be shown when storing a new book has been conducted successfully.
+
+![insight-add-book](static/assets/Wireframes/Adding_Book.png)
+
+
+User can also sign-out when if he is not using his own device and he will be asked it he is sure about signing out as in the following wireframe
+
+![insight-sign-out](static/assets/Wireframes/Sign_out.png)
+
+
+
+
+🚀 **merit & beyond** STILL NOT DONE
 - tablet views
 - Custom 404
 - Profile Page
@@ -288,8 +309,6 @@ This section where you would share links to any wireframes, mockups, diagrams et
 - Register
 - Forgot Password
 
-You can hand draw these, but CI posts a yearly license in the general channel for Balsamiq which is pretty easy to use.
-Here is the [2022 announcement](https://code-institute-room.slack.com/archives/C0L316Z96/p1640099614368000)
 
 # Information Architecture
 🚨**Required** 
