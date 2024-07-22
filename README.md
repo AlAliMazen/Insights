@@ -310,7 +310,7 @@ User can also sign-out when if he is not using his own device and he will be ask
 - Forgot Password
 
 
-# Information Architecture
+# Information Architecture [DONE]
 🚨**Required** 
 
 ## Entity Relationship Diagram
@@ -320,12 +320,12 @@ For designing and planning my Entities (Models) which are reflected in the datab
 
 ![Database Tables](static/assets/README/Database_tables.png)
 
-## Database Choice
+## Database Choice [DONE]
 🚨**Required** 
 
 I have used PostgreSQL indicated and recommended by Code Institute. First I have set up a database connection using the CI recommendations and link it int he Project env.py as DATABASE_URL. It is not possible to check this file as it is added in the .gitignore for security reasons. 
 
-## Data Models
+## Data Models [DONE]
 🚨**Required** 
 
 
@@ -377,7 +377,7 @@ It has the following structure :
 
 
 
-## CRUD Diagrams
+## CRUD Diagrams  [DONE]
 🚀 **merit & beyond**
 
 CRUD functionalities are completely applied on the Review Model where all visitors who visit the website can view (READ) the views on a specific book. Only registered users can WRITE (ADD) a review, UPDATE his/her own review and lastly DELETE his/her own review.
@@ -402,9 +402,7 @@ These two models are made for giving more interaction for user with the website.
 
 
 
-
-
-# Agile Process
+# Agile Process  [DONE]
 🚨**Required** 
 
 ## Project Goals
@@ -417,7 +415,7 @@ This project was built to achieve two main goals on two main levels:
 2- Visitors Level: interaction between a visitor and the website is made smoothly, giving the end user the possibility to manage his reviews including adding, reading, updating and deleting existing reviews. Furthermore, it lets user add his/her beloved author, category and book to let others interact with it. Behind the scene the admin can confirm the books choice as well as the review.
 
 
-## Initial User Stories
+## Initial User Stories  [DONE]
 🚨**Required**
 
 Right from the beginning I had a clear idea what to write (Idea for a website). Though it was challenging for me to come up with the journey details at that time. Brainstorming was as following:
@@ -523,7 +521,14 @@ will also be implemented such as nav-bar, footer, obvious website purpose etc.
 ## Scope
 🚀 **merit & beyond**
 
-Now you have to talk about the scope to reduce things more, you don't necessarily need all the bells and whistles, they could be beyond your skill set. Think basic stuff. Write a paragraph to sum up how you morphed the project goals into a prioritized list of user stories that would be delivered as an MVP (minimal viable product).
+The scope of this Django project is to create a comprehensive platform for book enthusiasts, where users can seamlessly interact with a robust library system. The project integrates both frontend and backend functionalities, enabling a dynamic user experience. Users can browse through a curated collection of books, view detailed information about each book, including the author and a brief synopsis, and engage with the content by writing reviews, rating books, and liking them. The platform also supports user-generated content, allowing users to add new books, authors, and categories, thereby expanding the library.
+
+In addition, the project includes a secure user authentication system, enabling users to register, log in. This feature ensures personalized experiences, such as tracking reviewed books and managing interactions. The frontend interface is designed to be intuitive and user-friendly, facilitating easy navigation and engagement. The backend, built on Django, ensures data consistency, security, and efficient processing of user requests.
+
+Moreover, the platform fosters a community atmosphere where users can share their insights and opinions on various books, contributing to a collaborative and interactive environment. By implementing features like likes and ratings, the system offers valuable feedback to other users, helping them discover popular and highly-rated books.
+
+Overall, this project serves as a versatile tool for book lovers, authors, and reviewers, offering a centralized hub for literary exploration and interaction. It is scalable and can be expanded with additional features, such as personalized book recommendations or social sharing options, to further enhance user engagement and broaden its reach.
+
 
 ## Agile Tool
 🚨**Required** 
