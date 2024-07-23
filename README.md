@@ -8,120 +8,9 @@ Insights starts by introducing itself as a platform for books, people can look f
 
 Rating of a book, likes of a books as well as reviews on a specific book will be very helpful to guide any client whether to read this book or move to something else. Books are classified based on their categories which might by useful when filtering and narrowing the choice.
 
-## Helpful tools
 
-### PDB Debugging
-Here’s a [cheatsheet](https://kapeli.com/cheat_sheets/Python_Debugger.docset/Contents/Resources/Documents/index) on how to navigate into functions and to the next line using pdb.
-
-This video shows you how to set a trace and then use the print() to evaluate variables
-
-https://user-images.githubusercontent.com/23039742/212526614-f3d19b8a-6841-43d4-a527-bfb6da95e0ad.mp4
-
-
-
-### Screenshots and Videos
-**Here’s a great video on how to add videos to your readme! no need to convert to gifs!!**
-
-https://www.youtube.com/watch?v=G3Cytlicv8Y
-
-> 1. record a video via slack
-> 2. download it
-> 3. in github, edit your readme via the pencil icon
-> 4. type a place holder word and highlight it
-> 5. drag and drop mp4 file over that text
-> 6. scroll down to the commit area
-> 7. update the default commit message
-> 8. click the green button
-> 9. ```git pull``` changes to your gitpod workspace
-
-**You can do the steps 3-9 for the image/screenshot uploads too!**
-
-### Cheatsheets and Auto Generation Tools
-
-Markdown's not all that easy so sometimes you may want to use some tools to make tables.
-
-- [Markdown Cheatsheet](https://guides.github.com/features/mastering-markdown/)
-- [markdown table generator](https://www.tablesgenerator.com/markdown_tables) - used to help with documentation table
-  formatting
-- [markdown table of contents generator](https://luciopaiva.com/markdown-toc/) - used to create table of
-  contents (be weary these tools have some bugs if you have dashes or trailing spaces in your headers)
-- [readme.so](https://readme.so/) - if you don't want to learn markdown, this tool might help you
-
-# GUIDE's Table of Contents
-- [PROJECT_NAME](#project_name)
-  - [Live Site](#live-site)
-  - [Repository](#repository)
-  - [Author](#author)
-- [Table of Contents](#table-of-contents)
-- [UX](#ux)
-  - [Target Audience](#target-audience)
-  - [Design Choices](#design-choices)
-    - [Colors](#colors)
-    - [Typography](#typography)
-    - [Images](#images)
-    - [Design Elements](#design-elements)
-    - [Animations and Transitions](#animations-and-transitions)
-    - [Frameworks](#frameworks)
-    - [Custom Styles](#custom-styles)
-    - [Custom Javascript](#custom-javascript)
-  - [Wireframes](#wireframes)
-- [Information Architecture](#information-architecture)
-  - [Entity Relationship Diagram](#entity-relationship-diagram)
-  - [Database Choice](#database-choice)
-  - [Data Models](#data-models)
-  - [CRUD Diagrams](#crud-diagrams)
-- [Agile Process](#agile-process)
-  - [Project Goals](#project-goals)
-  - [Initial User Stories](#initial-user-stories)
-  - [Feasibility vs Importance](#feasibility-vs-importance)
-  - [Scope](#scope)
-  - [Agile Tool](#agile-tool)
-    - [User Story Example](#user-story-example)
-    - [Epic Stories](#epic-stories)
-- [Features](#features)
-  - [Implemented Features](#implemented-features)
-  - [Future Features](#future-features)
-  - [Testing](#testing)
-  - [Manual Testing](#manual-testing)
-  - [Compatibility and Responsive Testing](#compatibility-and-responsive-testing)
-  - [Accessibility Testing](#accessibility-testing)
-    - [Accessibility Audits](#accessibility-audits)
-    - [Keyboard Navigation](#keyboard-navigation)
-    - [Chrome Vox Reader](#chrome-vox-reader)
-  - [Core Web Vitals](#core-web-vitals)
-  - [Validation Testing](#validation-testing)
-    - [CSS Validation](#css-validation)
-    - [HTML Validation](#html-validation)
-    - [JavaScript Validation](#javascript-validation)
-    - [Python Validation](#python-validation)
-    - [JSON Validation](#json-validation)
-  - [Automated Testing](#automated-testing)
-  - [Defects](#defects)
-  - [Defects of Note](#defects-of-note)
-  - [Outstanding Defects](#outstanding-defects)
-- [Technologies Used](#technologies-used)
-  - [Languages](#languages)
-  - [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
-- [Deployment](#deployment)
-  - [Prerequisites](#prerequisites)
-  - [Fork and Clone the Repository](#fork-and-clone-the-repository ) 
-  - [Local Deployment](#local-deployment)
-  - [production Deployment](#production-deployment)
-- [Credits](#credits)
-  - [Content](#content)
-  - [Media](#media)
-  - [Acknowledgments](#acknowledgments)
   
-====================================== The Sections you Fill in are below ==============================
 
-# PROJECT_NAME
-🚨**Required** 
-
-*replace the **PROJECT NAME** header with your project's name*
-
-- One or two paragraphs providing an overview of your project.
-- Write this as a sales pitch or commercial to entice users to interact with your site or how you want investors to invest in or purchase your website.
-- Include a picture of site that shows it in responsive states and links to deployed code: https://ui.dev/amiresponsive
 
 ## Live Site
 🚨**Required** 
@@ -141,9 +30,78 @@ Mazen Al Ali
 # Table of Contents
 🚀 **merit & beyond**
 
-Generate after readme is complete by copying and pasting your readme from this point & below into this tool:
-- [mardown table of contents generator](https://luciopaiva.com/markdown-toc/)
-**NOTE:** It does have some bugs if you have dashes or trailing spaces in your headers, so make sure all these WORK!
+- [Insights](#insights)
+- [GUIDE's Table of Contents](#guide-s-table-of-contents)
+  * [Live Site](#live-site)
+  * [Repository](#repository)
+  * [Author](#author)
+- [Table of Contents](#table-of-contents)
+- [UX](#ux)
+  * [Target Audience](#target-audience)
+  * [Design Choices](#design-choices)
+    + [Colors](#colors)
+    + [Typography](#typography)
+    + [Images](#images)
+    + [Design Elements](#design-elements)
+    + [Hover Effects and Icons](#hover-effects-and-icons)
+    + [Frameworks](#frameworks)
+    + [Custom Styles](#custom-styles)
+    + [Custom Javascript](#custom-javascript)
+  * [Wireframes](#wireframes)
+- [Information Architecture [DONE]](#information-architecture--done-)
+  * [Entity Relationship Diagram](#entity-relationship-diagram)
+  * [Database Choice [DONE]](#database-choice--done-)
+  * [Data Models [DONE]](#data-models--done-)
+  * [CRUD Diagrams  [DONE]](#crud-diagrams---done-)
+    + [Review Model:](#review-model-)
+    + [Adding Author, Category or Book:](#adding-author--category-or-book-)
+    + [Likes and Rating Models:](#likes-and-rating-models-)
+- [Agile Process  [DONE]](#agile-process---done-)
+  * [Project Goals](#project-goals)
+  * [Initial User Stories  [DONE]](#initial-user-stories---done-)
+  * [Feasibility vs Importance](#feasibility-vs-importance)
+  * [Scope](#scope)
+  * [Agile Tool](#agile-tool)
+    + [User Story Example](#user-story-example)
+- [Features  [DONE]](#features---done-)
+  * [Implemented Features](#implemented-features)
+  * [Future Features](#future-features)
+  * [Testing](#testing)
+  * [Manual Testing](#manual-testing)
+  * [Compatibility and Responsive Testing](#compatibility-and-responsive-testing)
+    + [Why Choosing the pre-defined Browsers](#why-choosing-the-pre-defined-browsers)
+  * [Accessibility Testing](#accessibility-testing)
+    + [Accessibility Audits](#accessibility-audits)
+    + [Keyboard Navigation](#keyboard-navigation)
+    + [Chrome Vox Reader](#chrome-vox-reader)
+  * [Core Web Vitals](#core-web-vitals)
+  * [Validation Testing](#validation-testing)
+    + [CSS Validation](#css-validation)
+    + [HTML Validation](#html-validation)
+    + [JavaScript Validation](#javascript-validation)
+    + [Python Validation](#python-validation)
+    + [JSON Validation](#json-validation)
+  * [Automated Testing](#automated-testing)
+  * [Defects](#defects)
+  * [Defects of Note](#defects-of-note)
+  * [Outstanding Defects](#outstanding-defects)
+- [Technologies Used](#technologies-used)
+  * [Languages](#languages)
+    + [Frontend](#frontend)
+    + [Backend](#backend)
+  * [Frameworks, Libraries & Programs Used](#frameworks--libraries---programs-used)
+- [Deployment](#deployment)
+  * [Prerequisites](#prerequisites)
+  * [Fork and Clone the Repository](#fork-and-clone-the-repository)
+  * [Development Deployment](#development-deployment)
+  * [Production Deployment](#production-deployment)
+- [Credits](#credits)
+  * [Content](#content)
+  * [Media](#media)
+  * [Acknowledgments](#acknowledgments)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 # UX
 🚨**Required** 
