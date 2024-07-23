@@ -753,63 +753,52 @@ will indicate the form can't be empty.
 ## Compatibility and Responsive Testing
 🚨**Required** 
 
->To save time, you can create this type of table in [markdown table generator](https://www.tablesgenerator.com/markdown_tables)
->
->As of Feb 14, 2022 CI students can take advantage of the Student Developer Pack where you have access to great things like [browserstack](https://education.github.com/pack/offers/#browserstack) You should have received an email about how to activate your student Developer Pack, here's a [slack](https://code-institute-room.slack.com/archives/C0L316Z96/p1644946870567999) with details if you can't find it in the associated thread.
+As a rule of thumb I am fascinated about using frameworks which do in fact much of the heavy lifting in the background when it comes to making any website a responsive one. I have used Bootstrap5 to make my website as much responsive as possible and I have checked the website on the following devices.
+
+| TOOL / Device                 | BROWSER     | SCREEN RESOLUTION  | SCREEN SIZE |
+|-------------------------------|-------------|--------------------|-------------|
+| iPhone 13 Pro Max (real)      | Safari 17.5 | 2778 x 1284        | 6.7 inches  |
+| iPhone 15 Pro Max (real)      | safari 17.5 | 2796 x 1290        | 6,7 inches  |
+| Samsung A51 (real)            | Google 8.0.1| 2400 x 1080        | 6,5 inches  |
+| Samsung S23 Ultra (real)      | Chrome 8    | 3088 x 1440        | 6,8 inches  |
+| iPad 4 (real)  | Chrome 78    | Safari 17.5 | 2048 x 1536        | 9,7 inches  |
+| MacBook Pro 16 M2 Pro (real ) | safari 17.5 | 3456 x 2234        | 16 inches   |
+| Samsung Galaxy Z Fold (real)  | Chrome 8    | 2176 x 1812        | 7,6 inches  |
+
+Following are emulators provided by Chrome (V. 126.0.6478.127) Browser on MacOS
+
+| DEVICE                  | SCREEN DIMENSION   |
+|-------------------------|--------------------|
+| iPhone SE               | 375 x 667          |
+| iPhone XR               | 414 x 896          |
+| iPhone 12 Pro           | 390 844            |
+| Pixel 7                 | 412 x 915          |
+| Galaxy S8+              | 360 x 740          |
+| Samsung Galaxy S20 Ultra| 412 x 915          |
+| iPad mini               | 768 x 1024         |
+| iPad Air                | 820 x 1180         |
+| iPad Pro                | 1024 x 1366        |
+| Surface Pro 7           | 912 x 1368         |
+| Surface Duo             | 540 x 720          |
+| Galaxy Z Fold 5         | 344 x 882          |
+| ASUS Zenbook Fold       | 853 x 1280         |
+| Samsung Galaxy A51/71   | 412 x 914          |
+| Nest Hub                | 1024 x 600         |
+| Nest Hub Max            | 1280 x 800         |
 
 
-Minimally you should use dev tools and emulators to try to test you site on various screen sizes and browsers and note it in a table:
-
-I ensured my site was worked well, and looked nice on a variety of devices & browsers as noted in the table below:
-
-| TOOL / Device                 | BROWSER     | OS         | SCREEN WIDTH  |
-|-------------------------------|-------------|------------|---------------|
-| real phone: motog6            | chrome 78   | android 8  | XS 360 x 640  |
-| browser stack: iPhone5s       | safari  13  | iOs        | XS 320 x 568  |
-| dev tools emulator: pixel 2   | firefox  69 | android 8  | SM 411 x 731  |
-| browserstack: iPhone 10x      | Chrome 78   | iOs 11     | SM 375 x 812  |
-| browserstack: nexus 7 - vert  | Chrome 78   | android 7  | M 600 x 960   |
-| real tablet: ipad mini - vert | safari  13  | iOs 6      | M 768 x 1024  |
-| browserstack: nexus 7 - horiz | firefox 69  | android 7  | LG 960 x 600  |
-| chrome emulator: ipad - horiz | safari 13   | iOs        | LG 1024 x 768 |
-| browserstack windows PC       | Chrome 78   | windows 10 | XL 1920 x 946 |
-| real computer: mac book pro   | safari 12.1 | Mohave     | XL 1400 x 766 |
-| browserstack windows pc       | IE Edge 88  | windows 10 | XL 1920 x 964 |
 
 
-🚀 **merit & beyond**
-Document why you chose the devices:
 
-1. Visit https://gs.statcounter.com/browser-market-share to figure out the most popular browsers & operating system combos seen across the web for the geographic region, and platform(s) and screen sizes you expect your users to belong to. 
+### Why Choosing the pre-defined Browsers
 
-2. Include a sentence about why you chose the combinations you did.
+1. Bases on the information available on [most-popular-websites](https://gs.statcounter.com/browser-market-share) I can confirm that the best browser is chrome world-wide and this makes it more efficient to start coding the website based on the tools provided including Networking Tools to check the responsiveness of the website and offering tools like Lighthouse to check for the accessibility.
 
-3. Create a table that lists out what devices, browsers, and operating system you tested your application on and a brief description of why you chose the mixture you did. The point is to prove that you looked at the site across various browsers, operating systems, and viewport breakpoints.
+2. Another browser includes Safari and I like it because it is built in macOS, though it has also no compatible issues when resizing. In the statics on the pre-defined site it comes in the second place and that can be because it comes pre-installed on the system.
 
-4. if you can't find the browser/device/OS combinations you want on Browserstack with your GitHub student webpack (or you didn't activate that in time), note what you'd ideally test on then what you ended up testing on as a compromise. 
+![browser-statistics](static/assets/README/browser-static.png)
 
-5. Build a table to summarize the choices you made [markdown table generator](https://www.tablesgenerator.com/markdown_tables)
 
-The combinations above were chosen because of the following information I gathered  from [ga.statcounter.com]( https://gs.statcounter.com/browser-market-share) for the US from Aug-Oct 2021:
-**browser Version Market Share**:
-  - safari iphone: 26.32%
-  - chrome for android: 21.32%
-  - Chrome 105.0: 15.77%
-  - Chrome 104.0: 6.28%
-  - Edge 105: 4.99%
-  - Safari 15.6 3.76%
-**browser Market Share**
-  - chrome: 50.28%
-  - Safari: 34.65%
-  - Edge: 6.37%
-  - Firefox: 3.52%
-  - Samsung Internet: 2.04%
-  - Opera: 0.89%
-**platform breakdown**
-  - mobile: 51.26%
-  - desktop: 45.73%
-  - tablet: 2.97%
-  - console: 0.03%
 
 ## Accessibility Testing
 🚨**Required** 
