@@ -122,14 +122,6 @@ body {
     background-color: #FF4850;
     margin-bottom: 5px;
 }
-.masthead {
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 33vh;
-    width: 100%;
-}
 
 /* --------- Error Messages --------*/
  .dl, ol, ul {
@@ -151,8 +143,16 @@ body {
 .card{
     border: 2px solid #0A419F;
     border-radius: 5px;
-    padding: 5px;
+    padding: 2px;
+    height: 100%
 }
+
+.card img{
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+
 .book-gallery{
     text-align: center;
     color: #0A419F;
@@ -162,6 +162,13 @@ body {
 .book-user{
     color: #FF4850;
 }
+
+.book-cover-img,
+.author-img{
+    max-width: 100%;
+    height:auto;
+}
+
 
 .bar-seprator{
     color: #0A419F;
@@ -200,16 +207,6 @@ body {
     background-color: #FF4850;
     border: 1px solid #0A419F;
     color: #fafafa;
-}
-
-.post-title {
-    margin-top: 10%;
-    margin-left: 5%;
-}
-
-.post-subtitle {
-    margin-left: 5%;
-    color: lightgray;
 }
 
 .btn-signup,

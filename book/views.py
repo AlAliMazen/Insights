@@ -15,12 +15,6 @@ class BooksList(generic.ListView):
     template_name="book/index.html"
     paginate_by=6
 
-def my_author(request):
-    """
-    Display authors  :model: book.Author
-    """
-    return HttpResponse("<h1>Hello my author</h1>")
-
 def transform_string(input_string): 
     # Convert all characters to lowercase
     lowercase_string = input_string.lower()
@@ -35,25 +29,15 @@ def add_book(request):
     """
     submitted = False
     if request.method == "POST":
-        print("POST function")
         bookForm = BookForm(request.POST, request.FILES)
         if bookForm.is_valid():
-            print("Book form is valid")
             book = bookForm.save(commit=False)
-            print(f'{request.user}  | {book.title}')
             book.user = request.user
             book.slug = transform_string(book.title)
-            print(f"Book slug: {book.slug}")
             book.save()
             submitted = True
             bookForm = BookForm()  # Reset the form after successful submission
-            messages.add_message(
-                request, messages.SUCCESS,
-                f'{book.title} has been added successfully'
-            )
             return HttpResponseRedirect('/add_book?submitted=True')
-        else:
-            print("Book form is not valid", bookForm.errors)
     else:
         bookForm = BookForm()
         if 'submitted' in request.GET:
@@ -75,13 +59,8 @@ def add_author(request):
             author.save()
             submitted = True
             authorForm = AuthorForm()  # Reset form after submission
-            messages.add_message(
-                request, messages.SUCCESS,
-                f'{author.fullname} has been added successfully'
-            )
+            
             return HttpResponseRedirect('/add_author?submitted=True')
-        else:
-            print("Author form is not valid:", authorForm.errors)  # Debugging statement
     else:
         authorForm = AuthorForm()
         if 'submitted' in request.GET:
@@ -103,8 +82,6 @@ def add_category(request):
             submitted = True
             categoryForm = CategoryForm()
             return HttpResponseRedirect('/add_category?submitted=True')
-        else:
-            print("Category Form has an error", categoryForm.errors)
     else:
         categoryForm=CategoryForm()
         if 'submitted' in request.GET:
@@ -146,7 +123,6 @@ def book_insight(request,slug):
 
     #reviews to show on a specific book
     reviews=book.reviews.all().order_by("-created_on")
-
     reviews_count=book.reviews.filter(approved=True).count()
 
     #handling the post request
@@ -158,7 +134,6 @@ def book_insight(request,slug):
            single_review.author = request.user
            single_review.save()
            userReview=ReviewForm()
-           messages.add_message(request, messages.SUCCESS,'Review submitted and awaiting approval')
            return redirect(reverse('book_insight', kwargs={'slug':slug}))
    
     #likes count
@@ -206,7 +181,6 @@ def edit_review(request, slug, review_id):
     """
     edit the selected review
     """
-    print(f"in the edit form {slug}  |  {review_id}",)
     if request.method == "POST":
         queryset = Book.objects.filter(approved=True)
         book=get_object_or_404(queryset,slug=slug)
@@ -218,11 +192,7 @@ def edit_review(request, slug, review_id):
             insight.book=book
             insight.approved=False
             insight.save()
-            messages.add_message(request, messages.SUCCESS, 'Insight Updated!')
 
-        else:
-            messages.add_message(request, messages.ERROR, 'Error updating insight!')
-    
     return HttpResponseRedirect(reverse('book_insight',args=[slug]))
 
 
@@ -230,15 +200,10 @@ def delete_review(request, slug, review_id):
     """
     delete a review from a book
     """
-    #queryset = Book.objects.filter(approved=True)
-    #book = get_object_or_404(queryset, slug=slug)
     review = get_object_or_404(Review, pk=review_id)
 
     if review.author == request.user:
         review.delete()
-        messages.add_message(request, messages.SUCCESS, "Review deleted!")
-    else:
-        messages.add_message(request, messages.ERROR, "Only your own review ")
     
     return HttpResponseRedirect(reverse('book_insight',args=[slug]))
 
