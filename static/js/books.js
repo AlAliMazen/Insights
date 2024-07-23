@@ -1,5 +1,5 @@
 /** DOMContentLoaded */
-bookForm=document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     /** Books */
     const bookSubmission = document.getElementById('book-submitted');
     if (bookSubmission != null){

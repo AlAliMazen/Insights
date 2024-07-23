@@ -761,128 +761,143 @@ Following are emulators provided by Chrome (V. 126.0.6478.127) Browser on MacOS
 ## Accessibility Testing
 🚨**Required** 
 
-Accessibility testing is aimed to make sure that those with visual or physical disabilities can still browse your website. Some users have had strokes or accidents that make it difficult to use a mouse, so they use keyboard keys to tab through sites. Others use screen readers that rely on HTML tags to help the user navigate quickly through the site to find information they want, others have color blindness or contrast issues. It's the law to provide services 
-Here's a [site](https://www.w3.org/WAI/fundamentals/accessibility-intro/#:~:text=Accessibility%20is%20Important%20for%20Individuals%2C%20Businesses%2C%20Society,-The%20Web%20is&text=That%20is%2C%20the%20accessibility%20barriers,older%20people) where you can learn more about accessibility and the internet.
-
-### Accessibility Audits
-🚨**Required** 
-
-Accessibility audits run through the HTML and determine if the parts of the WCAG (web content accessibility guidelines ) that are implemented through HTML tags and attributes are present. They can do some checking for low vision/contrast stuff too.
-
-You should run your deployed website pages through  at least on auditing tool. lighthouse's audit to check performance, accessibility, best practices and SEO scores. You should aim to get 85 or higher score on accessibility. 
-
-**You should fix issues associated with:**
-- contrast 
-- aria labels
-- alt text
-- large images
-- skewed images
-
 **Lighthouse**
-https://web.dev/measure/  If you have lower scores, read the report and follow the links to address the flagged issues. You can run this tool from Chrome Dev Tools too against your local machine, but chrome extensions can sometimes give you missing alt text on things like the grammarly plug in tracking pixel.
+It is very important to keep in mind that the Accessibility test doesn't always look as good as the code is. It depends on many factors including the good and clean code. I used Google Chrome Tools to perform the accessibility tests. 
 
-You want a score in the green for accessibility and should look at ways to get it to 100.
+One more point that can effect the Lighthouse results is the source where it runs and the internet connection. My accessibility tests are conducted **from the deployed version on Heroku platform. [Insight-website](https://insights-django-6d0b5a49c9fa.herokuapp.com/)**
 
+- **Home Page**
 
-**[WAVE chrome](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=en-US) extension**
-Wave is developed by webaim.org and does a bit better at contrast issues and uses 2.1 guidelines
+![insight-home](static/assets/README/acc-home.png)
 
-**Contrast Checkers**
-- https://webaim.org/resources/contrastchecker/
-- https://color.a11y.com/
+- **Book Insight Page**
 
-### Keyboard Navigation
-🚀 **merit & beyond**
+![insight-book-details](static/assets/README/acc-book-insight.png)
 
-Another way to accessibility test your site is to try to click on the browser URL and see what happens if you use the tab, arrow and enter keys. Does it work well or does the user get stuck? Check this in a couple browsers as the focus & active outlines are typically styled by the browser
+- **Add an Author Page**
 
-The expected results for various keyboard entries and field types can be found [here](https://webaim.org/techniques/keyboard/#testing)
+![insight-add-book](static/assets/README/acc-add-author.png)
 
-You can take a video of this testing if you want and convert it to a gif and paste that into your readme. Record something to yourself in a Slack direct message, then download it. Then you can use https://cloudconvert.com/mp4-to-gif to convert the mp4 to a gif and just paste it into the readme via GiHu, and it'll resolve itself.
+- **Add a Category Page**
 
-### Chrome Vox Reader
-🚀 **merit & beyond**
+![insight-add-category](static/assets/README/acc-add-category.png)
 
-If you are really ambitious, you can use the [VoxReader](https://chrome.google.com/webstore/detail/screen-reader/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en) extension in chrome to see what your site sounds like on a screen reader. It really drives home the need for good aria-labels & semantic HTML.
+- **Add a Book Page**
 
-## Core Web Vitals
-🚀 **merit & beyond**
+![insight-add-book](static/assets/README/acc-add-book.png)
 
-SEO is greatly impacted by your core web vitals. The readout from https://web.dev/measure/ which is essentially a lighthouse audit gives your site scores in 4 categories. Ideally you want your site to be in the green for all 4 scores. web.dev has dedicated servers to test deployed sites without extensions that skew the results, so it's best to get results from this site.
- You should talk about the results for each section pay attention to 
+- **Log Out Page**
+
+![insight-logout](static/assets/README/acc-sign-out.png)
+
+- **Sign In Page**
+
+![insight-sign-in](static/assets/README/acc-sign-in.png)
+
+- **Register Page**
+
+![insight-register](static/assets/README/acc-register.png)
+
 
 ## Validation Testing
 🚨**Required** 
 
-In this section you should write up any websites you used to validate your code and include screenshots.
+Another part of submitting a genuine code is to validate the syntax on different languages. Important to note by validating the HTML code is the way it has been validated. In other words, HTML pages in this Django Project are made of DTL (Django Template Language) syntax and not only in one page as many web developers are used to. Thus, I have used the direct link from Heroku platform allocated for this website and the results are as the following:
 
-**Validation issues are an automatic failure** You should run these about 3 times:
-- when you first deploy your site
-- just when you think you are done testing
-- right before you submit because 😼, ⚽, 🐶 & 👼 can eliminate a closing tag or curly bracket without you noticing.
+### HTML Validation
+
+For testing my HTML Code I have used [Markup Validation Service W3C](https://validator.w3.org/)
+
+- **Index.HTML CODE**
+
+![insight-val-home](static/assets/README/val-html-home.png)
+
+- **Book_details.HTML CODE**
+
+![insight-val-book-insight](static/assets/README/val-html-book-insight.png)
+
+- **Add_author.HTML CODE**
+
+![insight-add-book](static/assets/README/val-html-add-author.png)
+
+- **Add_category.HTML CODE**
+
+![insight-add-category](static/assets/README/val-html-add-category.png)
+
+- **Add_book.HTML CODE**
+
+![insight-add-book](static/assets/README/val-html-add-book.png)
+
+- **Signin.HTML CODE**
+
+![insight-login-val](static/assets/README/val-html-login.png)
+
+- **Signout.HTML CODE**
+
+![insight-logout](static/assets/README/val-html-logout.png)
+
 
 ### CSS Validation
 🚨**Required** 
 
-The [Jigsaw validator](https://jigsaw.w3.org/css-validator/) was used to validate CSS.
+The [Jigsaw validator](https://jigsaw.w3.org/css-validator/) was used to validate CSS my sole style.css file that is shared across the website.
 
-> If you only have one CSS file, you can just run the validator through one deployed page URL, if you have custom CSS for different pages, make sure you hit those different URLS, or do direct input on each file.
+- **Style.CSS CODE**
 
-Include a screenshot for each CSS file which includes the Green no ERRORS bar, two check marks:
+![insight-css](static/assets/README/val-css.png)
 
-**styles.css**
-![img.png](documentation/images/css-validation.png)
-
-### HTML Validation
-🚨**Required** 
-
-The **[W3 HTML Validator](https://validator.w3.org/)** was used to validate HTML by coping the page source as a direct input.
-
-> For each view you wrote, you should validate the HTML and have a test case for it linked to from here
-> NOTE: You may need to right-click to view the source of each page and paste that into the validator if you need to go through authentication to get to the page.
 
 ### JavaScript Validation
 🚨**Required** 
 
-The **[Jshint validator](https://jshint.com)** was used to validate each JS file.
+The **[Jshint validator](https://jshint.com)** recommended by Code Institute to run the JS validation tests. I have two files that I intentionally separate to make it easier for future purposes.
 
-> for each .js file, copy the code and paste it into this site, and have a test case for it linked to from here. You can have warnings, but no errors.
-> if using ES6, add this before pasting in your file: `/*jshint esversion: 6 */ `, similarly you can update it to 7 if you see warnings about ES7 syntax `/*jshint esversion: 7 */ `
+- **reviews.JS CODE**
+
+![insight-reviews-js](static/assets/README/val-js-reviews.png)
+
+- **books.JS CODE**
+
+![insight-books-js](static/assets/README/val-js-books.png)
+
 
 ### Python Validation
 🚨**Required** 
 
-**[CI's pep8 tool](https://pep8ci.herokuapp.com/)** was used to validate each .py file created.
+**[CI's pep8 tool](https://pep8ci.herokuapp.com/)** is the main tool used to perform python code validation for the root app (insight) and sub-app (book).
 
-> for each .py file you created, copy the source code and paste it into this site, and have a test case for it linked to from here.
-> include a screenshot of results in the test case showing NO ERRORS. (you should do this for all .py files in your repo
+- **view.py CODE**
 
-**run.py**
+![insight-view-py](static/assets/README/val-py-views.png)
 
-![image](https://user-images.githubusercontent.com/23039742/212106175-36b2f18a-7c75-458d-94dd-9886e81c71f3.png)
+- **admin.py CODE**
 
-Ideally you would have no errors remaining outside of line too long which you can fix by 
+![insight-admin-py](static/assets/README/val-py-admin.png)
+
+- **models.py CODE**
+
+![insight-models-py](static/assets/README/val-py-models.png)
+
+- **urls.py CODE**
+
+![insight-urls-py](static/assets/README/val-py-urls-book.png)
+
+- **forms.py CODE**
+
+![insight-forms-py](static/assets/README/val-py-forms.png)
+
+- **setting.py CODE**
+
+![insight-general-seetings](static/assets/README/val-py-settings.png)
+
+
+It is worth mentioning that in most cases the errors at python code validation are related to spaces and long line of code. Sometimes I used **noqa** to solve the issue.
 
 adding
 ```$python 
 # noqa
 ```
-There is a space before the # and after it to skip the quality assurance for that line.
-
-Note any errors or warnings you are ignoring and why.
-
-### JSON Validation
-🤷‍ **Required if you made some files** 
-The **[JSONLINT validatior](https://jsonlint.com/)** was used to validate JSON files.
-
-> for each .json file, you should copy the code and paste it into this site, and have a test case for it linked to from here.
-
-## Automated Testing
-🚀 **merit & beyond**
-
-If you managed to write jasmine tests or some django tests, note those files out here and how to run them. I only did this in my last project as I didn't have the time or energy to learn how to write tests. https://github.com/maliahavlicek/ms4_challenger/blob/master/documentation/TESTING.md is my write-up about those and how I ran them, but a simple test I'd recommend is authentication and any views you limit to superusers or logged-in users:
-
-https://github.com/maliahavlicek/ms4_challenger/blob/master/challenges/tests/test_views.py
+Another Note I need to address is that the view.py file inside the bool app has a a function which is very long(**book_insight**) I plan to refactor it in the future.
 
 ## Defects
 🚨**Required** 
@@ -948,7 +963,6 @@ List out the tools you used with a link and a short description (this helps othe
 - gitpod
 - github
 - google fonts
-- amiresponsiv
 - table of contents creator
 - markdown table generator
 
