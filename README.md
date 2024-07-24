@@ -946,13 +946,16 @@ The technologies and tools I used through out my project includes not only the l
 ## Frameworks, Libraries & Programs Used
 🚀 **merit & beyond**
 
-List out the tools you used with a link and a short description (this helps others figure out where to get the bonus points & reminds you what you used for your next project
+Software Applications I used to code my website:
+
 - [Balsamiq](https://balsamiq.com/wireframes/)
 - [Fontawesome](https://fontawesome.com/search?q=GitHub&o=r)
 - [Github](https://github.com/)
 - [Google fonts - Junge](https://fonts.google.com/?query=Junge)
 - [Table of contents creator](https://luciopaiva.com/markdown-toc/)
-
+- [VSCode](https://code.visualstudio.com/)
+- [draw.io](https://app.diagrams.net/)
+- [Quick Database Diagram](https://www.quickdatabasediagrams.com/)
 
 # Deployment
 🚨**Required** 
@@ -960,89 +963,111 @@ List out the tools you used with a link and a short description (this helps othe
 ## Prerequisites
 🚀 **merit & beyond**
 
-If the user is required to have certain keys and credentials you should include this section with directions on how to get the necessary information. ex)
+As a prerequisites to start a project is to set up Version Control System. I have used GitHub as a platform and Git as software tool preinstalled into the OS. Mine is macOS Sonoma 14.5. 
 
-1. **Gmail Account:** In order to have verification and forgot password emails sent to registered users you need a
-   google account. 
-  - [create a gmail accoount](https://accounts.google.com/signup) 
-  - [downgrade to less secure](https://myaccount.google.com/lesssecureapps?pli=1) after you are signed into the gmail account, downgrade to less secure
-2. **Couldinary URL**
-  - [create an account](https://cloudinary.com/)
-  - go to the dashboard and copy your API environmental variable
-   
-    <img width="1230" alt="image" src="https://user-images.githubusercontent.com/23039742/213839829-b4f349b3-419d-4ea2-bbca-90cf3c663bba.png">     
+I set up a GitHub Repository using the template provided by [Code-Institute-template](https://github.com/Code-Institute-Org/ci-full-template)
+
+Last but not least, ensure that both python and django framework are both installed on OS by running following command in the terminal 
+
+ - For Python use: `python3 --version`
+ - For Django use: `python3 -m django --version``
+
+I recommend use a package manager to install both python and Django in case they are not installed. Homebrew is the one I use on macOS to install the required packages and frameworks. [Guide on how to install python and django with homebrew](https://sites.google.com/view/web-development-bloge/python/how-to-install-django-on-macos) .
+
  
 ## Fork and Clone the Repository
 🚀 **merit & beyond**
-To keep the main reposotory for this project clean, please fork the repostiory into your own account. GitHub has [forking directions](https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository) but here's what you might do:
-1. login to your own gitHub account
-2. navigate to [my repository](URL OF YOUR LIVE REPOSITORY)
-3. In the top right corner of the page, click fork 
 
-![image](https://user-images.githubusercontent.com/23039742/213840378-e785eaa0-712b-468c-bcda-64fde56eae44.png)
+1. When repository is created try to click on the clone button and copy the https link.
 
-4. set yourself as the owner
-5. change the name of the repo if you want
-6. add a description if you want
-7. choose what to copy, typicall the main branch only
-8. click the snazy green button
+![insight-clone-repository](static/assets/README/dep-git-hub-a.png)
 
-![image](https://user-images.githubusercontent.com/23039742/213840549-5bef12ae-198e-412b-84b6-0cc718b6fa1d.png)
+2. In the IDE (mine is VSCode) right when it is open we can choose to clone the repository.
 
-9. To get files to your local environment, you need to clone it: click the code button
-10. Copy the url as needed (here's gitHub instructions)[https://docs.github.com/en/get-started/quickstart/fork-a-repo#cloning-your-forked-repository}
+![insight-clone-b](static/assets/README/dep-git-hub-b.png)
+
+3. Choose a directory where to save the project (which is in fact a copy of the main project).
 
 
-
-## Development Deployment 
+## Local Development Deployment
 🚨**Required** 
 
-This section should describe the process someone would have to go through to get the local working in GitPod, or your preferred IDE. Start from installing the chrome extension then clicking the green gitpod button in THEIR FORKED repository, the enumerate the steps to walk them through the process as if they were brand new to this proccess. **Include screenshots** where applicable.
+I did all the development on this project locally using the VSCode as my primary IDE. Here are the steps to follow to deploy this project (**Commands must be run in the same directory as the project itself)**:
 
-**Key points to cover** 
-- Install required python packages: `pip3 install -r requirements.txt`
-- Create env.py
-- What to put in the env.py, don’t disclose real values
->  - EMAIL_HOST_PASSWORD=<YOUR_VALUE>
->  - DEFAULT_FROM_EMAIL=<YOUR_VALUE>
->  - EMAIL_USERNAME=<YOUR_VALUE>
->  - SECRET_KEY=<YOUR_VALUE>
->  - CLOUDINARY_URL=<YOUR_VALUE>
->  - DEV=True
-- Apply Database Migrations so the database starts up `python3 manage.py migrate`
-- Create a super user so you can add and inspect things via django admin  `python3 manage.py createsuperuser`
-- Preload data: Sometimes you might want to include steps to create data in the admin or preload a data dump [coderwall blog](https://coderwall.com/p/mvsoyg/django-dumpdata-and-loaddata) has examples on how to dump data and load it which saves a bunch of time when deploying the application from a local database to a hosted database but you don’t  have to do this step
-- Start the server `python3 manage.py runserver`
+1. Open a terminal window in VSCode and run `pip3 install -r requirements.txt` : This will install all the packages required to run the project
 
+2. Make sure to turn **DEBUG** variable inside the **settings.py** to True: It will let you see debugging information i.e. where the error comes from.
+
+3. You have to create **env.py** file and add it into the .gitignore file. This will keep DATABASE link and SECRET KEY private and not published for public.
+
+the env.py must have the following variable in the following syntax
+
+>- import os
+
+>- os.environ.setdefault("DATABASE_URL","YOUR_DATABASE_SERVER_LINK")
+
+>- os.environ.setdefault("SECRET_KEY","YOUR_SECRET_KEY_FROM_SETTINGS.PY")
+
+>- os.environ.setdefault("CLOUDINARY_URL","CLOUDINARY_LINK_PER_MAIL")
+
+4. Run `python3 manage.py makemigrations` to create the Models from Book app and prepare them to be moved into the Database server
+
+5. Run `python3 manage.py migrate`to migrate the Database schema to the Database actual server.
+
+6. When the **env.py** is filled up correctly, run the following command to start the project
+`python3 manage.py runserver``
+
+**NOTE** On my macBook I have put the localhost address in the ALLOWED_HOSTS to let the project run locally.
+
+**NOTE** If you want to use the SQLITE Database you need just to uncomment the SQLITE Database  Code inside the settings.py and comment out the DATABASE variable used to link the project to external Database.
+
+7. Open a web browser and type the localhost address with`:8000`Port  (This port number is predefined also and you can change it). 
+
+As a result website will be loaded with the Home page.
 
 ## Production Deployment
 🚨**Required** 
 
-This section should describe the process you went through to deploy the project to a server where anyone can access the url without your machine running. This is typically Heroku. **Include screenshots** if you think they would make the process easier. Start with getting an heroku account and then setting up databases and other packages.
+The public link for my website is obtained from [Heroku-platform](https://www.heroku.com/) and to deploy your version of the website follow the steps:
 
-If you have project settings required for Heroku, provide a table of the keys and values. Do not share your personal
-keys but either cut them out of the screenshot or say <YOUR_VALUE> and include links on how the user would obtain such
-values.
+1. Head to Heroku website and setup an account
 
-**Key points to cover** 
-- creating new app
-- setting app name
-- setting region
-- entering dreaded billing info
-- subscribing to a plan
-- setting up db
-- adding environmental values- have a list or table so user has less chance of typos
->  - EMAIL_HOST_PASSWORD
->  - DEFAULT_FROM_EMAIL
->  - EMAIL_USERNAME
->  - SECRET_KEY
->  - CLOUDINARY_URL
->  - COLLECT_STATIC
-- adding build packages
-- deploy
-- gitHub connection
-- auto vs manual deploy
-- monitor logs
+2. Create a new App from upper right corner:
+
+3. Give the app a name and choose a region (either US or Europe) and click on **create app**
+
+![heroku-create-app](static/assets/README/her-create-app.png)
+
+4. Head to the **Deploy** menu bar and choose a GitHub as a source for deployment
+
+![heroku-deploy-github](static/assets/README/her-deploy-github.png)
+
+5. Under **App connected to GitHub** search for your Repository and click on connect
+
+![heroku-conncect](static/assets/README/her-connect-git.png)
+
+6. Under the **Manuel deploy** choose to select the branch you want from your repository. I have only one **main** repository. Click on **Deploy Branch**
+
+![heroku-main-branch](static/assets/README/her-branch.png)
+
+7. Head to **Settings** menu under **Config Var** choose to add the following three variables
+
+- DATABASE_URL : <YOUR_VALUE>
+
+- SECRET_KEY: <YOUR_VALUE>
+
+- CLOUDINARY_URL: <YOUR_VALUE>
+
+![heroku-var](static/assets/README/her-var.png)
+
+8. Under **Buildpacks** and click on **Add buildpack** to add python which has same version as your installed python version.
+
+![heroku-vars](static/assets/README/her-build-packs.png)
+
+
+**NOTE** 
+Build can be seen under the dash board in **build logs** which will end up producing a link for public access.
+
 
 # Credits
 🚨**Required** 
