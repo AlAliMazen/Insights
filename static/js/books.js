@@ -30,6 +30,14 @@ document.addEventListener('DOMContentLoaded', function() {
         } 
     }
 
+    /** Notification Messages auto-hide */
+    const notificationMsg=document.getElementById('msg');
+    if(notificationMsg!=null){
+        setTimeout(()=>{
+            notificationMsg.classList.remove('show');
+        },time_in_second)
+    }
+
 });
 
 const time_in_second=2500;

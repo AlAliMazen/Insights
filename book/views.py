@@ -102,6 +102,7 @@ def book_insight(request, slug):
     # ratings
     book_rating_set = Rating.objects.filter(rated_book=book)
     user_has_rated = False
+
     for rate in book_rating_set:
         if rate.user_rated == request.user:
             user_has_rated = True
@@ -113,13 +114,17 @@ def book_insight(request, slug):
             one_rate.rated_book = book
             one_rate.user_rated = request.user
             one_rate.save()
+            messages.add_message(request, messages.SUCCESS, f'{book.title} has been rated successfully')  # noqa
             return redirect(reverse('book_insight', kwargs={'slug': slug}))
 
     average_rating = book_rating_set.aggregate(Avg('rating'))['rating__avg']
-    average_rating = 0 if average_rating is None else average_rating
+    average_rating = 0 if average_rating is None else round(average_rating, 2)
+
     # reviews to show on a specific book
     reviews = book.reviews.all().order_by("-created_on")
+
     reviews_count = book.reviews.filter(approved=True).count()
+
     # handling the post request
     if request.method == 'POST':
         userReview = ReviewForm(request.POST)
@@ -129,6 +134,7 @@ def book_insight(request, slug):
             single_review.author = request.user
             single_review.save()
             userReview = ReviewForm()
+            messages.add_message(request, messages.SUCCESS, f'Review for {book.title} submitted successfully and awaiting approval')  # noqa
             return redirect(reverse('book_insight', kwargs={'slug': slug}))
     # likes count
     likes = book.liked_book.count()
@@ -146,7 +152,9 @@ def book_insight(request, slug):
             like.liked_book = book
             like.user_id = request.user
             like.save()
+            messages.add_message(request, messages.SUCCESS, 'Like submitted successfully')  # noqa
             return redirect(reverse('book_insight', kwargs={'slug': slug}))
+
     # form for submitting a like
     likes_form = LikesForm()
     userReview = ReviewForm()
