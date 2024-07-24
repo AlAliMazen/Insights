@@ -27,11 +27,7 @@ Rating of a book, likes of a books as well as reviews on a specific book will be
 
 Mazen Al Ali
 
-# Table of Contents
-🚀 **merit & beyond**
-
 - [Insights](#insights)
-- [GUIDE's Table of Contents](#guide-s-table-of-contents)
   * [Live Site](#live-site)
   * [Repository](#repository)
   * [Author](#author)
@@ -59,7 +55,6 @@ Mazen Al Ali
 - [Agile Process  [DONE]](#agile-process---done-)
   * [Project Goals](#project-goals)
   * [Initial User Stories  [DONE]](#initial-user-stories---done-)
-  * [Feasibility vs Importance](#feasibility-vs-importance)
   * [Scope](#scope)
   * [Agile Tool](#agile-tool)
     + [User Story Example](#user-story-example)
@@ -71,17 +66,11 @@ Mazen Al Ali
   * [Compatibility and Responsive Testing](#compatibility-and-responsive-testing)
     + [Why Choosing the pre-defined Browsers](#why-choosing-the-pre-defined-browsers)
   * [Accessibility Testing](#accessibility-testing)
-    + [Accessibility Audits](#accessibility-audits)
-    + [Keyboard Navigation](#keyboard-navigation)
-    + [Chrome Vox Reader](#chrome-vox-reader)
-  * [Core Web Vitals](#core-web-vitals)
   * [Validation Testing](#validation-testing)
-    + [CSS Validation](#css-validation)
     + [HTML Validation](#html-validation)
+    + [CSS Validation](#css-validation)
     + [JavaScript Validation](#javascript-validation)
     + [Python Validation](#python-validation)
-    + [JSON Validation](#json-validation)
-  * [Automated Testing](#automated-testing)
   * [Defects](#defects)
   * [Defects of Note](#defects-of-note)
   * [Outstanding Defects](#outstanding-defects)
@@ -93,9 +82,10 @@ Mazen Al Ali
 - [Deployment](#deployment)
   * [Prerequisites](#prerequisites)
   * [Fork and Clone the Repository](#fork-and-clone-the-repository)
-  * [Development Deployment](#development-deployment)
+  * [Local Development Deployment](#local-development-deployment)
   * [Production Deployment](#production-deployment)
 - [Credits](#credits)
+  * [Repo on GitHub Template](#repo-on-github-template)
   * [Content](#content)
   * [Media](#media)
   * [Acknowledgments](#acknowledgments)
@@ -457,24 +447,6 @@ You can find my user stories related to this project by visiting [Insights-User-
 - AC1: Only admin can see the appending review for approval 
 
 - AC2: Only Site Admin can delete newly reviews or even existing reviews.
-
-
-## Feasibility vs Importance
-🚀 **merit & beyond** (It is not clear what to write here)
-
-To scope the project for a MVP (minimally viable product) a feasibility analysis was done.
-
-The features in the table below have been taken from the user stories above. Generic features found in most websites
-will also be implemented such as nav-bar, footer, obvious website purpose etc.
-
-| Opportunity/Feature | Feasibility/Viability (score out of 5) | PurposeLevel of Importance (score out of 5) | In Or Out |
-|---------------------|----------------------------------------|---------------------------------------------|-----------|
-|                     |                                        |                                             |           |
-|                     |                                        |                                             |           |
-|                     |                                        |                                             |           |
-|                     |                                        |                                             |           |
-
-> You should discuss the outcome of what you will be dropping based on the outcome. Making a scatter plot of the scores and coloring the dot 
 
 ## Scope
 🚀 **merit & beyond**
@@ -1072,26 +1044,74 @@ Build can be seen under the dash board in **build logs** which will end up produ
 # Credits
 🚨**Required** 
 
-To avoid plagiarism amd copyright infringement, you should mention any other projects, stackoverflow, videos, blogs, etc
-that you used to gather imagery or ideas for your code even if you used it as a starting point and modified things.
-Giving credit to other people's efforts and ideas that saved you time acknowledges the hard work others did.
-
-- [Code Institute Template](https://github.com/Code-Institute-Org/python-essentials-template)
-- The Template for the GUI for this project was provided by Code Institute. This allows for the Command line to be shown and used within the browser.
+## Repo on GitHub Template
+  - [Code-institute-template-for-Django-Project](https://github.com/Code-Institute-Org/ci-full-template) used to set up a blueprint of the file structure of the project.
 
 ## Content
+- [Django Official Documentation](https://docs.djangoproject.com/en/5.0/)
 
-Use bullet points to list out sites you copied text from and cross-reference where those show up on your site
+- [Codemy.com on forms and CRUD functionality](https://www.youtube.com/watch?v=CVEKe39VFu8)
+
+- [Javascript Validation](https://jshint.com)
+
+- [Quick-Database-Diagram](https://www.quickdatabasediagrams.com/)
+
+- [Update-and-Edit in Django from Codemy.com](https://www.youtube.com/watch?v=J7xaESAddDQ&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=10)
+
+- [Code Institute Python Validator](https://pep8ci.herokuapp.com/#)
+
+- [Bootstrap-Carousel](https://getbootstrap.com/docs/5.3/components/carousel/)
+
+- [Bootstrap-official-documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+
+- [GitHub-Icon](https://fontawesome.com/icons/github?f=brands&s=solid)
+
+- [linked-In Icon](https://fontawesome.com/icons/linkedin?f=brands&s=solid)
+
+- [Fontawesome.com](https://fontawesome.com/)
+
+- [Hover-Effect-CDN](https://cdnjs.com/libraries/hover.css)
+
+- [Resize-image](https://www.iloveimg.com/resize-image#resize-options,percentage)
+
+- [Google-Fonts](https://fonts.google.com/)
+
+- [Favicon-generator](https://favicon.io/)
+
+- []()
 
 ## Media
 
-Make a list of sites you used images from. If you used several sites try to match up each image to the correct site.
-This includes attribution for icons if they came from font awesome or other sites, give them credit.
+All Photos appeared on the website related are brought from [Unsplash](https://unsplash.com) and her the links for the photos:
+
+- [white and blue printer paper](https://unsplash.com/photos/white-and-blue-printer-paper-mo3FOTG62ao)
+- [woman finding some book to read](https://unsplash.com/photos/woman-finding-some-book-to-read-mbKApJz6RSU)
+- [opened book on grass during daytime](https://unsplash.com/photos/opened-book-on-grass-during-daytime-bhBONc07WsI)
+- [flat ray photography of book, pencil, camera, and with lens](https://unsplash.com/photos/flat-ray-photography-of-book-pencil-camera-and-with-lens-3OiYMgDKJ6k)
+- [assorted-title of books piled in the shelves](https://unsplash.com/photos/assorted-title-of-books-piled-in-the-shelves-NIJuEQw0RKg)
+- [the new york times book](https://unsplash.com/photos/the-new-york-times-book-kshkB1i5_5o)
+- [a pile of books sitting next to each othe](https://unsplash.com/photos/a-pile-of-books-sitting-next-to-each-other-Hqbkgga0rNQ)
+- [pile of assorted-title books](https://unsplash.com/photos/pile-of-assorted-title-books-xY55bL5mZAM)
+- [white printer paper on white surface](https://unsplash.com/photos/white-printer-paper-on-white-surface-zx2xVvxBcww)
+- [book lot on shelf](https://unsplash.com/photos/book-lot-on-shelf-_ar2ENzmqb0)
+- [white wooden shelf with assorted books](https://unsplash.com/photos/white-wooden-shelf-with-assorted-books-7DMkvNblkpw)
+
+
+For creating Logo, I depend on using [Canva](https://canva.com)
+
+- [insight-Logo](https://www.canva.com/design/DAGJ7J-UHBY/MI-dw_CjbY8u1DoOXU7RWA/edit)
+
+
 
 ## Acknowledgments
 
-This is the section where you refer to code examples, mentors, blogs, stack overflow answers and videos that helped you accomplish your end project. Even if it's an idea that you updated you should note the site and why it was important to your completed project.
+A special word of thank because of their help and valuable time in testing and discussing:
 
-If you used a CodeInstitute Instructional project as a starting point. Make note of that here too.
+- My Mentor in the PP-4 Mrs. Sheryl Goldberg
 
+- Slack Community
+
+- Code Institute 
+
+- Tutor Support from Code Institute
 
