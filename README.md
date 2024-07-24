@@ -902,45 +902,34 @@ Another Note I need to address is that the view.py file inside the bool app has 
 ## Defects
 🚨**Required** 
 
-At this point you need to be using GITHUB's Issues to track these as it helps you with the AGILE process requirement and it's really easy to copy/paste screenshots in and then write up how you closed them.
+I have used GitHub Issue tracker to write any discovered bugs. Following listed issues are not considered Bugs but they can take the website down:
 
-[Here's a brief overview](https://docs.google.com/document/d/1nDS5tZeMO77Dfq85IZGMSV6C41XaPm9FwcpR3k-UTVc/edit#heading=h.542xzc8ufx4x) I put together on how to do this.
+- When Code Institute Database server goes down, the whole website won't be accessible. Following error will appear as the following screen shot:
 
-This what my custom bug template looks like in the UX
-![image](https://user-images.githubusercontent.com/23039742/165650359-a352d64e-b128-473d-ab60-7df0568a44df.png)
+![code-institute-db-server](static/assets/README/code-insitute-db-server.png)
 
-- provide a link to the issues link in GitHub
-- if you made a custom template include a screenshot
-- if you made a custom template include a link to the template
 
 ## Defects of Note
 🚀 **merit & beyond**
 
-Some defects are more pesky than others. Highlight 3-5 of the bugs that drove you the most nuts and link to them directly here. The accessors really like to know the struggle is real and that by doing this you picked up more skills.
+The following issue is not caused by my code, but rather it is by Bootstrap5 [bootstrap-carousel-element](https://getbootstrap.com/docs/5.3/components/carousel/) . The issue appears when the website loads, it should start turning the carousel slides automatically. This action doesn't sometimes happen. It starts turning slides when it is clicked either left or right.
 
 ## Outstanding Defects
 🚨**Required** 
 
-It's ok to not resolve all the defects you found as long as:
-- it does not impact a user from completing a vital function on the website
-- it only affects a very small subset of users
-- is an extreme edge case that very few users would try
-- there is an open issue against a framework, browser or technology used
+The register HTML page is a page that is provided by Django Framework and I couldn't manipulate the code as much as I wanted to. When I validate the code of the register page, I got the following error saying that there are some not closed tags like a paragraph and span tag inside the form element which is a code appear from somewhere not in the source files provided with the allauth module.
 
-If you know of something that isn't quite right, create an issue and link to it here and explain why you chose not to resolve it. 
-
-Sometimes it's as simple, word wrapping issue that makes the site look odd at a certain screensize that you just didn't have time to fix due to the impending deadline it's best to mention it but note why you allowed it to go live: "Yes it looks odd, but it doesn't impact core functionality of the site." than to let the accessors think you didn't notice it. 
+![insight-val-html-register](static/assets/README/val-html-register.png)
 
 
 # Technologies Used
 🚀 **merit & beyond**
 
-This section just summarizers tools and programming languages you used.
+The technologies and tools I used through out my project includes not only the languages and frameworks but also online tools including the following:
+
 
 ## Languages
 🚀 **merit & beyond**
-
--write bullet points for the languages you used (HTML, CSS, JAVASCRIPT, PYTHON,  DJANGO)
 
 ### Frontend
 
@@ -958,14 +947,11 @@ This section just summarizers tools and programming languages you used.
 🚀 **merit & beyond**
 
 List out the tools you used with a link and a short description (this helps others figure out where to get the bonus points & reminds you what you used for your next project
-- Balsamiq
-- fontawesome
-- gitpod
-- github
-- google fonts
-- table of contents creator
-- markdown table generator
-
+- [Balsamiq](https://balsamiq.com/wireframes/)
+- [Fontawesome](https://fontawesome.com/search?q=GitHub&o=r)
+- [Github](https://github.com/)
+- [Google fonts - Junge](https://fonts.google.com/?query=Junge)
+- [Table of contents creator](https://luciopaiva.com/markdown-toc/)
 
 
 # Deployment
