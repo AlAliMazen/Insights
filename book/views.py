@@ -20,8 +20,10 @@ def transform_string(input_string):
     # Convert all characters to lowercase
     lowercase_string = input_string.lower()
     # Replace spaces with hyphens
-    transformed_string = lowercase_string.replace(' ', '-')
-    return transformed_string
+    lower_case = lowercase_string.replace(' ', '-')
+    # Replaces 's with -
+    transform_string = lower_case.replace("'s", '-')
+    return transform_string
 
 
 def add_book(request):
