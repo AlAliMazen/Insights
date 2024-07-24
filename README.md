@@ -8,30 +8,24 @@ Insights starts by introducing itself as a platform for books, people can look f
 
 Rating of a book, likes of a books as well as reviews on a specific book will be very helpful to guide any client whether to read this book or move to something else. Books are classified based on their categories which might by useful when filtering and narrowing the choice.
 
-
-  
-
-
 ## Live Site
-🚨**Required** 
 
 - Your can visit my website [Insights](https://insights-django-6d0b5a49c9fa.herokuapp.com) .
 
 ## Repository
-🚨**Required** 
 
 - A complete documentation on gitHub on [Insights](https://github.com/AlAliMazen/Insights) .
 
 ## Author
-🚨**Required** 
-
 Mazen Al Ali
+
+## Table of Content
 
 - [Insights](#insights)
   * [Live Site](#live-site)
   * [Repository](#repository)
   * [Author](#author)
-- [Table of Contents](#table-of-contents)
+  * [Table of Content](#table-of-content)
 - [UX](#ux)
   * [Target Audience](#target-audience)
   * [Design Choices](#design-choices)
@@ -44,21 +38,21 @@ Mazen Al Ali
     + [Custom Styles](#custom-styles)
     + [Custom Javascript](#custom-javascript)
   * [Wireframes](#wireframes)
-- [Information Architecture [DONE]](#information-architecture--done-)
+- [Information Architecture](#information-architecture)
   * [Entity Relationship Diagram](#entity-relationship-diagram)
-  * [Database Choice [DONE]](#database-choice--done-)
-  * [Data Models [DONE]](#data-models--done-)
-  * [CRUD Diagrams  [DONE]](#crud-diagrams---done-)
+  * [Database Choice](#database-choice)
+  * [Data Models](#data-models)
+  * [CRUD Diagrams](#crud-diagrams)
     + [Review Model:](#review-model-)
     + [Adding Author, Category or Book:](#adding-author--category-or-book-)
     + [Likes and Rating Models:](#likes-and-rating-models-)
-- [Agile Process  [DONE]](#agile-process---done-)
+- [Agile Process](#agile-process)
   * [Project Goals](#project-goals)
-  * [Initial User Stories  [DONE]](#initial-user-stories---done-)
+  * [Initial User Stories](#initial-user-stories)
   * [Scope](#scope)
   * [Agile Tool](#agile-tool)
     + [User Story Example](#user-story-example)
-- [Features  [DONE]](#features---done-)
+- [Features](#features)
   * [Implemented Features](#implemented-features)
   * [Future Features](#future-features)
   * [Testing](#testing)
@@ -93,27 +87,24 @@ Mazen Al Ali
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
+
 # UX
-🚨**Required** 
+
 
 ## Target Audience
-🚀 **merit & beyond**
+
 
 Based on the the first idea in my mind, I have coded this website with intention to target the following group of people:
 
-- **Book Enthusiasts** : for all thise who are passionate about reading and want to share their love for books.
+- **Book Enthusiasts** : for all these who are passionate about reading and want to share their love for books.
 
 - **(Avid) Readers**: For individuals who are always on the lookout for new books to devour and enjoy reading reviews before making a choice.
 
 - **Literary Critics**: For people who enjoy analyzing literature and wish to share their perspectives with a broader audience.
 
 ## Design Choices
-🚀 **merit & beyond**
-
-Now that you have let the assessors know about the target audience and users, you can go into the design choices
 
 ### Colors
-🚀 **merit & beyond**
 
 For my colors I have used the following three colors which can make a high contrast helping for reading on a whit background
  - Dark Blue : RGB(10,65,159) -> HEX: #0A419F 
@@ -126,7 +117,6 @@ For my colors I have used the following three colors which can make a high contr
 
 
 ### Typography
-🚀 **merit & beyond**
 
 As this is a website about giving reviews about books which are mostly printable, I have used a similar font which is also for printing. I have used Google fonts and specifically the one used here is called **Junge** 
 
@@ -134,7 +124,6 @@ For the [see the Junge Font Family](https://fonts.google.com/specimen/Junge?quer
 
 
 ### Images
-🚀 **merit & beyond**
 
 I have depended heavily on [Unsplash website for free images](https://unsplash.com/) .
 
@@ -155,41 +144,38 @@ Images used on this website are listed below:
 
 - [Placeholder book](https://unsplash.com/photos/white-printer-paper-on-white-surface-zx2xVvxBcww).
 
-- ![Book lot on shelf](https://unsplash.com/photos/book-lot-on-shelf-_ar2ENzmqb0)
+- [Book lot on shelf](https://unsplash.com/photos/book-lot-on-shelf-_ar2ENzmqb0)
 
-- ![White wooden shelf with assorted books](https://unsplash.com/photos/white-wooden-shelf-with-assorted-books-7DMkvNblkpw)
+- [White wooden shelf with assorted books](https://unsplash.com/photos/white-wooden-shelf-with-assorted-books-7DMkvNblkpw)
 
 
 ### Design Elements
-🚀 **merit & beyond**
+
 
 - For styling my website I have depend depend on the [Code Institute template](https://github.com/Code-Institute-Solutions/blog/tree/main/01_getting_set_up) as a base template and then customize it based on my needs using **Bootstrap5** built in classes. 
 
 
 ### Hover Effects and Icons
-🚀 **merit & beyond**
 
-- When moving cursor over a menubar link a hover effect is going to take place. This hove effect is called **underline from center** . I bring the CDN link for the Hover effect from the [CDN for Hover Effects](https://cdnjs.com/libraries/hover.css)
+- When moving cursor over a menubar link a hover effect is going to take place. This hove effect is called **underline from center** . I bring the CDN link for the Hover effect from the [CDN for Hover Effects](https://cdnjs.com/libraries/hover.css) .
 
-A list of the available Hover effects can be found under this link [Hover Effects to choose from](https://ianlunn.github.io/Hover/)
+A list of the available Hover effects can be found under this link [Hover Effects to choose from](https://ianlunn.github.io/Hover/) .
 
 
 - Another vital element used heavily on this website is the use of Font-awesome icons which are very helpful indicating the purpose they are created for:
 
-1- [Indicating Reviews on A book ](https://fontawesome.com/icons/comments?f=classic&s=solid)
+1. [Indicating Reviews on A book ](https://fontawesome.com/icons/comments?f=classic&s=solid)
 
-2- [Rating a book ](https://fontawesome.com/icons/star?f=classic&s=solid)
+2. [Rating a book ](https://fontawesome.com/icons/star?f=classic&s=solid)
 
-3 - [Likes on a book ](https://fontawesome.com/icons/heart?f=classic&s=solid)
+3. [Likes on a book ](https://fontawesome.com/icons/heart?f=classic&s=solid)
 
-4- [Linked In ](https://fontawesome.com/icons/linkedin?f=brands&s=solid)
+4. [Linked In ](https://fontawesome.com/icons/linkedin?f=brands&s=solid)
 
-5 - [GitHib Icon](https://fontawesome.com/icons/github?f=brands&s=solid)
-
+5. [GitHib Icon](https://fontawesome.com/icons/github?f=brands&s=solid)
 
 
 ### Frameworks
-🚨**Required** 
 
 For making the website as responsive as possible I do have used Bootstrap5 and read through its documentation as following :
 
@@ -200,18 +186,18 @@ For making the website as responsive as possible I do have used Bootstrap5 and r
  -  [Navigation bar](https://getbootstrap.com/docs/5.3/components/navbar/) is made of a logo to the left, menubar in the middle. When Website is being loaded on a mobile devices, the menubar is going to be squeezed into a burger button located to the upper right corner of the page.
 
 ### Custom Styles
-🚨**Required**
 
 - In order to customize the website, I have coded my own CSS file located in under [project  static root directory](https://github.com/AlAliMazen/Insights/tree/main/static/css) in the template/css/style.css
 
 
 ### Custom Javascript
-🚨**Required** 
 
-- call attention to any custom javascript you created to help your User Experience you can organize this by functions or files
+
+- I have written two JavaScript files. First file is **reviews.js** which has to do with **UPDATE** and **DELETE** reviews. The second File **books.js** has to do with Confirmation Modal when **DELETING an author, a category or a book**
+
+  Both files can be found [under-js-static-files](https://github.com/AlAliMazen/Insights/tree/main/static/js) .
 
 ## Wireframes
-🚨**Required** 
 
 I have used [Balsamiq-Wireframes](https://balsamiq.com/wireframes/) application to create the wireframes which I have coded as frontend view. Client is expected to land on the Home page as in the following screenshot:
 
@@ -248,50 +234,38 @@ User can also sign-out when if he is not using his own device and he will be ask
 
 
 
+# Information Architecture
 
-🚀 **merit & beyond** STILL NOT DONE
-- tablet views
-- Custom 404
-- Profile Page
-- Login
-- Register
-- Forgot Password
-
-
-# Information Architecture [DONE]
-🚨**Required** 
 
 ## Entity Relationship Diagram
-🚨**Required** 
+
 
 For designing and planning my Entities (Models) which are reflected in the database for this project I have used [Quick DBD Online Tool](https://www.quickdatabasediagrams.com/) in the basic plan.
 
 ![Database Tables](static/assets/README/Database_tables.png)
 
-## Database Choice [DONE]
-🚨**Required** 
+## Database Choice
 
 I have used PostgreSQL indicated and recommended by Code Institute. First I have set up a database connection using the CI recommendations and link it int he Project env.py as DATABASE_URL. It is not possible to check this file as it is added in the .gitignore for security reasons. 
 
-## Data Models [DONE]
-🚨**Required** 
-
+## Data Models
 
 The Database is made of the following entities (Tables):
 
-1- Author : can be added by a created by user or Admin. Client can add many authors even if they still didn't have red their books. **One** authors can write **One or Many** book/s. Admin on the backend can approve the client author and make it available in the dropdown page for other clients.
+1. Author : can be added by a created by user or Admin. Client can add many authors even if they still didn't have red their books. **One** authors can write **One or Many** book/s. Admin on the backend can approve the client author and make it available in the dropdown page for other clients.
 
 Author Entity has the following Columns:
 
 ![Author Table](static/assets/README/author_tbl.png)
 
-2- Category : can be added by a created by user or Admin. Clients can add new Category which is not included in the dropdown list in order to categorize the book later on. This Model has Many-to-One relationship to Book entity. Many books can be categorized under one category. The entity is quiet simple and it has a only two columns in addition to its ID. These Columns are category name and category description. It is supposed to be used for future purposes.
+2. Category : can be added by a created by user or Admin. Clients can add new Category which is not included in the dropdown list in order to categorize the book later on. This Model has Many-to-One relationship to Book entity. Many books can be categorized under one category. The entity is quiet simple and it has a only two columns in addition to its ID. These Columns are category name and category description. It is supposed to be used for future purposes.
 
 Category table has the following structure:
+
 ![Category Table](static/assets/README/Category_tbl.png)
 
 
-3- Book : This is the main entity used across website. Books can be added. This table makes use of Author, Category, User, Review, Likes and Rating table. Thus, its relation as as following based on other entities:
+3. Book : This is the main entity used across website. Books can be added. This table makes use of Author, Category, User, Review, Likes and Rating table. Thus, its relation as as following based on other entities:
 
   - Many-to-One  : With Author table
   - Many-to-One  : With User who added the book
@@ -301,60 +275,57 @@ Category table has the following structure:
   - One-to-Many  : with Rating because one book can have many points
 
 It has the following structure:
+
 ![Book table](static/assets/README/Book_tbl.png)
 
+4. Likes : interaction table to track clients attitude with the book. It stores which book has been liked and by which user (client). Like is a feature that is either true or false. Thus, every user has and can either like a book (true) or doesn't like the book and keeps it as false per default.
 
-4- Likes : interaction table to track clients attitude with the book. It stores which book has been liked and by which user (client). Like is a feature that is either true or false. Thus, every user has and can either like a book (true) or doesn't like the book and keeps it as false per default.
-
-It has the following structure :
+It has the following structure:
 
 ![Like Table](static/assets/README/Likes_tbl.png)
 
 
-5- Rating : It is about the total average of a book out of 10. This field is similar to Likes entity but instead of either true or false, client can specify a value between 0.0 to 10.0 . The total rate is going to be calculated by the average.
+5. Rating : It is about the total average of a book out of 10. This field is similar to Likes entity but instead of either true or false, client can specify a value between 0.0 to 10.0 . The total rate is going to be calculated by the average.
 
 ![Rating Table](static/assets/README/Rating_tbl.png) .
 
-7- Review: The interactions between people who did or want to read the book to give their insights about the book are going to be tracked here. It makes use of the book_id which defines which book has been reviewed and commented on. It has Many-to-One relation to both Book and User table and has the following structure:
+7. Review: The interactions between people who did or want to read the book to give their insights about the book are going to be tracked here. It makes use of the book_id which defines which book has been reviewed and commented on. It has Many-to-One relation to both Book and User table and has the following structure:
 
 ![Review Table](static/assets/README/Review_tbl.png)
 
-6- User (already defined in Django): Used and default table by Django framework to help end user creates their accounts on the website. This table is not only used in the Database but also as a separate table in the Django Template Language to decide on whether the user is logged in or out and is the same one as the commenter (reviewer)
+6. User (already defined in Django): Used and default table by Django framework to help end user creates their accounts on the website. This table is not only used in the Database but also as a separate table in the Django Template Language to decide on whether the user is logged in or out and is the same one as the commenter (reviewer)
 
 ![User Table](static/assets/README/User_tbl.png)
 
-
-
-## CRUD Diagrams  [DONE]
-🚀 **merit & beyond**
+## CRUD Diagrams 
 
 CRUD functionalities are completely applied on the Review Model where all visitors who visit the website can view (READ) the views on a specific book. Only registered users can WRITE (ADD) a review, UPDATE his/her own review and lastly DELETE his/her own review.
 
 I used [draw.io](https://app.diagrams.net/) to draw the UML for the CRUD functionality applied to all models including Review, Book, Author, Category, Likes and Rating models.
 
 ### Review Model:
+
 It represents the insight written by authorized visitors of the website and have been approved by the admin on the backend. In the following diagram I try to indicate how the CRUD functionality has been applied on the Review Model
 
 ![Review-Model-CRUD](static/assets/Diagrams/Review_CRUD.drawio.png) 
 
 
-
 ### Adding Author, Category or Book:
+
 I have applied the CREATING new records on the author, category and Book models. These records excluding Books'records are made available at real time. Books which are are added need to be approved by the admin on the backend. Through all these three models the functionality is the same shown in the following diagram 
 
 ![C-author-books-category](static/assets/Diagrams/Adding_sources.drawio.png)
 
 
 ### Likes and Rating Models:
+
 These two models are made for giving more interaction for user with the website. These models are small and can only be seen when reviewing a book and want to like and rate that book. Both are made for future purposes. 
 
 
 
-# Agile Process  [DONE]
-🚨**Required** 
+# Agile Process 
 
 ## Project Goals
-🚨**Required** 
 
 This project was built to achieve two main goals on two main levels:
 
@@ -363,17 +334,15 @@ This project was built to achieve two main goals on two main levels:
 2- Visitors Level: interaction between a visitor and the website is made smoothly, giving the end user the possibility to manage his reviews including adding, reading, updating and deleting existing reviews. Furthermore, it lets user add his/her beloved author, category and book to let others interact with it. Behind the scene the admin can confirm the books choice as well as the review.
 
 
-## Initial User Stories  [DONE]
-🚨**Required**
+## Initial User Stories 
 
 Right from the beginning I had a clear idea what to write (Idea for a website). Though it was challenging for me to come up with the journey details at that time. Brainstorming was as following:
 
-1- What can offer the user to do on my website?
+1. What can offer the user to do on my website?
 
-2- How can the user share his ideas on my website?
+2. How can the user share his ideas on my website?
 
-3- How can I handle user's activity on my website.
-
+3. How can I handle user's activity on my website.
 
 With these questions in mind, I started to write my user stories from User's Point Of View as well as Admin's Point of View. For tracking the implementation of user's story I used GitHub Projects and the template provided by the Code Institute.
 
@@ -382,7 +351,7 @@ You can find my user stories related to this project by visiting [Insights-User-
 
 **Insights User Stories**
 
-1- View a list of available books with author amd category
+1. View a list of available books with author amd category
   
   **As a user I can see a list of books with their titles, authors, category as well as the one who added the book**
 
@@ -393,7 +362,7 @@ You can find my user stories related to this project by visiting [Insights-User-
   - AC3: I can see who created the book and when.
 
 
-2- Account Register:
+2. Account Register:
 
 **As a user I can create an account so that I can interact with the content**
 
@@ -401,7 +370,7 @@ You can find my user stories related to this project by visiting [Insights-User-
 
 - AC2: When logged in I can choose to let the website remember me so I don't need to log-in every time I visit the website.
 
-3- Add Author, Category and a Book:
+3. Add Author, Category and a Book:
 
 **As a logged-in user I can add authors, category and books so others can see them**
 
@@ -409,7 +378,7 @@ You can find my user stories related to this project by visiting [Insights-User-
 - AC2: When logged-in I can add a category
 - AC3: When logged-in I can add a book
 
-4- Interact with Content:
+4. Interact with Content:
 
 **As a logged-in User I can choose a book to write a review, put a like and rate it**
 
@@ -417,13 +386,13 @@ You can find my user stories related to this project by visiting [Insights-User-
 - AC2: As logged in user I can put a like on a book.
 - AC3: As logged in user I can rate a book.
 
-5- Edit my own Review:
+5. Edit my own Review:
 
 **As a user I can choose a review which is either approved or awaiting approval to update**
 
 - AC1: Only logged in user can choose his own review to update.
 
-6- Removing a book Review:
+6. Removing a book Review:
 
 **As a logged-in user I can choose my review to delete it.**
 
@@ -431,7 +400,7 @@ You can find my user stories related to this project by visiting [Insights-User-
 
 - AC2: Logged-in user should see a confirmation whether he is sure about deleting his review.
 
-7- Approving Added Books
+7. Approving Added Books
 
 **As a site Admin I can approve so that all site visitor can see the new book**
 
@@ -440,7 +409,7 @@ You can find my user stories related to this project by visiting [Insights-User-
 - AC2: Admin can delete the newly or already existing books as well.
 
 
-8- Approving/Deleting users Reviews
+8. Approving/Deleting users Reviews
 
 **As a site Admin I can see all reviews so that I can approve or remove the appending and existing ones**
 
@@ -449,7 +418,6 @@ You can find my user stories related to this project by visiting [Insights-User-
 - AC2: Only Site Admin can delete newly reviews or even existing reviews.
 
 ## Scope
-🚀 **merit & beyond**
 
 The scope of this Django project is to create a comprehensive platform for book enthusiasts, where users can seamlessly interact with a robust library system. The project integrates both frontend and backend functionalities, enabling a dynamic user experience. Users can browse through a curated collection of books, view detailed information about each book, including the author and a brief synopsis, and engage with the content by writing reviews, rating books, and liking them. The platform also supports user-generated content, allowing users to add new books, authors, and categories, thereby expanding the library.
 
@@ -459,9 +427,7 @@ Moreover, the platform fosters a community atmosphere where users can share thei
 
 Overall, this project serves as a versatile tool for book lovers, authors, and reviewers, offering a centralized hub for literary exploration and interaction. It is scalable and can be expanded with additional features, such as personalized book recommendations or social sharing options, to further enhance user engagement and broaden its reach.
 
-
 ## Agile Tool
-🚨**Required** 
 
 I depended on the templated provided by Code Institute to write and track my website User Stories. As for Tools used for tracking the implementation I have used GitHub Projects and issues linked to the project. Pre-mentioned I have listed my User stories and 
 you can find my user stories related to this project by visiting [Insights-User-Stories-Website](https://github.com/users/AlAliMazen/projects/2)
@@ -472,10 +438,8 @@ you can find my user stories related to this project by visiting [Insights-User-
 
 - I sometimes correct the user story if they include any typos.
 
-
-
 ### User Story Example
-🚨**Required** 
+
 
 Some examples about user story based on the template looks like the following:
 
@@ -497,11 +461,9 @@ It looks like the following screenshot:
 ![](static/assets/README/user.story-project-template.png)
 
 
-# Features  [DONE]
-🚨**Required** 
+# Features 
 
 ## Implemented Features
-🚨**Required** 
 
 Insights website is coded to be a baseline for people who wants to learn about Backend and its communication to the frontend. All implemented features are available in the course content including applying the CRUD functionality and make use of forms.
 
@@ -551,6 +513,7 @@ Add-author:
 ![insight-add-author-category-book](static/assets/README/insight-add-author.png)
 
 add-category:
+
 ![insight-add-author-category-book](static/assets/README/insight-add-category.png)
 
 add-book:
@@ -566,7 +529,6 @@ add-book:
 
 
 ## Future Features
-🚀 **merit & beyond**
 
 Though the website is a corner stone when learning about the backend and frontend communication, some plans are and already should be implemented in the future. These feature will give the website more professional functionality:
 
@@ -581,14 +543,10 @@ Though the website is a corner stone when learning about the backend and fronten
 - Logged in users should be able to manage their profile as well as delete the account completely. 
 
 ## Testing
-🚨**Required** 
 
 I want to draw attention that following tests are conducted based on the purpose the tool or page's goal to achieve. In other words, the log-in page has the purpose to take a legitimate username and a password which are created before and let user sign-in as a logged in uer. Moreover, the testing is going to be divided into sections based on the available pages.
 
-
 ## Manual Testing
-🚨**Required** 
-
 
 **Manual Testing For Log in**
 
@@ -678,10 +636,8 @@ will indicate the form can't be empty.
 ![insight-book-double-title](static/assets/README/insight-book-f-double-exist.png)
 
 
-
-
 ## Compatibility and Responsive Testing
-🚨**Required** 
+
 
 As a rule of thumb I am fascinated about using frameworks which do in fact much of the heavy lifting in the background when it comes to making any website a responsive one. I have used Bootstrap5 to make my website as much responsive as possible and I have checked the website on the following devices.
 
@@ -728,10 +684,7 @@ Following are emulators provided by Chrome (V. 126.0.6478.127) Browser on MacOS
 
 ![browser-statistics](static/assets/README/browser-static.png)
 
-
-
 ## Accessibility Testing
-🚨**Required** 
 
 **Lighthouse**
 It is very important to keep in mind that the Accessibility test doesn't always look as good as the code is. It depends on many factors including the good and clean code. I used Google Chrome Tools to perform the accessibility tests. 
@@ -772,7 +725,6 @@ One more point that can effect the Lighthouse results is the source where it run
 
 
 ## Validation Testing
-🚨**Required** 
 
 Another part of submitting a genuine code is to validate the syntax on different languages. Important to note by validating the HTML code is the way it has been validated. In other words, HTML pages in this Django Project are made of DTL (Django Template Language) syntax and not only in one page as many web developers are used to. Thus, I have used the direct link from Heroku platform allocated for this website and the results are as the following:
 
@@ -810,7 +762,7 @@ For testing my HTML Code I have used [Markup Validation Service W3C](https://val
 
 
 ### CSS Validation
-🚨**Required** 
+
 
 The [Jigsaw validator](https://jigsaw.w3.org/css-validator/) was used to validate CSS my sole style.css file that is shared across the website.
 
@@ -820,7 +772,7 @@ The [Jigsaw validator](https://jigsaw.w3.org/css-validator/) was used to validat
 
 
 ### JavaScript Validation
-🚨**Required** 
+
 
 The **[Jshint validator](https://jshint.com)** recommended by Code Institute to run the JS validation tests. I have two files that I intentionally separate to make it easier for future purposes.
 
@@ -834,7 +786,7 @@ The **[Jshint validator](https://jshint.com)** recommended by Code Institute to 
 
 
 ### Python Validation
-🚨**Required** 
+
 
 **[CI's pep8 tool](https://pep8ci.herokuapp.com/)** is the main tool used to perform python code validation for the root app (insight) and sub-app (book).
 
@@ -872,7 +824,6 @@ adding
 Another Note I need to address is that the view.py file inside the bool app has a a function which is very long(**book_insight**) I plan to refactor it in the future.
 
 ## Defects
-🚨**Required** 
 
 I have used GitHub Issue tracker to write any discovered bugs. Following listed issues are not considered Bugs but they can take the website down:
 
@@ -882,12 +833,10 @@ I have used GitHub Issue tracker to write any discovered bugs. Following listed 
 
 
 ## Defects of Note
-🚀 **merit & beyond**
 
 The following issue is not caused by my code, but rather it is by Bootstrap5 [bootstrap-carousel-element](https://getbootstrap.com/docs/5.3/components/carousel/) . The issue appears when the website loads, it should start turning the carousel slides automatically. This action doesn't sometimes happen. It starts turning slides when it is clicked either left or right.
 
 ## Outstanding Defects
-🚨**Required** 
 
 The register HTML page is a page that is provided by Django Framework and I couldn't manipulate the code as much as I wanted to. When I validate the code of the register page, I got the following error saying that there are some not closed tags like a paragraph and span tag inside the form element which is a code appear from somewhere not in the source files provided with the allauth module.
 
@@ -895,13 +844,11 @@ The register HTML page is a page that is provided by Django Framework and I coul
 
 
 # Technologies Used
-🚀 **merit & beyond**
 
 The technologies and tools I used through out my project includes not only the languages and frameworks but also online tools including the following:
 
 
 ## Languages
-🚀 **merit & beyond**
 
 ### Frontend
 
@@ -916,7 +863,6 @@ The technologies and tools I used through out my project includes not only the l
 - Django Version 4.2.13
 
 ## Frameworks, Libraries & Programs Used
-🚀 **merit & beyond**
 
 Software Applications I used to code my website:
 
@@ -930,10 +876,8 @@ Software Applications I used to code my website:
 - [Quick Database Diagram](https://www.quickdatabasediagrams.com/)
 
 # Deployment
-🚨**Required** 
 
 ## Prerequisites
-🚀 **merit & beyond**
 
 As a prerequisites to start a project is to set up Version Control System. I have used GitHub as a platform and Git as software tool preinstalled into the OS. Mine is macOS Sonoma 14.5. 
 
@@ -948,7 +892,6 @@ I recommend use a package manager to install both python and Django in case they
 
  
 ## Fork and Clone the Repository
-🚀 **merit & beyond**
 
 1. When repository is created try to click on the clone button and copy the https link.
 
@@ -960,9 +903,7 @@ I recommend use a package manager to install both python and Django in case they
 
 3. Choose a directory where to save the project (which is in fact a copy of the main project).
 
-
 ## Local Development Deployment
-🚨**Required** 
 
 I did all the development on this project locally using the VSCode as my primary IDE. Here are the steps to follow to deploy this project (**Commands must be run in the same directory as the project itself)**:
 
@@ -998,7 +939,6 @@ the env.py must have the following variable in the following syntax
 As a result website will be loaded with the Home page.
 
 ## Production Deployment
-🚨**Required** 
 
 The public link for my website is obtained from [Heroku-platform](https://www.heroku.com/) and to deploy your version of the website follow the steps:
 
@@ -1036,13 +976,11 @@ The public link for my website is obtained from [Heroku-platform](https://www.he
 
 ![heroku-vars](static/assets/README/her-build-packs.png)
 
-
 **NOTE** 
 Build can be seen under the dash board in **build logs** which will end up producing a link for public access.
 
 
 # Credits
-🚨**Required** 
 
 ## Repo on GitHub Template
   - [Code-institute-template-for-Django-Project](https://github.com/Code-Institute-Org/ci-full-template) used to set up a blueprint of the file structure of the project.
@@ -1078,7 +1016,7 @@ Build can be seen under the dash board in **build logs** which will end up produ
 
 - [Favicon-generator](https://favicon.io/)
 
-- []()
+- [Table-of-Content-Generator](http://ecotrust-canada.github.io/markdown-toc/)
 
 ## Media
 
@@ -1090,7 +1028,7 @@ All Photos appeared on the website related are brought from [Unsplash](https://u
 - [flat ray photography of book, pencil, camera, and with lens](https://unsplash.com/photos/flat-ray-photography-of-book-pencil-camera-and-with-lens-3OiYMgDKJ6k)
 - [assorted-title of books piled in the shelves](https://unsplash.com/photos/assorted-title-of-books-piled-in-the-shelves-NIJuEQw0RKg)
 - [the new york times book](https://unsplash.com/photos/the-new-york-times-book-kshkB1i5_5o)
-- [a pile of books sitting next to each othe](https://unsplash.com/photos/a-pile-of-books-sitting-next-to-each-other-Hqbkgga0rNQ)
+- [a pile of books sitting next to each other](https://unsplash.com/photos/a-pile-of-books-sitting-next-to-each-other-Hqbkgga0rNQ)
 - [pile of assorted-title books](https://unsplash.com/photos/pile-of-assorted-title-books-xY55bL5mZAM)
 - [white printer paper on white surface](https://unsplash.com/photos/white-printer-paper-on-white-surface-zx2xVvxBcww)
 - [book lot on shelf](https://unsplash.com/photos/book-lot-on-shelf-_ar2ENzmqb0)
@@ -1100,8 +1038,6 @@ All Photos appeared on the website related are brought from [Unsplash](https://u
 For creating Logo, I depend on using [Canva](https://canva.com)
 
 - [insight-Logo](https://www.canva.com/design/DAGJ7J-UHBY/MI-dw_CjbY8u1DoOXU7RWA/edit)
-
-
 
 ## Acknowledgments
 
@@ -1115,3 +1051,4 @@ A special word of thank because of their help and valuable time in testing and d
 
 - Tutor Support from Code Institute
 
+- To all friends who take the chance and create an account to add authors, category and books of their interest.
