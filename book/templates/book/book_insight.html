@@ -63,7 +63,12 @@
                 on: {{ author_details.created_on }} </h6>
         </div>
         <div class="col-12 col-md-5 p-3 mb-2">
+            {% if "placeholder" in author_details.author_image.url %}
+            <img src="{% static 'images/nobody.jpg' %}" class="author-img my-5" alt="nobody img">
+            {% else %}
             <img src="{{ author_details.author_image.url }}" class="author-img my-5" alt="{{ author_details.fullname }}">
+            {% endif %}
+            
         </div>
     </div>
     <hr class="h-divider">
